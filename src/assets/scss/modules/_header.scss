@@ -1,13 +1,18 @@
 .header {
   box-sizing: border-box;
-  background: rgba(5, 24, 52, 0.85);
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  @media screen and (min-width: $lg-width){
+    border-bottom: 1px solid rgba(white, 0.1);
+  }
   &__logo{
     position: relative;
-    z-index: 2;
+    z-index: 3;
   }
   .hamburger{
     position: relative;
-    z-index: 2;
+    z-index: 3;
   }
   .hamburger.is-active ~ &__navbar-nav{
     right: 0;
@@ -17,6 +22,7 @@
     justify-content: space-between;
     align-items: center;
     &-nav{
+      z-index: 2;
       display: flex;
       align-items: center;
       flex-wrap: wrap;

@@ -26,7 +26,7 @@
       opacity: $hamburger-hover-opacity;
     }
   }
-  @media screen and (min-width: $lg-width){
+  @media screen and (min-width: 992px){
     display: none;
   }
 

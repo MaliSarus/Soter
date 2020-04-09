@@ -3,6 +3,8 @@ $md-width: 768px;
 $lg-width: 992px;
 $xl-width: 1200px;
 
+$accent-color: #2096F3;
+
 
 
 body,html{
@@ -13,13 +15,16 @@ body,html{
 *{
   font-family: "Gotham Pro", sans-serif;
 }
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+}
 
 h1{
   font-size: 29px;
-  line-height: 119.2%;
+  //line-height: 119.2%;
   @media (min-width: 992px) {
     font-size: 64px;
-    line-height: 71px;
+    line-height: 71px !important;
   }
 }
 
@@ -33,23 +38,24 @@ h2{
 }
 
 .container{
+  padding: 0 20px;
   @media (min-width: 576px) {
-    max-width: calc(540px + (1260px - 1140px))
+    max-width: calc(540px + (1270px - 1140px))
   }
 
   // Средние девайсы («таблетки», >= 768px)
   @media (min-width: 768px) {
-    max-width: calc(760px + (1260px - 1140px))
+    max-width: calc(760px + (1270px - 1140px))
   }
 
   // Большие девайсы (десктопы, >= 992px)
   @media (min-width: 992px) {
-    max-width: calc(960px + (1260px - 1140px))
+    max-width: calc(960px + (1270px - 1140px))
   }
 
   // Экстрабольшие девайсы (большие десктопы, >= 1200px)
   @media (min-width: 1200px) {
-    max-width: calc(1140px + (1260px - 1140px));
+    max-width: calc(1140px + (1270px - 1140px));
   }
 }
 
@@ -60,3 +66,4 @@ button, a{
 button{
   appearance: none;
 }
+
