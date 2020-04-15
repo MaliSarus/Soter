@@ -23,9 +23,9 @@
             </button>
             <div class="header__navbar-nav">
                <ul class="header__navbar-list" id="navbarNav">
-                   <li class="header__navbar-item">Products</li>
-                   <li class="header__navbar-item">Industries</li>
-                   <li class="header__navbar-item">Resources</li>
+                   <li class="header__navbar-item">Link_1</li>
+                   <li class="header__navbar-item">Link_2</li>
+                   <li class="header__navbar-item">Link_3</li>
                    <li class="header__navbar-item">Log In</li>
                </ul>
                <a href="#" class="button button_blue">Try Soter</a>

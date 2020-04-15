@@ -6,6 +6,7 @@
 
 
 .little-dot {
+  opacity: 1;
   width: 10px;
   height: 10px;
   background: #BCBCBC;
@@ -14,33 +15,38 @@
   vertical-align: middle;
   margin: 0 16px;
   position: relative;
-  z-index: 10;
+  z-index: 1;
   transition: background-color .3s;
-  &:hover{
+
+  &:hover {
     background: #2096F3;
   }
 }
 
 .little-dot--first,
 .little-dot--last {
-  z-index: 5;
+  z-index: 0;
 }
 
 
-
-
 .big-dot {
+  z-index: 2;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  background:#2096F3;
+  transform: translate(-50%, -50%);
+  background: #2096F3;
   width: 27px;
   height: 10px;
   border-radius: 5px;
-  &::before{
+  @media screen and (min-width: $lg-width){
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+
+  &::before {
     display: block;
-    content:'';
+    content: '';
     position: absolute;
     z-index: 0;
     width: calc(100% + 8px);
@@ -50,9 +56,10 @@
     left: -4px;
     top: -4px;
   }
-  &::after{
+
+  &::after {
     display: block;
-    content:'';
+    content: '';
     position: absolute;
     z-index: 0;
     width: calc(100% + 16px);
@@ -65,18 +72,54 @@
   }
 }
 
-.transition-next .big-dot, .transition-prev .big-dot  {
+.transition-next .big-dot, .transition-prev .big-dot {
   animation: slide-next-prev 1s linear both;
 }
 
+.transition-prev .little-dot--first{
+  animation: dots-min-prev .4s linear both;
+}
+
+.transition-next .little-dot--last {
+  animation: dots-min-next .4s linear both;
+}
+
 @keyframes slide-next-prev {
-  from{
+  from {
     width: 27px;
   }
-  30%{
+  30% {
     width: 100px;
   }
-  50%{
+  50% {
     width: 27px;
+  }
+}
+
+@keyframes dots-min-prev {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(80%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes dots-min-next {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-80%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

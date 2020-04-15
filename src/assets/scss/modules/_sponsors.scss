@@ -1,7 +1,7 @@
 .sponsors {
-  padding-top: 31px;
+  padding: 50px 0;
   @media screen and (min-width: $lg-width) {
-    padding-top: 138px;
+    padding: 138px 0;
   }
   &__head{
     position: relative;
@@ -30,12 +30,12 @@
     }
     .arrows{
       display: none;
+      @media screen and (min-width: $sm-width){
+        display: flex;
+      }
     }
     @media screen and (min-width: $lg-width){
       margin-bottom: 68px;
-      .arrows{
-        display: flex;
-      }
     }
   }
   &__title{
@@ -47,6 +47,9 @@
   }
 
   .swiper {
+    &-container{
+      z-index: 0;
+    }
     &-slide {
       cursor: pointer;
       text-align: center;
@@ -62,30 +65,15 @@
       }
     }
     &-wrapper{
-      margin-bottom: 45px;
-    }
-    &-pagination{
-      position: relative;
-    }
-
-    &-pagination-bullet {
-        width: 10px;
-        height: 10px;
-        text-align: center;
-        line-height: 20px;
-        font-size: 12px;
-        color: #000;
-        opacity: 1;
-        background: rgba(0, 0, 0, 0.2);
-      &-active {
-        color: #fff;
-        background: #007aff;
-        width: 27px;
-        border-radius: 5px;
-        box-sizing: content-box;
-
+      margin-bottom: 43px;
+      @media screen and (min-width: $lg-width){
+        margin-bottom: 67px;
       }
     }
-
+    &-nav{
+      @media screen and (min-width: $sm-width){
+        display: none;
+      }
+    }
   }
 }

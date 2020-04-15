@@ -63,7 +63,7 @@
       border-color: transparent;
     }
     &:active{
-      color: #11274B;
+      color: $main-color;
       background: #E2EEFF;
       border-color: transparent;
     }
@@ -88,7 +88,7 @@
       }
     }
     &:active{
-      color: #11274B;
+      color: $main-color;
       background: #E2EEFF;
       border-color: transparent;
       &::after{
@@ -97,7 +97,7 @@
     }
   }
   &_color_dark{
-    color: #11274B;
+    color: $main-color;
     &::after{
       filter: brightness(0.3);
     }
@@ -135,7 +135,7 @@
     color: white;
   }
   &_dark{
-    color: #11274B;
+    color: $main-color;
   }
 }
 
@@ -151,6 +151,10 @@
 }
 
 .arrows{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 80px;
   height: 20px;
   display: flex;
@@ -160,26 +164,69 @@
     width: 20px;
     background: url("../img/interface/arrow.svg") center no-repeat;
     background-size: contain;
+    transition: transform .25s, filter .1s;
+    &:active{
+      filter: sepia(1) hue-rotate(184deg) saturate(15.5) contrast(0.6) hue-rotate(24deg) saturate(1.5);
+    }
+    &:hover{
+      transform: scale(1.3);
+    }
     &-next{
       transform: rotate(180deg);
+      &:hover{
+        transform: rotate(180deg) scale(1.3);
+      }
     }
   }
 }
 
-.slider-pagination{
-  display: flex;
-  justify-content: center;
-  .slider-bullet{
-    background: url("../img/interface/bullet.svg") center no-repeat;
-    width: 10px;
-    margin: 0 5px;
-    &_active{
-      height: 26px;
-      width: 43px;
-      background: url("../img/interface/bullet-active.svg") center no-repeat;
-      margin: 0 5px;
-    }
-    &.active{
+.swiper-button-prev,.swiper-button-next{
+  transform: translateY(-50%);
+  outline: none;
+  &::after{
+    content: '';
+    background: url("../img/interface/arrow.svg") center no-repeat;
+    width: 100%;
+    height: 100%;
+    transition: transform .25s, background .25s;
+    outline: none;
+  }
+  &:active{
+    filter: sepia(1) hue-rotate(184deg) saturate(15.5) contrast(0.6) hue-rotate(24deg) saturate(1.5);
+
+  }
+}
+.swiper-button-prev{
+  &:hover{
+    &::after{
+      transform: scale(1.5);
     }
   }
+}
+.swiper-button-next{
+  &::after{
+    transform: rotate(180deg);
+  }
+  &:hover{
+    &::after{
+      transform: scale(1.5) rotate(180deg);
+    }
+  }
+}
+
+.with-dots{
+  &::after{
+    margin-top: 45px;
+    margin-bottom: 25px;
+    display: block;
+    content: url("../img/interface/three-dots.svg");
+  }
+}
+
+.p-15{
+  padding: 0 15px;
+}
+
+.hidden{
+  overflow: hidden;
 }

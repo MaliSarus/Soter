@@ -24,6 +24,8 @@
                                 <div class="swiper-slide sponsors__slide"><img
                                         src="./assets/img/sponsors/mriwa-logo.png" alt="Лого спонсора"></div>
                             </div>
+                            <div class="swiper-nav swiper-button-next"></div>
+                            <div class="swiper-nav swiper-button-prev"></div>
                         </div>
                         <div class="pagination-wrapper">
                             <div class="pagination-container">

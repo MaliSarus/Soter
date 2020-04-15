@@ -2,17 +2,17 @@
   box-sizing: border-box;
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
   @media screen and (min-width: $lg-width){
     border-bottom: 1px solid rgba(white, 0.1);
   }
   &__logo{
     position: relative;
-    z-index: 3;
+    z-index: 11;
   }
   .hamburger{
     position: relative;
-    z-index: 3;
+    z-index: 11;
   }
   .hamburger.is-active ~ &__navbar-nav{
     right: 0;
@@ -25,7 +25,7 @@
     box-sizing: border-box;
     padding: 0 20px;
     &-nav{
-      z-index: 2;
+      z-index: 10;
       display: flex;
       align-items: center;
       flex-wrap: wrap;

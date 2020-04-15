@@ -9,6 +9,7 @@ const hamburgerInit = () => {
     });
     $('.hamburger').on('click', function () {
         $(this).toggleClass('is-active');
+        $('body').toggleClass('hidden');
     });
 };
 
@@ -37,7 +38,7 @@ const sliderButtonsHandler = () =>{
             paginationWrapper.removeClass('transition-prev')
         }
     }
-}
+};
 
 const sponsorsSlideInit = () => {
     const mySwiper = new Swiper('.swiper-container', {
@@ -50,6 +51,28 @@ const sponsorsSlideInit = () => {
             el: '.swiper-pagination',
             clickable: true,
             dynamicBullets: true
+
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on:{
+            slideNextTransitionStart: function () {
+                const paginationWrapper = $('.pagination-wrapper');
+                paginationWrapper.addClass('transition-next');
+                setTimeout(function () {
+                    paginationWrapper.removeClass('transition-next')
+                }, 500);
+            },
+            slidePrevTransitionStart: function () {
+                console.log('trnsPrevStart');
+                const paginationWrapper = $('.pagination-wrapper');
+                paginationWrapper.addClass('transition-prev');
+                setTimeout(function () {
+                    paginationWrapper.removeClass('transition-prev')
+                }, 500);
+            },
         },
         breakpoints: {
             576: {
@@ -59,6 +82,7 @@ const sponsorsSlideInit = () => {
             768: {
                 slidesPerView: 3,
                 spaceBetween: 40,
+
             },
             992: {
                 slidesPerView: 4,
@@ -69,6 +93,14 @@ const sponsorsSlideInit = () => {
                 spaceBetween: 115,
             }
         }
+    });
+    const arrowPrev = $('.sponsors__head .arrow-prev');
+    const arrowNext = $('.sponsors__head .arrow-next');
+    arrowPrev.on('click', function () {
+        mySwiper.slidePrev(400,true);
+    });
+    arrowNext.on('click', function () {
+        mySwiper.slideNext(400,true);
     });
     const dots = $('.sponsors__content .little-dot');
     dots.on('click',function (event) {
