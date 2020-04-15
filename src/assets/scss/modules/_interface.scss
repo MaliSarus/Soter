@@ -149,3 +149,37 @@
     color: $accent-color;
   }
 }
+
+.arrows{
+  width: 80px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  .arrow{
+    height: auto;
+    width: 20px;
+    background: url("../img/interface/arrow.svg") center no-repeat;
+    background-size: contain;
+    &-next{
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.slider-pagination{
+  display: flex;
+  justify-content: center;
+  .slider-bullet{
+    background: url("../img/interface/bullet.svg") center no-repeat;
+    width: 10px;
+    margin: 0 5px;
+    &_active{
+      height: 26px;
+      width: 43px;
+      background: url("../img/interface/bullet-active.svg") center no-repeat;
+      margin: 0 5px;
+    }
+    &.active{
+    }
+  }
+}

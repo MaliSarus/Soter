@@ -21,6 +21,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 -20px;
+    box-sizing: border-box;
+    padding: 0 20px;
     &-nav{
       z-index: 2;
       display: flex;
