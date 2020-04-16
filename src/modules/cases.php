@@ -24,7 +24,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15">
                 <div class="cases__item">
-                    <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image"><img src="./assets/img/cases/icon-2.svg" alt=""></div>
                     <h4>Your title - use h4</h4>
                     <p class="text">Your text - use p</p>
                     <a href="#" class="cases__item_hover" style="background-image: url(./assets/img/cases/hover-bg.png)">
