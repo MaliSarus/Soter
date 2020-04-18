@@ -13,7 +13,7 @@ const hamburgerInit = () => {
     });
 };
 
-const sliderButtonsHandler = () =>{
+const sliderButtonsHandler = () => {
     const btns = $('.nav-dot');
     const paginationWrapper = $('.pagination-wrapper');
     const bigDotContainer = $('.big-dot-container');
@@ -22,9 +22,9 @@ const sliderButtonsHandler = () =>{
     btns.on('click', btnClick);
 
     function btnClick() {
-        if($(this).hasClass('little-dot--first')) {
+        if ($(this).hasClass('little-dot--first')) {
             paginationWrapper.addClass('transition-prev');
-        } else if ($(this).hasClass('little-dot--last')){
+        } else if ($(this).hasClass('little-dot--last')) {
             paginationWrapper.addClass('transition-next');
         }
 
@@ -32,16 +32,16 @@ const sliderButtonsHandler = () =>{
     }
 
     function cleanClasses() {
-        if(paginationWrapper.hasClass('transition-next')) {
+        if (paginationWrapper.hasClass('transition-next')) {
             paginationWrapper.removeClass('transition-next')
-        } else if(paginationWrapper.hasClass('transition-prev')) {
+        } else if (paginationWrapper.hasClass('transition-prev')) {
             paginationWrapper.removeClass('transition-prev')
         }
     }
 };
 
-const sponsorsSlideInit = () => {
-    const mySwiper = new Swiper('.swiper-container', {
+const sponsorsSliderInit = () => {
+    const mySwiper = new Swiper('.sponsors__slider', {
         // Optional parameters
         slidesPerView: 1,
         spaceBetween: 0,
@@ -57,7 +57,7 @@ const sponsorsSlideInit = () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        on:{
+        on: {
             slideNextTransitionStart: function () {
                 const paginationWrapper = $('.pagination-wrapper');
                 paginationWrapper.addClass('transition-next');
@@ -81,7 +81,7 @@ const sponsorsSlideInit = () => {
             },
             768: {
                 slidesPerView: 3,
-                spaceBetween: 40,
+                // spaceBetween: 40,
 
             },
             992: {
@@ -90,34 +90,171 @@ const sponsorsSlideInit = () => {
             },
             1200: {
                 slidesPerView: 5,
-                spaceBetween: 115,
+                // spaceBetween: 115,
             }
         }
     });
     const arrowPrev = $('.sponsors__head .arrow-prev');
     const arrowNext = $('.sponsors__head .arrow-next');
     arrowPrev.on('click', function () {
-        mySwiper.slidePrev(400,true);
+        mySwiper.slidePrev(400, true);
     });
     arrowNext.on('click', function () {
-        mySwiper.slideNext(400,true);
+        mySwiper.slideNext(400, true);
     });
     const dots = $('.sponsors__content .little-dot');
-    dots.on('click',function (event) {
-        if($('.little-dot--first').is(event.target)){
-            mySwiper.slidePrev(400,true);
+    dots.on('click', function (event) {
+        if ($('.little-dot--first').is(event.target)) {
+            mySwiper.slidePrev(400, true);
         }
-        if($('.little-dot--last').is(event.target)){
-            mySwiper.slideNext(400,true);
+        if ($('.little-dot--last').is(event.target)) {
+            mySwiper.slideNext(400, true);
         }
     })
 };
+const feedbackSliderInit = () => {
+    const mySwiper = new Swiper('.feedback__slider', {
+        // Optional parameters
+        slidesPerView: 1,
+        spaceBetween: 9,
+        direction: 'horizontal',
+        centeredSlides:true,
+        loop: true,
+        on: {
+            resize: function(){
+                console.log('resize');
+              if ($(window).width() > 992){
+                  this.destroy(false,true);
+                  $('.feedback__slider > .swiper-wrapper').css({
+                      flexWrap: 'wrap'
+                  })
+              }
+              else{
+                  this.init();
+              }
+            },
+            slideNextTransitionStart: function () {
+                const paginationWrapper = $('.pagination-wrapper');
+                paginationWrapper.addClass('transition-next');
+                setTimeout(function () {
+                    paginationWrapper.removeClass('transition-next')
+                }, 500);
+            },
+            slidePrevTransitionStart: function () {
+                const paginationWrapper = $('.pagination-wrapper');
+                paginationWrapper.addClass('transition-prev');
+                setTimeout(function () {
+                    paginationWrapper.removeClass('transition-prev')
+                }, 500);
+            },
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 1,
+                centeredSlides: false
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+
+            },
+        }
+    });
+    const dots = $('.feedback__block .little-dot');
+    dots.on('click', function (event) {
+        if ($('.little-dot--first').is(event.target)) {
+            mySwiper.slidePrev(400, true);
+        }
+        if ($('.little-dot--last').is(event.target)) {
+            mySwiper.slideNext(400, true);
+        }
+    })
+};
+
+$(window).on('resize', function () {
+
+    if (isSet($('.clip-and-go'))) {
+        if ($(window).width() < 992 && !(isSet($('.clip-and-go .desktop')))) {
+            $('.clip-and-go__block').each(function () {
+                const image = $(this).find('.clip-and-go__image');
+                const contentToPrepend = $(this).find('.clip-and-go__content button');
+                image.parent().addClass('desktop');
+                image.detach().insertBefore(contentToPrepend);
+            });
+        } else if($(window).width() >= 992 && isSet($('.clip-and-go .desktop'))){
+            $('.clip-and-go__block').each(function () {
+                const desktopPlace = $(this).find('.desktop');
+                const image = $(this).find('.clip-and-go__image');
+                image.detach().appendTo(desktopPlace);
+            });
+            $('.clip-and-go .desktop').removeClass('desktop');
+        }
+    }
+    if (isSet($('.successes'))) {
+        if ($(window).width() < 992 && !(isSet($('.successes .desktop')))) {
+            $('.successes__block').each(function () {
+                const video = $(this).find('.successes__video');
+                const contentToPrepend = $(this).find('.successes__content button');
+                video.parent().addClass('desktop');
+                video.detach().insertBefore(contentToPrepend);
+            });
+        } else if($(window).width() >= 992 && isSet($('.successes .desktop'))){
+            $('.successes__block').each(function () {
+                const desktopPlace = $(this).find('.desktop');
+                console.log(desktopPlace);
+                const video = $(this).find('.successes__video');
+                console.log(video);
+                video.detach().appendTo(desktopPlace);
+            });
+            $('.successes .desktop').removeClass('desktop');
+        }
+    }
+    if (isSet($('.feedback'))) {
+        if ($(window).width() < 992) {
+            $('.feedback__slider > .swiper-wrapper').removeAttr('style');
+            feedbackSliderInit();
+        }
+        else{
+            $('.feedback__slider > .swiper-wrapper').css('flex-wrap','wrap')
+        }
+    }
+});
 
 $(document).ready(function () {
     hamburgerInit();
     sliderButtonsHandler();
     if (isSet($('.sponsors'))) {
-        sponsorsSlideInit();
+        sponsorsSliderInit();
+    }
+    if (isSet($('.clip-and-go'))) {
+        if ($(window).width() < 992 && !(isSet($('.clip-and-go .desktop')))) {
+            $('.clip-and-go__block').each(function () {
+                const image = $(this).find('.clip-and-go__image');
+                const contentToPrepend = $(this).find('.clip-and-go__content button');
+                image.parent().addClass('desktop');
+                image.detach().insertBefore(contentToPrepend);
+            })
+        }
+    }
+    if (isSet($('.successes'))) {
+        if ($(window).width() < 992 && !(isSet($('.successes .desktop')))) {
+            $('.successes__block').each(function () {
+                const video = $(this).find('.successes__video');
+                const contentToPrepend = $(this).find('.successes__content button');
+                video.parent().addClass('desktop');
+                video.detach().insertBefore(contentToPrepend);
+            })
+        }
+    }
+    if (isSet($('.feedback'))) {
+        if ($(window).width() < 992) {
+            $('.feedback__slider > .swiper-wrapper').removeAttr('style');
+            feedbackSliderInit();
+        }
+        else{
+            $('.feedback__slider > .swiper-wrapper').css('flex-wrap','wrap')
+        }
     }
 });
+
 

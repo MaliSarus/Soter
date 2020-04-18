@@ -11,7 +11,7 @@
                         </div>
                     </div>
                     <div class="sponsors__content">
-                        <div class="swiper-container">
+                        <div class="swiper-container sponsors__slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide sponsors__slide"><img src="./assets/img/sponsors/nhs-logo.png"
                                                                                alt="Лого спонсора"></div>

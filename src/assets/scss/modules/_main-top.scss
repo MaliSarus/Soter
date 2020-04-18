@@ -36,6 +36,10 @@
     padding-bottom: 217px;
   }
   &__block{
+    padding: 0 10px;
+    @media screen and (min-width: $lg-width){
+      padding: 0;
+    }
   }
   &__text{
     text-align: center;
@@ -51,11 +55,11 @@
     @media screen and (min-width: $lg-width){
       text-align: left;
       position: relative;
-      padding-left: 22px;
+      padding-left: 26px;
       margin-bottom: 44px;
       &::before{
-        left: -123px;
-        top: -26px;
+        left: -135px;
+        top: -36px;
         content: url('../img/main-top/title-balls-bg.svg');
       }
       &::after{
@@ -95,7 +99,7 @@
     display: flex;
     flex-wrap: wrap;
     @media screen and (min-width: $lg-width){
-      padding-left: 22px;
+      padding-left: 26px;
     }
     a{
       flex-basis: 100%;

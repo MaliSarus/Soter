@@ -1,0 +1,25 @@
+.request{
+  background: linear-gradient(90deg, #2096F3 0%, #2855C5 49.48%, #0851BF 100%);
+  padding-top: 41px;
+  padding-bottom: 58px;
+  @media screen and (min-width: $lg-width){
+    padding-top: 115px;
+    padding-bottom: 102px;
+  }
+  &__top{
+    padding: 0 10px;
+    text-align: center;
+    @media screen and (min-width: $lg-width){
+      padding: 0;
+      text-align: left;
+    }
+    h2{
+      line-height: 120%;
+    }
+    p{
+      @media screen and (min-width: $md-width){
+        font-size: 20px;
+      }
+    }
+  }
+}

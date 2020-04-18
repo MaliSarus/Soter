@@ -1,8 +1,8 @@
 .button {
   text-decoration: none;
   display: block;
-  padding: 25px 40px;
-  padding-top: 28px;
+  padding: 19px 40px;
+  padding-top: 26px;
   border-radius: 3px;
   border: none;
   outline:none;
@@ -11,8 +11,13 @@
   font-size: 16px;
   overflow: hidden;
   box-sizing: border-box;
+  line-height: 15px;
   letter-spacing: 0.05em;
   text-align: center;
+  @media screen and (min-width: $lg-width){
+    padding: 23px 40px;
+    padding-top: 26px;
+  }
   &:hover{
     text-decoration: none;
   }
@@ -22,6 +27,12 @@
     position: relative;
     background: none;
     z-index: 1;
+    padding-top: 28px;
+    padding-bottom: 22px;
+    @media screen and (min-width: $lg-width){
+      padding-bottom: 25px;
+      padding-top: 26px;
+    }
     &::before{
       position: absolute;
       left: 0;
@@ -34,6 +45,7 @@
       opacity: 1;
       z-index: -1;
       transition: opacity .5s;
+
     }
     &::after{
       display: inline-block;
@@ -180,21 +192,26 @@
   }
 }
 
-.swiper-button-prev,.swiper-button-next{
+.swiper-nav{
   transform: translateY(-50%);
   outline: none;
+  width: auto!important;
+  overflow: visible;
   &::after{
     content: '';
     background: url("../img/interface/arrow.svg") center no-repeat;
-    width: 100%;
+    width: 13px;
     height: 100%;
-    transition: transform .25s, background .25s;
+    transition: transform .25s, background .25s, width .25s;
     outline: none;
   }
   &:active{
     filter: sepia(1) hue-rotate(184deg) saturate(15.5) contrast(0.6) hue-rotate(24deg) saturate(1.5);
-
   }
+  //&:hover{
+  //  width: calc(12px * 1.5);
+  //}
+
 }
 .swiper-button-prev{
   &:hover{
@@ -216,15 +233,16 @@
 
 .with-dots{
   &::after{
-    margin-top: 45px;
-    margin-bottom: 25px;
     display: block;
     content: url("../img/interface/three-dots.svg");
   }
 }
 
 .p-15{
-  padding: 0 15px;
+  padding: 0 20px;
+  @media screen and (min-width: $md-width){
+    padding: 0 15px;
+  }
 }
 
 .hidden{

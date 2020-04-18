@@ -23,10 +23,10 @@
             </button>
             <div class="header__navbar-nav">
                <ul class="header__navbar-list" id="navbarNav">
-                   <li class="header__navbar-item">Link_1</li>
-                   <li class="header__navbar-item">Link_2</li>
-                   <li class="header__navbar-item">Link_3</li>
-                   <li class="header__navbar-item">Log In</li>
+                   <li class="header__navbar-item"><a href="#" class="header__navbar-link">Link_1</a></li>
+                   <li class="header__navbar-item"><a href="#" class="header__navbar-link">Link_2</a></li>
+                   <li class="header__navbar-item"><a href="#" class="header__navbar-link">Link_3</a></li>
+                   <li class="header__navbar-item"><a href="#" class="header__navbar-link">Log In</a></li>
                </ul>
                <a href="#" class="button button_blue">Try Soter</a>
            </div>

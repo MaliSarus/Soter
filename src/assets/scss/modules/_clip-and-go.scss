@@ -1,0 +1,72 @@
+.clip-and-go{
+  background: linear-gradient(90deg, #F6FAFF 0%, #EBF4FF 100%);
+  padding-top: 52px;
+  padding-bottom: 58px;
+  &__block{
+    margin-bottom: 70px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $lg-width){
+      margin-bottom: 0;
+    }
+  }
+  &__content{
+    @media screen and (min-width: $lg-width){
+      padding: 75px 0;
+    }
+    >h2{
+      margin-bottom: 8px;
+      text-align: center;
+      @media screen and (min-width: $md-width){
+        margin-bottom: 28px;
+      }
+      @media screen and (min-width: $lg-width){
+        text-align: left;
+      }
+    }
+    >p{
+      text-align: center;
+      margin-bottom: 33px;
+      @media screen and (min-width: $md-width){
+        margin-bottom: 53px;
+      }
+      @media screen and (min-width: $lg-width){
+        text-align: left;
+      }
+    }
+    >button{
+      width: 100%;
+      @media screen and (min-width: $md-width){
+        width: auto;
+        margin: 0 auto;
+      }
+      @media screen and (min-width: $lg-width){
+        margin: unset;
+      }
+    }
+  }
+  &__image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 28px;
+    height: 100%;
+    @media screen and (min-width: $lg-width){
+      max-height: unset;
+      justify-content: flex-start;
+      margin-bottom: 0;
+    }
+    img{
+      max-height: 100%;
+      max-width: 100%;
+      position: relative;
+      z-index: 2;
+      display: block;
+      @media screen and (min-width: $sm-width){
+        width: auto;
+      }
+    }
+  }
+}
