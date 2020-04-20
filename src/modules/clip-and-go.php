@@ -3,7 +3,7 @@
        <div class="row clip-and-go__block">
            <div class="col-12 col-lg-6">
                <div class="clip-and-go__image">
-                   <img src="./assets/img/clip-and-go/1.png" alt="">
+                   <img src="./src/assets/img/clip-and-go/1.png" alt="">
                </div>
            </div>
            <div class="col-12 col-lg-6">
@@ -29,7 +29,7 @@
            </div>
            <div class="col-12 col-lg-6">
                <div class="clip-and-go__image">
-                   <img src="./assets/img/clip-and-go/2.png" alt="">
+                   <img src="./src/assets/img/clip-and-go/2.png" alt="">
                </div>
            </div>
        </div>

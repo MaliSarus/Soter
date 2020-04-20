@@ -1,3 +1,6 @@
+import Swiper from 'swiper'
+import "../scss/style.scss";
+
 function isSet(element) {
     return element.length !== 0;
 }

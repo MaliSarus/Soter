@@ -9,7 +9,7 @@
         <div class="row solutions__bottom">
             <div class="col-12 col-md-4 p-15 d-flex">
                 <article class="solutions__item">
-                    <div class="solutions__image" style="background-image: url(./assets/img/solutions/1.png)"></div>
+                    <div class="solutions__image" style="background-image: url(./src/assets/img/solutions/1.png)"></div>
                     <div class="solutions__text">
                         <h4>Your text - use h4</h4>
                     </div>
@@ -17,7 +17,7 @@
             </div>
             <div class="col-12 col-md-4 p-15 d-flex">
                 <article class="solutions__item">
-                    <div class="solutions__image" style="background-image: url(./assets/img/solutions/2.png)"></div>
+                    <div class="solutions__image" style="background-image: url(./src/assets/img/solutions/2.png)"></div>
                     <div class="solutions__text">
                         <h4>Your text - use h4</h4>
                     </div>
@@ -25,7 +25,7 @@
             </div>
             <div class="col-12 col-md-4 p-15 d-flex">
                 <article class="solutions__item">
-                    <div class="solutions__image" style="background-image: url(./assets/img/solutions/3.png)"></div>
+                    <div class="solutions__image" style="background-image: url(./src/assets/img/solutions/3.png)"></div>
                     <div class="solutions__text">
                         <h4>Your text - use h4</h4>
                     </div>

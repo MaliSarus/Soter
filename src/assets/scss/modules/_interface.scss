@@ -8,15 +8,16 @@
   outline:none;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 16px;
   overflow: hidden;
   box-sizing: border-box;
   line-height: 15px;
   letter-spacing: 0.05em;
   text-align: center;
+  font-size: 14px;
   @media screen and (min-width: $lg-width){
     padding: 23px 40px;
     padding-top: 26px;
+    font-size: 16px;
   }
   &:hover{
     text-decoration: none;
@@ -31,7 +32,7 @@
     padding-bottom: 22px;
     @media screen and (min-width: $lg-width){
       padding-bottom: 25px;
-      padding-top: 26px;
+      padding-top: 28px;
     }
     &::before{
       position: absolute;
@@ -242,6 +243,15 @@
   padding: 0 20px;
   @media screen and (min-width: $md-width){
     padding: 0 15px;
+  }
+}
+
+.p-sx-30{
+  padding-left: 10px;
+  padding-right: 10px;
+  @media screen and (min-width: $lg-width){
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
