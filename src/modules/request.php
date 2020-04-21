@@ -18,7 +18,7 @@
                                        required>
                                 <label for="request-name">First Name</label>
                             </div>
-                            <div class="request__input-wrapper">
+                            <div class="request__input-wrapper request__phone">
                                 <input type="tel" name="phone" class="request__input form-control" id="request-phone"
                                        required>
                                 <label for="request-phone">Phone number</label>
@@ -26,12 +26,12 @@
 
                         </div>
                         <div class="request__form-row">
-                            <div class="request__input-wrapper">
+                            <div class="request__input-wrapper request__mail">
                                 <input type="email" name="email" class="request__input form-control" id="request-email"
                                        required>
                                 <label for="request-email">EMAIL</label>
                             </div>
-                            <div class="request__input-wrapper">
+                            <div class="request__input-wrapper request__company">
                                 <input type="text" name="company" class="request__input form-control"
                                        id="request-company" required>
                                 <label for="request-company">Company</label>

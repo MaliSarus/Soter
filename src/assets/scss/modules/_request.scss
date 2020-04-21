@@ -54,6 +54,8 @@
     }
   }
   &__block{
+    position: relative;
+    z-index: 2;
     width: 100%;
     form{
       button{
@@ -88,11 +90,54 @@
     position: relative;
     flex-grow: 1;
     flex-basis: 100%;
+    &::after{
+      display: block;
+      content: '';
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #8ECDFF;
+      @media screen and (min-width: $lg-width){
+        left: 25px;
+        width: calc(100% - 50px);
+      }
+    }
+    &::before{
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      @media screen and (min-width: $lg-width){
+        right: 35px;
+      }
+    }
+    &.request__company{
+      &::before{
+        content: url("../img/request/company-icon.svg");
+      }
+    }
+    &.request__phone{
+      &::before{
+        content: url("../img/request/phone-icon.svg");
+      }
+    }
+    &.request__mail{
+      &::before{
+        content: url("../img/request/mail-icon.svg");
+      }
+    }
+
 
     @media screen and (min-width: $lg-width){
       flex-basis: 50%;
       margin-bottom: 41px;
       padding: 0 25px;
+    }
+    input{
+      width: calc(100% - 30px);
     }
     textarea{
       resize: none;

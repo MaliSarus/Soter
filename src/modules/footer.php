@@ -49,12 +49,16 @@
             <div class="col-12 col-lg-6">
                 <p>Subscribe to our newsletter</p>
                 <form action="#">
-                    <input type="mail" id="footer-mail" name="request-mail">
-                    <label for="footer-mail">EMAIL</label>
+                    <div class="request__input-wrapper request__mail">
+                        <input type="email" id="footer-mail" name="request-mail" required>
+                        <label for="footer-mail">EMAIL</label>
+                    </div>
                     <button type="submit"></button>
                 </form>
             </div>
-            <div class="col-12 col-lg-6"></div>
+            <div class="col-12 col-lg-6 d-flex align-items-center">
+                <p class="footer__copy">All right reserved. 2020</p>
+            </div>
         </div>
     </div>
 </footer>

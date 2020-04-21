@@ -21,13 +21,73 @@
     @media screen and (min-width: $lg-width) {
       padding-top: 47px;
     }
+    p{
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 138.2%;
+      margin-bottom: 14px;
+      text-align: center;
+      @media screen and (min-width: $lg-width){
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 18px;
+      }
+    }
+    form{
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 24px;
+      @media screen and (min-width: $lg-width){
+        margin-bottom: 0;
+      }
+    }
+    .request__input-wrapper{
+      &::after{
+        width: 100%;
+        left: 0;
+      }
+      &::before{
+        right: 10px;
+      }
 
+      position: relative;
+      padding: 0;
+      margin-bottom: 0;
+      @media screen and (min-width: $lg-width){
+        max-width: 265px;
+        margin-right: 20px;
+      }
+      label{
+        position: absolute;
+        left: 0;
+        bottom: 11px;
+        padding: 0;
+      }
+      input{
+        line-height: 100%;
+        padding-bottom: 11px;
+        padding-top: 0;
+        border-bottom: none;
+        &:focus ~ label,
+        &:valid ~ label{
+          opacity: 0;
+        }
+      }
+    }
     button {
       width: 40px;
       height: 40px;
       border: none;
       outline: none;
       background: url("../img/footer/submit-button.svg") center / contain no-repeat;
+      transition: transform .25s;
+      margin-left: 10px;
+      @media screen and (min-width: $lg-width){
+        margin: 0;
+      }
+      &:hover{
+        transform: translateY(-5px);
+      }
     }
 
   }
@@ -190,5 +250,14 @@
       }
     }
   }
-
+  &__copy{
+    font-weight: normal!important;
+    font-size: 12px!important;
+    color: #8FA1BF;
+    margin-bottom: 0!important;
+    width: 100%;
+    @media screen and (min-width: $lg-width){
+      text-align: right!important;
+    }
+  }
 }

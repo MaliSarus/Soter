@@ -172,21 +172,21 @@ const feedbackSliderInit = () => {
 
 $(window).on('resize', function () {
 
-    if (isSet($('.clip-and-go'))) {
-        if ($(window).width() < 992 && !(isSet($('.clip-and-go .desktop')))) {
-            $('.clip-and-go__block').each(function () {
-                const image = $(this).find('.clip-and-go__image');
-                const contentToPrepend = $(this).find('.clip-and-go__content button');
+    if (isSet($('.products'))) {
+        if ($(window).width() < 992 && !(isSet($('.products .desktop')))) {
+            $('.products__block').each(function () {
+                const image = $(this).find('.products__image');
+                const contentToPrepend = $(this).find('.products__content button');
                 image.parent().addClass('desktop');
                 image.detach().insertBefore(contentToPrepend);
             });
-        } else if($(window).width() >= 992 && isSet($('.clip-and-go .desktop'))){
-            $('.clip-and-go__block').each(function () {
+        } else if($(window).width() >= 992 && isSet($('.products .desktop'))){
+            $('.products__block').each(function () {
                 const desktopPlace = $(this).find('.desktop');
-                const image = $(this).find('.clip-and-go__image');
+                const image = $(this).find('.products__image');
                 image.detach().appendTo(desktopPlace);
             });
-            $('.clip-and-go .desktop').removeClass('desktop');
+            $('.products .desktop').removeClass('desktop');
         }
     }
     if (isSet($('.successes'))) {
@@ -237,11 +237,11 @@ $(document).ready(function () {
     if (isSet($('.sponsors'))) {
         sponsorsSliderInit();
     }
-    if (isSet($('.clip-and-go'))) {
-        if ($(window).width() < 992 && !(isSet($('.clip-and-go .desktop')))) {
-            $('.clip-and-go__block').each(function () {
-                const image = $(this).find('.clip-and-go__image');
-                const contentToPrepend = $(this).find('.clip-and-go__content button');
+    if (isSet($('.products'))) {
+        if ($(window).width() < 992 && !(isSet($('.products .desktop')))) {
+            $('.products__block').each(function () {
+                const image = $(this).find('.products__image');
+                const contentToPrepend = $(this).find('.products__content button');
                 image.parent().addClass('desktop');
                 image.detach().insertBefore(contentToPrepend);
             })
