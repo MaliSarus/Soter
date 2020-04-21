@@ -11,7 +11,7 @@
                     <div class="swiper-wrapper">
                         <div class="feedback__item swiper-slide">
                             <div class="feedback__image"
-                                 style="background-image: url(./src/assets/img/feedback/user-image.jpg)"></div>
+                                 style="background-image: url(./assets/img/feedback/user-image.jpg)"></div>
                             <div class="feedback__text">
                                 <h3>Vimel Budhev</h3>
                                 <p>Adopting the SoterSpine solution to link-in with one of the problems that we have
@@ -25,7 +25,7 @@
                         </div>
                         <div class="feedback__item swiper-slide">
                             <div class="feedback__image"
-                                 style="background-image: url(./src/assets/img/feedback/2.jpg)"></div>
+                                 style="background-image: url(./assets/img/feedback/2.jpg)"></div>
                             <div class="feedback__text">
                                 <h3>Vimel Budhev</h3>
                                 <p>Adopting the SoterSpine solution to link-in with one of the problems that we have
@@ -39,7 +39,7 @@
                         </div>
                         <div class="feedback__item swiper-slide">
                             <div class="feedback__image"
-                                 style="background-image: url(./src/assets/img/feedback/3.jpg)"></div>
+                                 style="background-image: url(./assets/img/feedback/3.jpg)"></div>
                             <div class="feedback__text">
                                 <h3>Vimel Budhev</h3>
                                 <p>Adopting the SoterSpine solution to link-in with one of the problems that we have
@@ -53,7 +53,7 @@
                         </div>
                         <div class="feedback__item swiper-slide">
                             <div class="feedback__image"
-                                 style="background-image: url(./src/assets/img/feedback/4.jpg)"></div>
+                                 style="background-image: url(./assets/img/feedback/4.jpg)"></div>
                             <div class="feedback__text">
                                 <h3>Vimel Budhev</h3>
                                 <p>Adopting the SoterSpine solution to link-in with one of the problems that we have

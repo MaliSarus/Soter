@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 <header id="header" class="header">
     <div class="container">
         <nav class="header__navbar">
-            <a class="header__logo" href="#"><img src="./src/assets/img/header/logo.svg" alt="Логотип"></a>
+            <a class="header__logo" href="#"><img src="../assets/img/interface/logo.svg" alt="Логотип"></a>
             <button class="hamburger hamburger--emphatic" type="button">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>

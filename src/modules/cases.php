@@ -10,8 +10,8 @@
         <div class="row cases__content">
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15">
                 <div class="cases__item">
-                    <div class="cases__image"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
-                    <div class="cases__image hover"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>
                     <div class="cases__text">
                         <h4>Your title - use h4</h4>
                         <p class="text">Your text - use p</p>
@@ -32,13 +32,13 @@
                             Your text - use p
                         </p>
                     </div>
-                    <a href="#" class="link hover"><b>Learn more</b> <img src="./src/assets/img/cases/arrow.svg" alt=""></a>
+                    <a href="#" class="link hover"><b>Learn more</b> <img src="./assets/img/cases/arrow.svg" alt=""></a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15">
                 <div class="cases__item">
-                    <div class="cases__image"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
-                    <div class="cases__image hover"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>
                     <div class="cases__text">
                         <h4>Your title - use h4</h4>
                         <p class="text">Your text - use p</p>
@@ -59,13 +59,13 @@
                             Your text - use p
                         </p>
                     </div>
-                    <a href="#" class="link hover"><b>Learn more</b> <img src="./src/assets/img/cases/arrow.svg" alt=""></a>
+                    <a href="#" class="link hover"><b>Learn more</b> <img src="./assets/img/cases/arrow.svg" alt=""></a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15">
                 <div class="cases__item">
-                    <div class="cases__image"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
-                    <div class="cases__image hover"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>
                     <div class="cases__text">
                         <h4>Your title - use h4</h4>
                         <p class="text">Your text - use p</p>
@@ -86,13 +86,13 @@
                             Your text - use p
                         </p>
                     </div>
-                    <a href="#" class="link hover"><b>Learn more</b> <img src="./src/assets/img/cases/arrow.svg" alt=""></a>
+                    <a href="#" class="link hover"><b>Learn more</b> <img src="./assets/img/cases/arrow.svg" alt=""></a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15">
                 <div class="cases__item">
-                    <div class="cases__image"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
-                    <div class="cases__image hover"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>
                     <div class="cases__text">
                         <h4>Your title - use h4</h4>
                         <p class="text">Your text - use p</p>
@@ -113,13 +113,13 @@
                             Your text - use p
                         </p>
                     </div>
-                    <a href="#" class="link hover"><b>Learn more</b> <img src="./src/assets/img/cases/arrow.svg" alt=""></a>
+                    <a href="#" class="link hover"><b>Learn more</b> <img src="./assets/img/cases/arrow.svg" alt=""></a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15">
                 <div class="cases__item">
-                    <div class="cases__image"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
-                    <div class="cases__image hover"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>
                     <div class="cases__text">
                         <h4>Your title - use h4</h4>
                         <p class="text">Your text - use p</p>
@@ -140,13 +140,13 @@
                             Your text - use p
                         </p>
                     </div>
-                    <a href="#" class="link hover"><b>Learn more</b> <img src="./src/assets/img/cases/arrow.svg" alt=""></a>
+                    <a href="#" class="link hover"><b>Learn more</b> <img src="./assets/img/cases/arrow.svg" alt=""></a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15">
                 <div class="cases__item">
-                    <div class="cases__image"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
-                    <div class="cases__image hover"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>
                     <div class="cases__text">
                         <h4>Your title - use h4</h4>
                         <p class="text">Your text - use p</p>
@@ -167,13 +167,13 @@
                             Your text - use p
                         </p>
                     </div>
-                    <a href="#" class="link hover"><b>Learn more</b> <img src="./src/assets/img/cases/arrow.svg" alt=""></a>
+                    <a href="#" class="link hover"><b>Learn more</b> <img src="./assets/img/cases/arrow.svg" alt=""></a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15">
                 <div class="cases__item">
-                    <div class="cases__image"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
-                    <div class="cases__image hover"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>
                     <div class="cases__text">
                         <h4>Your title - use h4</h4>
                         <p class="text">Your text - use p</p>
@@ -194,13 +194,13 @@
                             Your text - use p
                         </p>
                     </div>
-                    <a href="#" class="link hover"><b>Learn more</b> <img src="./src/assets/img/cases/arrow.svg" alt=""></a>
+                    <a href="#" class="link hover"><b>Learn more</b> <img src="./assets/img/cases/arrow.svg" alt=""></a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15">
                 <div class="cases__item">
-                    <div class="cases__image"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
-                    <div class="cases__image hover"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>
                     <div class="cases__text">
                         <h4>Your title - use h4</h4>
                         <p class="text">Your text - use p</p>
@@ -221,13 +221,13 @@
                             Your text - use p
                         </p>
                     </div>
-                    <a href="#" class="link hover"><b>Learn more</b> <img src="./src/assets/img/cases/arrow.svg" alt=""></a>
+                    <a href="#" class="link hover"><b>Learn more</b> <img src="./assets/img/cases/arrow.svg" alt=""></a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15">
                 <div class="cases__item">
-                    <div class="cases__image"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
-                    <div class="cases__image hover"><img src="./src/assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
+                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>
                     <div class="cases__text">
                         <h4>Your title - use h4</h4>
                         <p class="text">Your text - use p</p>
@@ -248,7 +248,7 @@
                             Your text - use p
                         </p>
                     </div>
-                    <a href="#" class="link hover"><b>Learn more</b> <img src="./src/assets/img/cases/arrow.svg" alt=""></a>
+                    <a href="#" class="link hover"><b>Learn more</b> <img src="./assets/img/cases/arrow.svg" alt=""></a>
                 </div>
             </div>
         </div>

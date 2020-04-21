@@ -13,16 +13,16 @@
                     <div class="sponsors__content">
                         <div class="swiper-container sponsors__slider">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide sponsors__slide"><img src="./src/assets/img/sponsors/nhs-logo.png"
+                                <div class="swiper-slide sponsors__slide"><img src="./assets/img/sponsors/nhs-logo.png"
                                                                                alt="Лого спонсора"></div>
                                 <div class="swiper-slide sponsors__slide"><img
-                                        src="./src/assets/img/sponsors/innovate-uk-logo.png" alt="Лого спонсора"></div>
+                                        src="./assets/img/sponsors/innovate-uk-logo.png" alt="Лого спонсора"></div>
                                 <div class="swiper-slide sponsors__slide"><img
-                                        src="./src/assets/img/sponsors/curtin-logo.png" alt="Лого спонсора"></div>
+                                        src="./assets/img/sponsors/curtin-logo.png" alt="Лого спонсора"></div>
                                 <div class="swiper-slide sponsors__slide"><img
-                                        src="./src/assets/img/sponsors/csiro-logo.png" alt="Лого спонсора"></div>
+                                        src="./assets/img/sponsors/csiro-logo.png" alt="Лого спонсора"></div>
                                 <div class="swiper-slide sponsors__slide"><img
-                                        src="./src/assets/img/sponsors/mriwa-logo.png" alt="Лого спонсора"></div>
+                                        src="./assets/img/sponsors/mriwa-logo.png" alt="Лого спонсора"></div>
                             </div>
                             <div class="swiper-nav swiper-button-next"></div>
                             <div class="swiper-nav swiper-button-prev"></div>
