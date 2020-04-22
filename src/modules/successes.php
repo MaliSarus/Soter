@@ -15,16 +15,12 @@
             </div>
             <div class="col-12 col-lg-6">
                 <div class="successes__content">
-                    <h3>Your title - use h3</h3>
+                    <h3>The UK’s largest building merchant reduced manual handling injuries by 55%</h3>
                     <p class="text">
-                        Your text - use p
-                    </p>
-                    <p class="text">
-                        Your text - use p
-                    </p>
-                    <h3>Your title - use h3</h3>
-                    <p class="text">
-                        Your text - use p
+                        Course sir people worthy horses add entire suffer. Celebrated delightful an especially
+                        increasing instrument am. Pain son rose more park way that. Uncommonly no it announcing
+                        melancholy an in. Able rent long in do we. Bed uncommonly his discovered for estimating far.
+                        Their saved linen downs tears son add music.
                     </p>
                     <button class="button button_blue successes__button">View all cases</button>
                 </div>

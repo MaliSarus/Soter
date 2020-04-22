@@ -10,6 +10,13 @@
     @media screen and (min-width: $lg-width){
       margin-bottom: 0;
     }
+    &:nth-child(2n){
+      @media screen and (min-width: $lg-width){
+        .products__image{
+
+        }
+      }
+    }
   }
   &__content{
     @media screen and (min-width: $lg-width){

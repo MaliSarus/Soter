@@ -29,11 +29,11 @@
     background: none;
     z-index: 1;
     padding: 0 40px;
-    padding-top: 28px;
+    padding-top: 27px;
     padding-bottom: 22px;
     @media screen and (min-width: $lg-width){
       padding-bottom: 25px;
-      padding-top: 28px;
+      padding-top: 27px;
     }
     &::before{
       position: absolute;
@@ -269,8 +269,8 @@
 
 .invalid{
   font-weight: bold;
-  color: firebrick!important;
+  color: #e92731 !important;
   &::after{
-    background-color: firebrick!important;
+    background-color: #e92731!important;
   }
 }

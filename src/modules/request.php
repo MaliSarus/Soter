@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div class="request__top p-sx-30">
-                    <h2 class="title title_light">Your title - use h2</h2>
+                    <h2 class="title title_light">Leave A Request</h2>
                     <p class="text text_light">One of Our Team Will Contact You</p>
                 </div>
             </div>

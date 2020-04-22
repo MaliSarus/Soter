@@ -279,18 +279,19 @@ $(document).ready(function () {
         }
     }
 
+
     if (isSet($('.request'))) {
         const requestInputs = $('.request__input');
         const phoneInput = $('#request-phone');
         const nameInput = $('#request-name');
-        const mailInput = $('#request-email');
         const companyInput = $('#request-company');
         const messageInput = $('#request-message');
         const requestSubmit = $('.request form button[type="submit"]');
 
+
         requestInputs.on('input', function () {
             if ($(this).is(':valid')) {
-                if (!($(this).is('#request-phone'))) {
+                if (!($(this).is('#request-phone')) || !($(this).is('#request-email'))) {
                     $(this).parent().removeClass('invalid').addClass('valid');
                     $(this).siblings('label').removeClass('invalid').addClass('valid');
                 }
@@ -310,28 +311,36 @@ $(document).ready(function () {
                 event.preventDefault();
             }
         });
-        mailInput.on('blur', function () {
-            if ($(this).val() !== '') {
-                $(this).siblings('label').hide();
+
+        nameInput.on('input',function () {
+            $(this).val($(this).val().replace(/[0-9]/, ''));
+        });
+
+        phoneInput.on('input', function () {
+            if (!(Inputmask.isValid($(this).val(), "+9-(999)-999-9999"))) {
+                // $(this).removeClass('valid').addClass('invalid');
+                $(this).parent().removeClass('valid').addClass('invalid');
+                $(this).siblings('label').removeClass('valid').addClass('invalid');
             } else {
-                $(this).siblings('label').removeAttr('style');
+                // $(this).removeClass('invalid').addClass('valid');
+                $(this).parent().removeClass('invalid').addClass('valid');
+                $(this).siblings('label').removeClass('invalid').addClass('valid');
             }
-        })
+        });
+
         phoneInput.on('focus', function () {
-            setTimeout(function () {
-                phoneInput.inputmask({
-                    "mask": "+9-(999)-999-9999",
-                    showMaskOnHover: false,
-                    showMaskOnFocus: true,
-                    'onincomplete': function () {
-                        phoneInput.inputmask("remove")
-                    },
-                    "oncomplete": function () {
-                        $(this).parent().removeClass('invalid').addClass('valid');
-                        $(this).siblings('label').removeClass('invalid').addClass('valid');
-                    }
-                });
-            }, 700)
+            phoneInput.inputmask({
+                "mask": "+9-(999)-999-9999",
+                showMaskOnHover: false,
+                showMaskOnFocus: true,
+                'onincomplete': function () {
+                    phoneInput.inputmask("remove")
+                },
+                "oncomplete": function () {
+                    $(this).parent().removeClass('invalid').addClass('valid');
+                    $(this).siblings('label').removeClass('invalid').addClass('valid');
+                }
+            });
         });
         phoneInput.on('blur', function () {
             if (!(Inputmask.isValid($(this).val(), "+9-(999)-999-9999"))) {
@@ -349,12 +358,37 @@ $(document).ready(function () {
 
     }
 
+    const pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
+    const mailInput = $('[name="email"]');
+    mailInput.on('input', function () {
+        if ($(this).val().search(pattern) == 0) {
+            $(this).parent().removeClass('invalid').addClass('valid');
+            $(this).siblings('label').removeClass('invalid').addClass('valid');
+        } else {
+            $(this).parent().removeClass('valid').addClass('invalid');
+            $(this).siblings('label').removeClass('valid').addClass('invalid');
+        }
+    });
+    mailInput.on('blur', function () {
+        if ($(this).val() !== '') {
+            $(this).siblings('label').hide();
+            if ($(this).val().search(pattern) == 0) {
+                $(this).parent().removeClass('invalid').addClass('valid');
+                $(this).siblings('label').removeClass('invalid').addClass('valid');
+            } else {
+                $(this).parent().removeClass('valid').addClass('invalid');
+                $(this).siblings('label').removeClass('valid').addClass('invalid');
+            }
+        } else {
+            $(this).siblings('label').removeAttr('style');
+        }
 
+    });
     if ($(window).width() >= 992) {
         const footerSocials = $('.footer__socials').data('mobile', $('.footer__socials').parent().attr('class'))
         footerSocials.detach().appendTo('.footer__left');
-
     }
+
 });
 
 

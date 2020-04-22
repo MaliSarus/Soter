@@ -2,7 +2,7 @@
     <div class="container-fluid container-lg">
         <div class="row">
             <div class="col-12 feedback__top with-dots">
-                <h2 class="title title_dark">Your title - use h2</h2>
+                <h2 class="title title_dark">What Our Clients Are Saying About Us</h2>
             </div>
         </div>
         <div class="row feedback__block">

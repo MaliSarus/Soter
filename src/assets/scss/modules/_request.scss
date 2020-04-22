@@ -49,6 +49,7 @@
     }
     p{
       @media screen and (min-width: $md-width){
+        font-weight: bold;
         font-size: 20px;
       }
     }

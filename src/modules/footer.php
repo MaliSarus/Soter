@@ -9,7 +9,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-5">
                 <div class="footer__nav">
                     <ul>
                         <li><a href="#">Products</a></li>
@@ -25,7 +25,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-12 col-lg-3">
+            <div class="col-12 col-lg-4">
                 <div class="footer__contacts">
                     <p>
                         Soter Analytics LTD
@@ -50,7 +50,7 @@
                 <p>Subscribe to our newsletter</p>
                 <form action="#">
                     <div class="request__input-wrapper request__mail">
-                        <input type="email" id="footer-mail" name="request-mail" required>
+                        <input type="email" id="footer-mail" name="email" required>
                         <label for="footer-mail">EMAIL</label>
                     </div>
                     <button type="submit"></button>

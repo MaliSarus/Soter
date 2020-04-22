@@ -28,6 +28,7 @@
       line-height: 140%;
       @media screen and (min-width: $md-width){
         font-size: 25px;
+        max-width: 505px;
         line-height: 140%;
       }
     }
@@ -35,6 +36,7 @@
       margin-top: 13px;
       margin-bottom: 31px;
       @media screen and (min-width: $md-width){
+        max-width: 505px;
         font-size: 16px;
         line-height: 160%;
         margin-top:25px;
@@ -43,11 +45,12 @@
     }
   }
   &__button{
-    width: 100%;
+    width: calc(100% - 20px);
+    margin: 0 auto;
     margin-top: 34px;
     @media screen and (min-width: $md-width){
-      margin: 0 auto;
       margin-top: 42px;
+      width: 100%;
       max-width: 266px;
     }
     @media screen and (min-width: $lg-width){

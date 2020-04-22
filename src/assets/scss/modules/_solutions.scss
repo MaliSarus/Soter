@@ -21,14 +21,10 @@
    }
  }
   &__bottom{
-
     margin-bottom: -26px;
     @media screen and (min-width: $md-width){
       margin: 0 -15px;
       margin-bottom: -26px;
-    }
-    >div{
-
     }
   }
   &__item{
@@ -57,13 +53,15 @@
     border-radius: 3px;
     width: calc(100% - 16px * 2);
     box-sizing: border-box;
-    padding: 16px 24px;
+    padding: 16px 19px;
     position: relative;
     margin: -30px auto 0 auto;
     flex-grow: 1;
+    text-align: center;
     @media screen and (min-width: $md-width){
       margin-top: -15px;
-      padding-left: 30px;
+      text-align: left;
+      padding: 17px 19px 17px 30px;
     }
     h4{
       font-size: 14px;

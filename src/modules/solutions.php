@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12 solutions__top with-dots">
-                <h2 class="title title_dark">Your Title - Use h2</h2>
-                <p class="text">Your descriprion - use p</p>
+                <h2 class="title title_dark">The Worlds First End-to-End Ergonomic Training Solution</h2>
+                <p class="text">We are empowering organizations to prevent ergonomic injuries in the workplace by providing them with valuable insights on injury risk and allowing them to continuously improve the health and safety of the entire workforce</p>
             </div>
         </div>
         <div class="row solutions__bottom">
@@ -11,7 +11,7 @@
                 <article class="solutions__item">
                     <div class="solutions__image" style="background-image: url(./assets/img/solutions/1.png)"></div>
                     <div class="solutions__text">
-                        <h4>Your text - use h4</h4>
+                        <h4>Back and shoulder feedback from the wearable device</h4>
                     </div>
                 </article>
             </div>
@@ -19,7 +19,7 @@
                 <article class="solutions__item">
                     <div class="solutions__image" style="background-image: url(./assets/img/solutions/2.png)"></div>
                     <div class="solutions__text">
-                        <h4>Your text - use h4</h4>
+                        <h4>Highly personalized coaching via the app</h4>
                     </div>
                 </article>
             </div>
@@ -27,7 +27,7 @@
                 <article class="solutions__item">
                     <div class="solutions__image" style="background-image: url(./assets/img/solutions/3.png)"></div>
                     <div class="solutions__text">
-                        <h4>Your text - use h4</h4>
+                        <h4>Data-driven workplace improvement</h4>
                     </div>
                 </article>
             </div>

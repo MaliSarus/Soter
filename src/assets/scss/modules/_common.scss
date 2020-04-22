@@ -101,22 +101,22 @@ ul{
 .container{
   padding: 0 20px;
   @media (min-width: 576px) {
-    max-width: calc(540px + (1190px - 1140px))
+    max-width: calc(540px + (1210px - 1140px))
   }
 
   // Средние девайсы («таблетки», >= 768px)
   @media (min-width: 768px) {
-    max-width: calc(760px + (1190px - 1140px))
+    max-width: calc(760px + (1210px - 1140px))
   }
 
   // Большие девайсы (десктопы, >= 992px)
   @media (min-width: 992px) {
-    max-width: calc(960px + (1190px - 1140px))
+    max-width: calc(960px + (1210px - 1140px))
   }
 
   // Экстрабольшие девайсы (большие десктопы, >= 1200px)
   @media (min-width: 1200px) {
-    max-width: calc(1140px + (1190px - 1140px));
+    max-width: calc(1140px + (1210px - 1140px));
   }
 }
 

@@ -1,6 +1,5 @@
 .footer {
   padding-top: 36px;
-  padding-bottom: 27px;
   background: $main-color;
   color: white;
   @media screen and (min-width: $lg-width) {
@@ -104,6 +103,9 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 19px;
+    @media screen and (min-width: $lg-width) {
+      padding-left: 59px;
+    }
 
     > ul {
       flex-basis: 100%;
@@ -118,6 +120,7 @@
       @media screen and (min-width: $lg-width) {
         flex-basis: 50%;
         margin-bottom: 0;
+        max-width: 197px;
       }
 
       > li {
@@ -153,7 +156,7 @@
 
           @media screen and (min-width: $lg-width) {
             font-size: 14px;
-            line-height: 13px;
+            line-height: 15px;
             margin: unset;
           }
         }
@@ -165,6 +168,7 @@
     text-align: center;
     @media screen and (min-width: $lg-width) {
       text-align: left;
+      padding-left: 77px;
     }
 
     > p {
@@ -214,12 +218,15 @@
     }
 
     img {
-      height: 100%;
       margin-right: 6px;
       transition: filter .5s;
+      width: 14px;
+      height: 10px;
 
       @media screen and (min-width: $lg-width) {
         margin-right: 10px;
+        width: auto;
+        height: auto;
       }
     }
   }
@@ -227,8 +234,12 @@
   &__socials {
     text-align: center;
     margin-top: 27px;
+    padding-bottom: 27px;
+    border-bottom: 1px solid #1D3357;
     @media screen and (min-width: $lg-width) {
       text-align: left;
+      padding-bottom: 0;
+      border-bottom: none;
     }
 
     &-item {
