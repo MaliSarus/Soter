@@ -67,9 +67,10 @@
     &-link{
       color: white;
       font-weight: 500;
-      padding: 15px 0;
+      padding: calc(29px / 2) 0;
       display: block;
       font-size: 18px;
+      line-height: 100%;
       @media screen and (min-width: $lg-width){
         font-size: 16px;
         padding-top: 43px;
@@ -126,10 +127,12 @@
       display: none;
     }
     @media screen and (min-width: $lg-width){
+      padding: 0 34px;
       padding-top: 22px;
-      padding-bottom: 18px;
+      padding-bottom: 17px;
       width: auto;
       margin-left: 68px;
+      font-size: 14px;
     }
   }
 }

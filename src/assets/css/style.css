@@ -249,7 +249,7 @@ button {
 .button {
   text-decoration: none;
   display: block;
-  padding: 19px 40px;
+  padding: 19px 38px;
   padding-top: 26px;
   border-radius: 3px;
   border: none;
@@ -267,7 +267,7 @@ button {
 
 @media screen and (min-width: 992px) {
   .button {
-    padding: 23px 40px;
+    padding: 23px 38px;
     padding-top: 26px;
     font-size: 16px;
   }
@@ -285,6 +285,7 @@ button {
   position: relative;
   background: none;
   z-index: 1;
+  padding: 0 40px;
   padding-top: 28px;
   padding-bottom: 22px;
 }
@@ -595,6 +596,23 @@ button {
 
 .hidden {
   overflow: hidden;
+}
+
+.valid {
+  color: springgreen !important;
+}
+
+.valid::after {
+  background-color: springgreen !important;
+}
+
+.invalid {
+  font-weight: bold;
+  color: firebrick !important;
+}
+
+.invalid::after {
+  background-color: firebrick !important;
 }
 
 /*!
@@ -2420,9 +2438,10 @@ button {
 .header__navbar-link {
   color: white;
   font-weight: 500;
-  padding: 15px 0;
+  padding: calc(29px / 2) 0;
   display: block;
   font-size: 18px;
+  line-height: 100%;
 }
 
 @media screen and (min-width: 992px) {
@@ -2500,10 +2519,12 @@ button {
 
 @media screen and (min-width: 992px) {
   .header .button {
+    padding: 0 34px;
     padding-top: 22px;
-    padding-bottom: 18px;
+    padding-bottom: 17px;
     width: auto;
     margin-left: 68px;
+    font-size: 14px;
   }
 }
 
@@ -2711,8 +2732,8 @@ button {
 
 @media screen and (min-width: 992px) {
   .sponsors__head::before {
-    left: -44px;
-    top: -53px;
+    left: -67px;
+    top: -76px;
     width: 23px;
     height: 23px;
   }
@@ -2733,10 +2754,10 @@ button {
 
 @media screen and (min-width: 992px) {
   .sponsors__head::after {
-    left: -18px;
-    top: -27px;
-    width: 23px;
-    height: 23px;
+    left: -40px;
+    top: -49px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -2755,6 +2776,12 @@ button {
 @media screen and (min-width: 992px) {
   .sponsors__head {
     margin-bottom: 68px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sponsors__block {
+    margin: 0 -10px;
   }
 }
 
@@ -2791,6 +2818,7 @@ button {
 }
 
 .sponsors__slider.swiper-container .swiper-slide {
+  width: auto;
   cursor: pointer;
   text-align: center;
   display: -webkit-box;
@@ -2815,7 +2843,7 @@ button {
 
 @media screen and (min-width: 992px) {
   .sponsors__slider.swiper-container .swiper-slide {
-    padding: 0;
+    padding: 0 20px;
   }
 }
 
@@ -2826,8 +2854,17 @@ button {
 }
 
 .sponsors__slider.swiper-container .swiper-slide img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 1200px) {
+  .sponsors__slider.swiper-container .swiper-slide img {
+    width: unset;
+    height: unset;
+  }
 }
 
 .sponsors__slider.swiper-container .swiper-wrapper {
@@ -3025,9 +3062,9 @@ button {
   height: 100%;
   background: url("../img/cases/hover-bg.png") center/cover no-repeat;
   opacity: 0;
-  -webkit-transition: opacity .5s;
-  -o-transition: opacity .5s;
-  transition: opacity .5s;
+  -webkit-transition: opacity .25s;
+  -o-transition: opacity .25s;
+  transition: opacity .25s;
 }
 
 .cases__item::after {
@@ -3041,9 +3078,9 @@ button {
   height: 100%;
   background: rgba(8, 81, 191, 0.8);
   opacity: 0;
-  -webkit-transition: opacity .5s;
-  -o-transition: opacity .5s;
-  transition: opacity .5s;
+  -webkit-transition: opacity .25s;
+  -o-transition: opacity .25s;
+  transition: opacity .25s;
 }
 
 .cases__item:hover {
@@ -3057,13 +3094,14 @@ button {
   -webkit-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
   transform: translateY(-10px);
-  padding: 30px 25px 44px 30px;
-}
-
-@media screen and (min-width: 768px) {
-  .cases__item:hover {
-    padding: 45px 37px 57px 37px;
-  }
+  -webkit-animation-name: change-paddings;
+  animation-name: change-paddings;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .cases__item:hover::before {
@@ -3075,22 +3113,25 @@ button {
 }
 
 .cases__item:hover > div {
-  opacity: 0;
-  position: absolute;
-  -webkit-transition: opacity .5s;
-  -o-transition: opacity .5s;
-  transition: opacity .5s;
+  position: static;
+  -webkit-animation-name: hide-regular;
+  animation-name: hide-regular;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .cases__item:hover .hover {
   position: relative;
   z-index: 2;
-  max-height: 500px;
   display: block;
-  opacity: 1;
-  -webkit-transition: opacity .5s 1s, max-height 2s , position .1s 2s;
-  -o-transition: opacity .5s 1s, max-height 2s , position .1s 2s;
-  transition: opacity .5s 1s, max-height 2s , position .1s 2s;
+  -webkit-animation-name: show-hover;
+  animation-name: show-hover;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .cases__item:hover .link.hover {
@@ -3189,6 +3230,87 @@ button {
   .cases__button {
     margin-top: 57px;
     width: auto;
+  }
+}
+
+@-webkit-keyframes hide-regular {
+  from {
+    opacity: 1;
+    max-height: 500px;
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+  }
+}
+
+@keyframes hide-regular {
+  from {
+    opacity: 1;
+    max-height: 500px;
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+  }
+}
+
+@-webkit-keyframes show-hover {
+  from {
+    min-height: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+@keyframes show-hover {
+  from {
+    min-height: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+@-webkit-keyframes change-paddings {
+  from {
+    padding: 30px 25px 25px 30px;
+  }
+  to {
+    padding: 30px 25px 44px 30px;
+  }
+}
+
+@keyframes change-paddings {
+  from {
+    padding: 30px 25px 25px 30px;
+  }
+  to {
+    padding: 30px 25px 44px 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  @-webkit-keyframes change-paddings {
+    from {
+      padding: 62px 36px 35px 36px;
+    }
+    to {
+      padding: 45px 37px 57px 37px;
+    }
+  }
+  @keyframes change-paddings {
+    from {
+      padding: 62px 36px 35px 36px;
+    }
+    to {
+      padding: 45px 37px 57px 37px;
+    }
   }
 }
 
@@ -3812,7 +3934,6 @@ button {
 .request__input {
   background: none;
   border: none;
-  border-bottom: 2px solid #8ECDFF;
   outline: none;
   border-radius: unset;
   padding-left: 0;
@@ -3823,7 +3944,6 @@ button {
 .request__input:focus {
   background: none;
   border: none;
-  border-bottom: 2px solid #8ECDFF;
   outline: none;
   border-radius: unset;
   -webkit-box-shadow: none;
@@ -3842,11 +3962,15 @@ button {
   font-size: 10px;
   line-height: 155.5%;
   text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 10px;
 }
 
 @media screen and (min-width: 992px) {
   .request__bottom > p {
     text-align: left;
+    padding: 0;
     font-size: 12px;
     margin-top: 24px;
   }
@@ -3965,7 +4089,7 @@ button {
   height: 40px;
   border: none;
   outline: none;
-  background: url("../img/footer/submit-button.svg") center/contain no-repeat;
+  background: url("../img/footer/submit-button.svg") 50% 100%/contain no-repeat;
   -webkit-transition: -webkit-transform .25s;
   transition: -webkit-transform .25s;
   -o-transition: transform .25s;

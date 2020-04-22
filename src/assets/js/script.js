@@ -1,7 +1,15 @@
-
 function isSet(element) {
     return element.length !== 0;
 }
+
+function validation(element) {
+    if (element === '') {
+        element.css({
+            color: 'red'
+        });
+        console.log(element.siblings());
+    }
+};
 
 const hamburgerInit = () => {
     const hamburger = $('.hamburger');
@@ -59,6 +67,12 @@ const sponsorsSliderInit = () => {
             prevEl: '.swiper-button-prev',
         },
         on: {
+            resize: function () {
+                if ($(window).width() >= 1200) {
+                    this.destroy(false, true);
+                    this.init();
+                }
+            },
             slideNextTransitionStart: function () {
                 const paginationWrapper = $('.pagination-wrapper');
                 paginationWrapper.addClass('transition-next');
@@ -77,7 +91,7 @@ const sponsorsSliderInit = () => {
         breakpoints: {
             576: {
                 slidesPerView: 2,
-                spaceBetween: 40,
+                // spaceBetween: 40,
             },
             768: {
                 slidesPerView: 3,
@@ -86,10 +100,10 @@ const sponsorsSliderInit = () => {
             },
             992: {
                 slidesPerView: 4,
-                spaceBetween: 50,
+                // spaceBetween: 50,
             },
             1200: {
-                slidesPerView: 5,
+                slidesPerView: 'auto',
                 // spaceBetween: 115,
             }
         }
@@ -118,19 +132,18 @@ const feedbackSliderInit = () => {
         slidesPerView: 1,
         spaceBetween: 9,
         direction: 'horizontal',
-        centeredSlides:true,
+        centeredSlides: true,
         loop: true,
         on: {
-            resize: function(){
-              if ($(window).width() >= 992){
-                  this.destroy(false,true);
-                  $('.feedback__slider > .swiper-wrapper').css({
-                      flexWrap: 'wrap'
-                  })
-              }
-              else{
-                  this.init();
-              }
+            resize: function () {
+                if ($(window).width() >= 992) {
+                    this.destroy(false, true);
+                    $('.feedback__slider > .swiper-wrapper').css({
+                        flexWrap: 'wrap'
+                    })
+                } else {
+                    this.init();
+                }
             },
             slideNextTransitionStart: function () {
                 const paginationWrapper = $('.pagination-wrapper');
@@ -172,6 +185,7 @@ const feedbackSliderInit = () => {
 
 $(window).on('resize', function () {
 
+
     if (isSet($('.products'))) {
         if ($(window).width() < 992 && !(isSet($('.products .desktop')))) {
             $('.products__block').each(function () {
@@ -180,7 +194,7 @@ $(window).on('resize', function () {
                 image.parent().addClass('desktop');
                 image.detach().insertBefore(contentToPrepend);
             });
-        } else if($(window).width() >= 992 && isSet($('.products .desktop'))){
+        } else if ($(window).width() >= 992 && isSet($('.products .desktop'))) {
             $('.products__block').each(function () {
                 const desktopPlace = $(this).find('.desktop');
                 const image = $(this).find('.products__image');
@@ -197,7 +211,7 @@ $(window).on('resize', function () {
                 video.parent().addClass('desktop');
                 video.detach().insertBefore(contentToPrepend);
             });
-        } else if($(window).width() >= 992 && isSet($('.successes .desktop'))){
+        } else if ($(window).width() >= 992 && isSet($('.successes .desktop'))) {
             $('.successes__block').each(function () {
                 const desktopPlace = $(this).find('.desktop');
                 const video = $(this).find('.successes__video');
@@ -210,23 +224,22 @@ $(window).on('resize', function () {
         if ($(window).width() < 992) {
             $('.feedback__slider > .swiper-wrapper').removeAttr('style');
             feedbackSliderInit();
-        }
-        else{
-            $('.feedback__slider > .swiper-wrapper').css('flex-wrap','wrap')
+        } else {
+            $('.feedback__slider > .swiper-wrapper').css('flex-wrap', 'wrap')
         }
     }
     if ($(window).width() < 992) {
-        if($('.footer__socials').data('mobile') !== undefined) {
+        if ($('.footer__socials').data('mobile') !== undefined) {
             const footerSocialsPlace = '.' + $('.footer__socials').data('mobile');
             const footerSocials = $('.footer__socials');
             footerSocials.detach().appendTo(footerSocialsPlace);
         }
     }
-    if ($(window).width() >= 992 && $('.footer__socials').data('mobile') === undefined ){
-        const footerSocials  = $('.footer__socials').data('mobile',$('.footer__socials').parent().attr('class'));
+    if ($(window).width() >= 992 && $('.footer__socials').data('mobile') === undefined) {
+        const footerSocials = $('.footer__socials').data('mobile', $('.footer__socials').parent().attr('class'));
         footerSocials.detach().appendTo('.footer__left');
     }
-    if($(window).width() >= 992 && $('.footer__socials').data('mobile') !== undefined){
+    if ($(window).width() >= 992 && $('.footer__socials').data('mobile') !== undefined) {
         $('.footer__socials').detach().appendTo('.footer__left');
     }
 });
@@ -261,14 +274,84 @@ $(document).ready(function () {
         if ($(window).width() < 992) {
             $('.feedback__slider > .swiper-wrapper').removeAttr('style');
             feedbackSliderInit();
-        }
-        else{
-            $('.feedback__slider > .swiper-wrapper').css('flex-wrap','wrap')
+        } else {
+            $('.feedback__slider > .swiper-wrapper').css('flex-wrap', 'wrap')
         }
     }
 
-    if($(window).width() >= 992){
-        const footerSocials  = $('.footer__socials').data('mobile',$('.footer__socials').parent().attr('class'))
+    if (isSet($('.request'))) {
+        const requestInputs = $('.request__input');
+        const phoneInput = $('#request-phone');
+        const nameInput = $('#request-name');
+        const mailInput = $('#request-email');
+        const companyInput = $('#request-company');
+        const messageInput = $('#request-message');
+        const requestSubmit = $('.request form button[type="submit"]');
+
+        requestInputs.on('input', function () {
+            if ($(this).is(':valid')) {
+                if (!($(this).is('#request-phone'))) {
+                    $(this).parent().removeClass('invalid').addClass('valid');
+                    $(this).siblings('label').removeClass('invalid').addClass('valid');
+                }
+            } else {
+                $(this).parent().removeClass('valid').addClass('invalid');
+                $(this).siblings('label').removeClass('valid').addClass('invalid');
+            }
+        });
+        requestSubmit.on('click', function (event) {
+            let failFlag = 0;
+            requestInputs.each(function () {
+                if ($(this).hasClass('invalid')) {
+                    failFlag = 1
+                }
+            });
+            if (failFlag == 1) {
+                event.preventDefault();
+            }
+        });
+        mailInput.on('blur', function () {
+            if ($(this).val() !== '') {
+                $(this).siblings('label').hide();
+            } else {
+                $(this).siblings('label').removeAttr('style');
+            }
+        })
+        phoneInput.on('focus', function () {
+            setTimeout(function () {
+                phoneInput.inputmask({
+                    "mask": "+9-(999)-999-9999",
+                    showMaskOnHover: false,
+                    showMaskOnFocus: true,
+                    'onincomplete': function () {
+                        phoneInput.inputmask("remove")
+                    },
+                    "oncomplete": function () {
+                        $(this).parent().removeClass('invalid').addClass('valid');
+                        $(this).siblings('label').removeClass('invalid').addClass('valid');
+                    }
+                });
+            }, 700)
+        });
+        phoneInput.on('blur', function () {
+            if (!(Inputmask.isValid($(this).val(), "+9-(999)-999-9999"))) {
+
+                // $(this).removeClass('valid').addClass('invalid');
+                $(this).parent().removeClass('valid').addClass('invalid');
+                $(this).siblings('label').removeClass('valid').addClass('invalid');
+            } else {
+                // $(this).removeClass('invalid').addClass('valid');
+                $(this).parent().removeClass('invalid').addClass('valid');
+                $(this).siblings('label').removeClass('invalid').addClass('valid');
+            }
+        })
+
+
+    }
+
+
+    if ($(window).width() >= 992) {
+        const footerSocials = $('.footer__socials').data('mobile', $('.footer__socials').parent().attr('class'))
         footerSocials.detach().appendTo('.footer__left');
 
     }
