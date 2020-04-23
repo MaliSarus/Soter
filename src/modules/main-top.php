@@ -1,14 +1,15 @@
 <section class="main-top" style="background-image: url(./assets/img/main-top/bg-image.png)">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-8">
+            <div class="col-12 col-lg-9">
                 <div class="main-top__block">
                     <div class="main-top__text">
                         <h1 class="main-top__title title_light">
-                            Main title with <span class="text text_accent">accent color</span>
+                            Preventing ergonomic injury <span class="text text_accent">​in the Workplace</span>
                         </h1>
                         <p class="main-top__desc text text_light">
-                            You text for description something
+                            We develop AI-driven wearable solutions and personalized coaching mobile app to improve
+                            ergonomic safety and reduce hazardous movements
                         </p>
                     </div>
                     <div class="main-top__nav">

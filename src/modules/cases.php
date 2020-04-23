@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="cases__head">
-                    <h2 class="title title_dark">Your title - use h2</h2>
+                    <h2 class="title title_dark">Use Cases</h2>
                 </div>
             </div>
         </div>
@@ -198,7 +198,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <button class="button button_blue cases__button">View all cases</button>
+                <a href="#" class="button button_blue cases__button">View all cases</a>
             </div>
         </div>
 </section>

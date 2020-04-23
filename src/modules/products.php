@@ -13,7 +13,7 @@
                         The wearable device, personal mobile app & tutorials for workers to self-correct their movements
                         in real-time. All the data is also accessible via the analytics dashboard.
                     </p>
-                    <button class="button button_blue">explore sotercoach</button>
+                    <a href="#" class="button button_blue">explore sotercoach</a>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
                         Personal app-free solution for worksites where is no opportunity to use mobile phones. All data
                         is stored, synchronized & analyzed in the communal device management app.
                     </p>
-                    <button class="button button_blue button_lower">explore clip&go</button>
+                    <a href="#" class="button button_blue button_lower">explore clip&go</a>
                 </div>
 
             </div>

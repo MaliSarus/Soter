@@ -9,10 +9,22 @@
   &__logo{
     position: relative;
     z-index: 11;
+    img{
+      width: 151px;
+      height: 23px;
+      @media screen and (min-width: $lg-width ){
+        width: auto;
+        height: auto;
+      }
+    }
   }
   .hamburger{
     position: relative;
     z-index: 11;
+    @media screen and (max-width: $lg-width){
+      padding: 0;
+      padding-top: 5px;
+    }
   }
   .hamburger.is-active ~ &__navbar-nav{
     right: 0;
@@ -20,10 +32,15 @@
   &__navbar{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 16px;
     //margin: 0 -30px;
     box-sizing: border-box;
     //padding: 0 20px;
+    @media screen and (min-width: $lg-width){
+      padding-top: 0;
+      align-items: center;
+    }
     &-nav{
       z-index: 10;
       display: flex;

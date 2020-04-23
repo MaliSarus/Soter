@@ -4,7 +4,7 @@
             <div class="col-12">
                 <div class="sponsors__block">
                     <div class="sponsors__head">
-                        <h2 class="sponsors__title title title_dark">Your Title</h2>
+                        <h2 class="sponsors__title title title_dark">Trusted by Industry Leaders</h2>
                         <div class="arrows">
                             <div class="arrow arrow-prev"></div>
                             <div class="arrow arrow-next"></div>

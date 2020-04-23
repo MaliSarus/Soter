@@ -94,6 +94,9 @@
     @media screen and (min-width: $md-width){
       font-size: 21px;
     }
+    @media screen and (min-width: $lg-width){
+      max-width: 644px;
+    }
   }
   &__nav{
     display: flex;

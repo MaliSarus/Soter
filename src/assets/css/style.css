@@ -2403,9 +2403,28 @@ button {
   z-index: 11;
 }
 
+.header__logo img {
+  width: 151px;
+  height: 23px;
+}
+
+@media screen and (min-width: 992px) {
+  .header__logo img {
+    width: auto;
+    height: auto;
+  }
+}
+
 .header .hamburger {
   position: relative;
   z-index: 11;
+}
+
+@media screen and (max-width: 992px) {
+  .header .hamburger {
+    padding: 0;
+    padding-top: 5px;
+  }
 }
 
 .hamburger.is-active ~ .header__navbar-nav {
@@ -2419,11 +2438,21 @@ button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 16px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+@media screen and (min-width: 992px) {
+  .header__navbar {
+    padding-top: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 }
 
 .header__navbar-nav {
@@ -2711,6 +2740,12 @@ button {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .main-top__desc {
+    max-width: 644px;
+  }
+}
+
 .main-top__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2861,6 +2896,7 @@ button {
     text-align: left;
     position: static;
     z-index: unset;
+    max-width: 780px;
   }
 }
 
@@ -3475,19 +3511,19 @@ button {
   }
 }
 
-.products__content > button {
+.products__content > a {
   width: 100%;
 }
 
 @media screen and (min-width: 768px) {
-  .products__content > button {
+  .products__content > a {
     margin: 0 auto;
     max-width: 325px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .products__content > button {
+  .products__content > a {
     margin: 0;
   }
 }
