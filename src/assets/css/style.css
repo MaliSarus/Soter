@@ -3000,6 +3000,12 @@ button {
   max-width: 1090px;
 }
 
+@media screen and (min-width: 768px) {
+  .solutions__top h2 {
+    line-height: 120%;
+  }
+}
+
 .solutions__top p {
   max-width: 920px;
   margin: 0 auto;
@@ -3085,9 +3091,15 @@ button {
 
 .solutions__text h4 {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 160%;
   color: #11274B;
+}
+
+@media screen and (min-width: 768px) {
+  .solutions__text h4 {
+    font-size: 18px;
+  }
 }
 
 .cases {
