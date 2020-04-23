@@ -104,10 +104,14 @@ const sponsorsSliderInit = () => {
             },
             1200: {
                 slidesPerView: 'auto',
+                // loopedSlides: 1,
                 // spaceBetween: 115,
             }
         }
     });
+    setInterval(function(){
+        mySwiper.update(true);
+    }, 1000);
     const arrowPrev = $('.sponsors__head .arrow-prev');
     const arrowNext = $('.sponsors__head .arrow-next');
     arrowPrev.on('click', function () {
