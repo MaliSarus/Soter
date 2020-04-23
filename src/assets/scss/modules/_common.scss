@@ -45,7 +45,7 @@ h1{
   font-weight: bold;
   font-size: 29px;
   //line-height: 119.2%;
-  @media (min-width: 992px) {
+  @media (min-width: $md-width) {
     font-size: 64px;
     line-height: 71px !important;
   }
@@ -98,7 +98,43 @@ ul{
 .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
   padding: 0 20px;
 }
-.container{
+.container-lg{
+  @media (min-width: 992px) {
+    max-width: calc(960px + (1210px - 1140px))
+  }
+  @media (min-width: 1200px) {
+    max-width: calc(1140px + (1210px - 1140px));
+  }
+}
+
+.container-md{
+  @media (min-width: 768px) {
+    max-width: calc(760px + (1210px - 1140px))
+  }
+  @media (min-width: 992px) {
+    max-width: calc(960px + (1210px - 1140px))
+  }
+  @media (min-width: 1200px) {
+    max-width: calc(1140px + (1210px - 1140px));
+  }
+}
+
+.container-sm{
+  @media (min-width: 576px) {
+    max-width: calc(540px + (1210px - 1140px))
+  }
+  @media (min-width: 768px) {
+    max-width: calc(760px + (1210px - 1140px))
+  }
+  @media (min-width: 992px) {
+    max-width: calc(960px + (1210px - 1140px))
+  }
+  @media (min-width: 1200px) {
+    max-width: calc(1140px + (1210px - 1140px));
+  }
+}
+
+.container, .container-xl{
   padding: 0 20px;
   @media (min-width: 576px) {
     max-width: calc(540px + (1210px - 1140px))

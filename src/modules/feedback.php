@@ -27,14 +27,11 @@
                             <div class="feedback__image"
                                  style="background-image: url(./assets/img/feedback/2.jpg)"></div>
                             <div class="feedback__text">
-                                <h3>Vimel Budhev</h3>
-                                <p>Adopting the SoterSpine solution to link-in with one of the problems that we have
-                                    within
-                                    the business, [manual handling], and employing this device to help eliminate, reduce
-                                    and
-                                    also teach people the right way of doing manual handling has been the perfect
-                                    marriage</p>
-                                <p><b>Head of Health, Safety and Environment, Travis Perkins</b></p>
+                                <h3>Lincoln Butler</h3>
+                                <p>We have seen what fitness trackers and smartwatches have done for engaging people in
+                                    their own general well-being and fitness, and I expect this type of simple,
+                                    effective device will help drive more preventative behaviour at work</p>
+                                <p><b>Swissport General Manager Systems and Safety Pacific</b></p>
                             </div>
                         </div>
                         <div class="feedback__item swiper-slide">

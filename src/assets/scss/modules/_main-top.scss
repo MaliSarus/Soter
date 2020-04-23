@@ -91,7 +91,7 @@
   &__desc{
     font-size: 14px;
     font-weight: 500;
-    @media screen and (min-width: $lg-width){
+    @media screen and (min-width: $md-width){
       font-size: 21px;
     }
   }
@@ -115,6 +115,12 @@
         &:last-child{
           margin-right: 0;
         }
+      }
+    }
+    .button_blue{
+      @media screen and (min-width: $lg-width){
+        width: 100%;
+        max-width: 213px;
       }
     }
   }

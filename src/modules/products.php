@@ -25,12 +25,12 @@
                         Personal app-free solution for worksites where is no opportunity to use mobile phones. All data
                         is stored, synchronized & analyzed in the communal device management app.
                     </p>
-                    <button class="button button_blue">explore sotercoach</button>
+                    <button class="button button_blue button_lower">explore clip&go</button>
                 </div>
 
             </div>
             <div class="col-12 col-lg-6">
-                <div class="products__image">
+                <div class="products__image w-10">
                     <img src="./assets/img/products/2.png" alt="">
                 </div>
             </div>

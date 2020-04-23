@@ -28,10 +28,11 @@
     position: relative;
     background: none;
     z-index: 1;
-    padding: 0 40px;
+    padding: 0;
     padding-top: 27px;
     padding-bottom: 22px;
     @media screen and (min-width: $lg-width){
+      padding: 0;
       padding-bottom: 25px;
       padding-top: 27px;
     }
