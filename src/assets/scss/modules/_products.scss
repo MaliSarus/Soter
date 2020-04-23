@@ -2,6 +2,11 @@
   background: linear-gradient(90deg, #F6FAFF 0%, #EBF4FF 100%);
   padding-top: 52px;
   padding-bottom: 58px;
+  overflow: hidden;
+  @media screen and (min-width: $lg-width){
+    padding-top: 119px;
+    padding-bottom: 108px;
+  }
   &__block{
     margin-bottom: 70px;
     &:last-child{
@@ -91,8 +96,9 @@
     }
     &.w-10{
       img{
-        max-width: none;
-        width: calc(100% + 8px);
+        @media screen and (min-width: $lg-width){
+          width: auto;
+        }
       }
     }
   }

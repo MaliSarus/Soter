@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 successes__top with-dots">
-                <h2 class="title title_dark">Your Title - Use h2</h2>
+                <h2 class="title title_dark">Success Is The Number of Healthy Workers</h2>
             </div>
         </div>
         <div class="row successes__block">
@@ -22,7 +22,7 @@
                         melancholy an in. Able rent long in do we. Bed uncommonly his discovered for estimating far.
                         Their saved linen downs tears son add music.
                     </p>
-                    <button class="button button_blue successes__button">View all cases</button>
+                    <a class="button button_blue successes__button">View all cases</a>
                 </div>
             </div>
         </div>

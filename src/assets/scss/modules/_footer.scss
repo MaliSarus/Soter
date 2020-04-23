@@ -1,5 +1,6 @@
 .footer {
   padding-top: 36px;
+  padding-bottom: 27px;
   background: $main-color;
   color: white;
   @media screen and (min-width: $lg-width) {
@@ -8,15 +9,24 @@
   }
 
   &__top {
-    padding-bottom: 27px;
     @media screen and (min-width: $lg-width) {
       padding-bottom: 60px;
-      border-bottom: 1px solid #1D3357;
+      position: relative;
+      &::after{
+        height: 1px;
+        width: calc(100% - 40px);
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        background: #1D3357;
+        display: block;
+        content: '';
+      }
     }
   }
 
   &__bottom {
-    padding-top: 33px;
+    padding-top: 23px;
     @media screen and (min-width: $lg-width) {
       padding-top: 47px;
     }
@@ -41,6 +51,7 @@
       }
     }
     .request__input-wrapper{
+      flex-basis: unset;
       &::after{
         width: 100%;
         left: 0;

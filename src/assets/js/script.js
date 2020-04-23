@@ -109,7 +109,7 @@ const sponsorsSliderInit = () => {
             }
         }
     });
-    setInterval(function(){
+    setInterval(function () {
         mySwiper.update(true);
     }, 1000);
     const arrowPrev = $('.sponsors__head .arrow-prev');
@@ -194,7 +194,7 @@ $(window).on('resize', function () {
         if ($(window).width() < 992 && !(isSet($('.products .desktop')))) {
             $('.products__block').each(function () {
                 const image = $(this).find('.products__image');
-                const contentToPrepend = $(this).find('.products__content button');
+                const contentToPrepend = $(this).find('.products__content .button');
                 image.parent().addClass('desktop');
                 image.detach().insertBefore(contentToPrepend);
             });
@@ -211,7 +211,7 @@ $(window).on('resize', function () {
         if ($(window).width() < 992 && !(isSet($('.successes .desktop')))) {
             $('.successes__block').each(function () {
                 const video = $(this).find('.successes__video');
-                const contentToPrepend = $(this).find('.successes__content button');
+                const contentToPrepend = $(this).find('.successes__content .button');
                 video.parent().addClass('desktop');
                 video.detach().insertBefore(contentToPrepend);
             });
@@ -258,7 +258,7 @@ $(document).ready(function () {
         if ($(window).width() < 992 && !(isSet($('.products .desktop')))) {
             $('.products__block').each(function () {
                 const image = $(this).find('.products__image');
-                const contentToPrepend = $(this).find('.products__content button');
+                const contentToPrepend = $(this).find('.products__content .button');
                 image.parent().addClass('desktop');
                 image.detach().insertBefore(contentToPrepend);
             })
@@ -268,7 +268,7 @@ $(document).ready(function () {
         if ($(window).width() < 992 && !(isSet($('.successes .desktop')))) {
             $('.successes__block').each(function () {
                 const video = $(this).find('.successes__video');
-                const contentToPrepend = $(this).find('.successes__content button');
+                const contentToPrepend = $(this).find('.successes__content .button');
                 video.parent().addClass('desktop');
                 video.detach().insertBefore(contentToPrepend);
             })
@@ -316,7 +316,7 @@ $(document).ready(function () {
             }
         });
 
-        nameInput.on('input',function () {
+        nameInput.on('input', function () {
             $(this).val($(this).val().replace(/[0-9]/, ''));
         });
 

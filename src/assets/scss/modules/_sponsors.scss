@@ -10,7 +10,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 10px;
     margin-bottom: 40px;
+    @media screen and (min-width: $md-width){
+      margin: 0;
+      margin-bottom: 40px;
+    }
 
     &::before {
       display: block;
@@ -43,8 +48,8 @@
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px;
-      left: 0px;
-      top: -8px;
+      left: 3px;
+      top: -5px;
       z-index: 0;
       @media screen and (min-width: $lg-width) {
         left: -40px;
@@ -93,7 +98,7 @@
     z-index: 0;
     max-height: 125px;
     @media screen and (min-width: $xl-width) {
-      margin: 0 calc(-115px / 2);
+      margin: 0 calc(-120px / 2);
     }
 
     .swiper {
@@ -115,7 +120,7 @@
           padding: 0 20px;
         }
         @media screen and (min-width: $xl-width) {
-          padding: 0 calc(115px / 2);
+          padding: 0 calc(120px / 2);
         }
 
         img {

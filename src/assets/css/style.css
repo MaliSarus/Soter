@@ -151,7 +151,6 @@ h2 {
 @media (min-width: 768px) {
   h2 {
     font-size: 55px;
-    line-height: 53px;
   }
 }
 
@@ -2811,7 +2810,15 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 0 10px;
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .sponsors__head {
+    margin: 0;
+    margin-bottom: 40px;
+  }
 }
 
 .sponsors__head::before {
@@ -2844,8 +2851,8 @@ button {
   height: 18px;
   background: #F9F9F9;
   border-radius: 5px;
-  left: 0px;
-  top: -8px;
+  left: 3px;
+  top: -5px;
   z-index: 0;
 }
 
@@ -2911,7 +2918,7 @@ button {
 
 @media screen and (min-width: 1200px) {
   .sponsors__slider.swiper-container {
-    margin: 0 calc(-115px / 2);
+    margin: 0 calc(-120px / 2);
   }
 }
 
@@ -2947,7 +2954,7 @@ button {
 
 @media screen and (min-width: 1200px) {
   .sponsors__slider.swiper-container .swiper-slide {
-    padding: 0 calc(115px / 2);
+    padding: 0 calc(120px / 2);
   }
 }
 
@@ -3089,7 +3096,7 @@ button {
   }
 }
 
-.solutions__text h4 {
+.solutions__text p {
   font-size: 14px;
   font-weight: 500;
   line-height: 160%;
@@ -3097,7 +3104,7 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .solutions__text h4 {
+  .solutions__text p {
     font-size: 18px;
   }
 }
@@ -3119,6 +3126,18 @@ button {
 @media screen and (min-width: 768px) {
   .cases__head {
     margin-bottom: 54px;
+  }
+}
+
+.cases__head h2 {
+  max-width: 182px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .cases__head h2 {
+    margin: 0;
+    max-width: 364px;
   }
 }
 
@@ -3254,7 +3273,7 @@ button {
   transition: opacity .5s 1s;
 }
 
-.cases__text > h4 {
+.cases__text > h3 {
   margin-bottom: 12px;
   font-size: 16px;
   line-height: 15px;
@@ -3263,7 +3282,7 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .cases__text > h4 {
+  .cases__text > h3 {
     font-size: 23px;
     line-height: 22px;
   }
@@ -3455,6 +3474,14 @@ button {
   background: linear-gradient(90deg, #F6FAFF 0%, #EBF4FF 100%);
   padding-top: 52px;
   padding-bottom: 58px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 992px) {
+  .products {
+    padding-top: 119px;
+    padding-bottom: 108px;
+  }
 }
 
 .products__block {
@@ -3586,9 +3613,10 @@ button {
   }
 }
 
-.products__image.w-10 img {
-  max-width: none;
-  width: calc(100% + 8px);
+@media screen and (min-width: 992px) {
+  .products__image.w-10 img {
+    width: auto;
+  }
 }
 
 .products .button_lower {
@@ -3630,6 +3658,11 @@ button {
     margin-top: 21px;
     margin-bottom: 77px;
   }
+}
+
+.successes__top h2 {
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 .successes__content {
@@ -3966,6 +3999,7 @@ button {
   padding-top: 41px;
   padding-bottom: 58px;
   position: relative;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 992px) {
@@ -3999,7 +4033,7 @@ button {
   width: calc(100% / 1.4);
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -75px;
   background: url("../img/request/map-mobile.svg") bottom right/contain no-repeat;
 }
 
@@ -4028,12 +4062,12 @@ button {
   }
 }
 
-.request__top h2 {
+.request__top > h2 {
   line-height: 120%;
 }
 
 @media screen and (min-width: 768px) {
-  .request__top p {
+  .request__top > p {
     font-weight: bold;
     font-size: 20px;
   }
@@ -4225,6 +4259,7 @@ button {
 
 .footer {
   padding-top: 36px;
+  padding-bottom: 27px;
   background: #11274B;
   color: white;
 }
@@ -4236,19 +4271,25 @@ button {
   }
 }
 
-.footer__top {
-  padding-bottom: 27px;
-}
-
 @media screen and (min-width: 992px) {
   .footer__top {
     padding-bottom: 60px;
-    border-bottom: 1px solid #1D3357;
+    position: relative;
+  }
+  .footer__top::after {
+    height: 1px;
+    width: calc(100% - 40px);
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    background: #1D3357;
+    display: block;
+    content: '';
   }
 }
 
 .footer__bottom {
-  padding-top: 33px;
+  padding-top: 23px;
 }
 
 @media screen and (min-width: 992px) {
@@ -4290,6 +4331,8 @@ button {
 }
 
 .footer__bottom .request__input-wrapper {
+  -ms-flex-preferred-size: unset;
+  flex-basis: unset;
   position: relative;
   padding: 0;
   margin-bottom: 0;
