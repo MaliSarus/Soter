@@ -19,10 +19,10 @@
                                 requires the definition</p>
                         </div>
                     </div>
-                    <div class="cases__item-content hover">
+                    <div class="cases__item-content_hover">
                         <div class="cases__text hover">
                             <h3>Your title - use h3</h3>
-                            <p class="text">
+                            <p class="text hover">
                                 Your text - use p
                                 Your text - use p
                                 Your text - use p
@@ -51,10 +51,10 @@
                             <p class="text">Your text - use p</p>
                         </div>
                     </div>
-                    <div class="cases__item-content hover">
+                    <div class="cases__item-content_hover">
                         <div class="cases__text hover">
                             <h3>Prevent shoulder injuries</h3>
-                            <p class="text">
+                            <p class="text hover">
                                 Soter provides data that can be used to discover risk hotspots where resources need
                                 immediate effect while safely managing other areas from a distance
                             </p>
@@ -75,10 +75,10 @@
                                 requires </p>
                         </div>
                     </div>
-                    <div class="cases__item-content hover">
+                    <div class="cases__item-content_hover">
                         <div class="cases__text hover">
                             <h3>Your title - use h3</h3>
-                            <p class="text">
+                            <p class="text hover">
                                 Your text - use p
                                 Your text - use p
                                 Your text - use p
@@ -107,10 +107,10 @@
                             <p class="text">Everyday practice shows that the implementation of the planned targets</p>
                         </div>
                     </div>
-                    <div class="cases__item-content hover">
+                    <div class="cases__item-content_hover">
                         <div class="cases__text hover">
                             <h3>Your title - use h3</h3>
-                            <p class="text">
+                            <p class="text hover">
                                 Your text - use p
                                 Your text - use p
                                 Your text - use p
@@ -139,10 +139,10 @@
                             <p class="text">Everyday practice shows that the implementation of the planned targets</p>
                         </div>
                     </div>
-                    <div class="cases__item-content hover">
+                    <div class="cases__item-content_hover">
                         <div class="cases__text hover">
                             <h3>Your title - use h3</h3>
-                            <p class="text">
+                            <p class="text hover">
                                 Your text - use p
                                 Your text - use p
                                 Your text - use p
@@ -172,10 +172,10 @@
                                 was</p>
                         </div>
                     </div>
-                    <div class="cases__item-content hover">
+                    <div class="cases__item-content_hover">
                         <div class="cases__text hover">
                             <h3>Your title - use h3</h3>
-                            <p class="text">
+                            <p class="text hover">
                                 Your text - use p
                                 Your text - use p
                                 Your text - use p

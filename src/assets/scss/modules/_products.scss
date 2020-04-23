@@ -90,15 +90,7 @@
         width: auto;
       }
       @media screen and (min-width: $lg-width){
-        max-width: none;
-        max-height: none;
-      }
-    }
-    &.w-10{
-      img{
-        @media screen and (min-width: $lg-width){
-          width: auto;
-        }
+        object-fit: contain;
       }
     }
   }
