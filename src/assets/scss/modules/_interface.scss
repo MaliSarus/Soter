@@ -284,3 +284,36 @@
     background-color: #e92731!important;
   }
 }
+
+
+.balls{
+  &-bl-sm{
+    position: relative;
+    &::after{
+      position: absolute;
+      content: url("../img/interface/balls-bl-sm-mobile.svg");
+      display: block;
+      bottom: 0;
+      right: 0;
+      @media screen and (min-width: 390px){
+        content: url("../img/interface/balls-bl-sm-desktop.svg");
+      }
+    }
+  }
+  &-br-sm{
+    position: relative;
+    display: inline-block!important;
+    left: 50%;
+    transform: translateX(-50%);
+    &::after{
+      position: absolute;
+      content: url("../img/interface/balls-br-sm-mobile.svg");
+      display: block;
+      bottom: 18px;
+      left: 0;
+      @media screen and (min-width: 390px){
+        content: url("../img/interface/balls-br-sm-desktop.svg");
+      }
+    }
+  }
+}

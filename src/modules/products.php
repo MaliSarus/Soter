@@ -1,12 +1,12 @@
 <section class="products">
     <div class="container">
         <div class="row products__block">
-            <div class="col-12 col-lg-6">
-                <div class="products__image">
-                    <img src="./assets/img/products/1.png" alt="">
+            <div class="col-12 col-lg-6 d-flex align-items-center">
+                <div class="products__image balls-br-sm">
+                    <img src="./assets/img/products/1-new.png" alt="">
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">
                 <div class="products__content">
                     <h2 class="title title_dark">SoterCoach</h2>
                     <p class="text">
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="row products__block">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 d-flex align-items-center">
                 <div class="products__content">
                     <h2 class="title title_dark">Clip&Go</h2>
                     <p class="text">
@@ -29,9 +29,9 @@
                 </div>
 
             </div>
-            <div class="col-12 col-lg-6">
-                <div class="products__image w-10">
-                    <img src="./assets/img/products/2.png" alt="">
+            <div class="col-12 col-lg-6 d-flex align-items-center">
+                <div class="products__image w-10 balls-bl-sm">
+                    <img src="./assets/img/products/2-new.png" alt="">
                 </div>
             </div>
         </div>

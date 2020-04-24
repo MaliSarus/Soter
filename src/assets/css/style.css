@@ -681,6 +681,47 @@ button {
   background-color: #e92731 !important;
 }
 
+.balls-bl-sm {
+  position: relative;
+}
+
+.balls-bl-sm::after {
+  position: absolute;
+  content: url("../img/interface/balls-bl-sm-mobile.svg");
+  display: block;
+  bottom: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 390px) {
+  .balls-bl-sm::after {
+    content: url("../img/interface/balls-bl-sm-desktop.svg");
+  }
+}
+
+.balls-br-sm {
+  position: relative;
+  display: inline-block !important;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.balls-br-sm::after {
+  position: absolute;
+  content: url("../img/interface/balls-br-sm-mobile.svg");
+  display: block;
+  bottom: 18px;
+  left: 0;
+}
+
+@media screen and (min-width: 390px) {
+  .balls-br-sm::after {
+    content: url("../img/interface/balls-br-sm-desktop.svg");
+  }
+}
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -3621,18 +3662,13 @@ button {
 }
 
 .products__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
+  position: relative;
+  display: inline-block !important;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   margin-bottom: 26px;
-  height: 100%;
 }
 
 @media screen and (min-width: 992px) {
