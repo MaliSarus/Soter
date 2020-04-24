@@ -297,14 +297,18 @@
       right: 0;
       @media screen and (min-width: 390px){
         content: url("../img/interface/balls-bl-sm-desktop.svg");
+        bottom: 8px;
+      }
+      @media screen and (min-width: $xl-width){
+        bottom: 18px;
       }
     }
   }
   &-br-sm{
-    position: relative;
-    display: inline-block!important;
-    left: 50%;
-    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    @media screen and (min-width: 454px){
+      width: auto;
+    }
     &::after{
       position: absolute;
       content: url("../img/interface/balls-br-sm-mobile.svg");
@@ -313,6 +317,7 @@
       left: 0;
       @media screen and (min-width: 390px){
         content: url("../img/interface/balls-br-sm-desktop.svg");
+        left: -59px;
       }
     }
   }

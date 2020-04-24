@@ -13,8 +13,13 @@
       max-width: 182px;
       margin: 0 auto;
       @media screen and (min-width: $md-width){
-        margin: 0;
         max-width: 364px;
+        text-align: center;
+      }
+      @media screen and (min-width: $lg-width){
+        margin: 0;
+        text-align: left;
+
       }
     }
   }

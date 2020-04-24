@@ -27,7 +27,11 @@
 
           .products__image {
             img {
-              margin-left: -10px;
+              @media screen and (min-width: $xl-width){
+                margin-left: -10px;
+                max-width: none;
+                max-height: none;
+              }
             }
           }
       }
@@ -70,7 +74,7 @@
   }
   &__image{
     position: relative;
-    display: inline-block!important;
+    display: inline-block;
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 26px;
