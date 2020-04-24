@@ -29,11 +29,11 @@
                 <div class="footer__contacts">
                     <p>
                         Soter Analytics LTD
-                        <br>
-                        <b>Office 5, 27 Parsons Green Ln
-                            ​London, SW6 4HH</b>
                     </p>
-                    <a class="footer__mail" href="mailto:example@mail.com"><img src="./assets/img/footer/mail-icon.svg" alt="Иконка почты">example@mail.com</a>
+                    <p class="footer__address">Office 5, 27 Parsons Green Ln
+                        ​London, SW6 4HH</p>
+                    <a class="footer__mail" href="mailto:example@mail.com"><img src="./assets/img/footer/mail-icon.svg"
+                                                                                alt="Иконка почты">example@mail.com</a>
                     <div class="footer__socials">
                         <a href="#" class="footer__socials-item">
                             <img src="./assets/img/footer/in-icon.svg" alt="Иконка соцсети">
