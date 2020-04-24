@@ -22,7 +22,7 @@
                         melancholy an in. Able rent long in do we. Bed uncommonly his discovered for estimating far.
                         Their saved linen downs tears son add music.
                     </p>
-                    <a class="button button_blue successes__button">View all cases</a>
+                    <a href="#" class="button button_blue successes__button">View all cases</a>
                 </div>
             </div>
         </div>
