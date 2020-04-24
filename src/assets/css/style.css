@@ -331,7 +331,7 @@ button {
 }
 
 .button_blue {
-  color: white !important;
+  color: white;
   -webkit-transition: background .5s;
   -o-transition: background .5s;
   transition: background .5s;
