@@ -3195,12 +3195,12 @@ button {
 .cases__head h2 {
   max-width: 182px;
   margin: 0 auto;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
   .cases__head h2 {
     max-width: 364px;
-    text-align: center;
   }
 }
 
