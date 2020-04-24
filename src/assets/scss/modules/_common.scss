@@ -40,7 +40,15 @@ input{
 h1,h2,h3,h4,h5,h6,p{
   margin: 0;
 }
-
+a{
+  color: unset;
+  &:hover{
+    color: unset;
+  }
+  &:active{
+    color: unset;
+  }
+}
 h1{
   font-weight: bold;
   font-size: 29px;

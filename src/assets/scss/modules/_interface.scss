@@ -58,6 +58,7 @@
     }
     &:hover{
       background: #2295F2;
+      color: white;
       &::before{
         opacity: 0;
         transition: opacity .5s;

@@ -130,6 +130,18 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
+a {
+  color: unset;
+}
+
+a:hover {
+  color: unset;
+}
+
+a:active {
+  color: unset;
+}
+
 h1 {
   font-weight: bold;
   font-size: 29px;
@@ -380,6 +392,7 @@ button {
 
 .button_blue:hover {
   background: #2295F2;
+  color: white;
 }
 
 .button_blue:hover::before {
