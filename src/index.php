@@ -11,6 +11,9 @@ require './modules/products.php';
 require './modules/successes.php';
 require './modules/feedback.php';
 require './modules/request.php';
+require './modules/features.php';
+require './modules/accent.php';
+require './modules/how-we-work.php';
 
 require './modules/footer.php';
 ?>

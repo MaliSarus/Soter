@@ -12,7 +12,6 @@
                 <div class="cases__item">
                     <div class="cases__item-content">
                         <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
-                        <!--                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>-->
                         <div class="cases__text">
                             <h3>Prevent back injuries</h3>
                             <p class="text">Everyday practice shows that the implementation of the planned targets
@@ -45,7 +44,6 @@
                 <div class="cases__item">
                     <div class="cases__item-content">
                         <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
-                        <!--                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>-->
                         <div class="cases__text">
                             <h3>Your title - use h3</h3>
                             <p class="text">Your text - use p</p>
@@ -68,7 +66,6 @@
                 <div class="cases__item">
                     <div class="cases__item-content">
                         <div class="cases__image"><img src="./assets/img/cases/icon-3.svg" alt=""></div>
-                        <!--                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>-->
                         <div class="cases__text">
                             <h3>Personalized training</h3>
                             <p class="text">Everyday practice shows that the implementation of the planned targets
@@ -101,7 +98,6 @@
                 <div class="cases__item">
                     <div class="cases__item-content">
                         <div class="cases__image"><img src="./assets/img/cases/icon-4.svg" alt=""></div>
-                        <!--                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>-->
                         <div class="cases__text">
                             <h3>Early injury intervention</h3>
                             <p class="text">Everyday practice shows that the implementation of the planned targets</p>
@@ -133,7 +129,6 @@
                 <div class="cases__item">
                     <div class="cases__item-content">
                         <div class="cases__image"><img src="./assets/img/cases/icon-5.svg" alt=""></div>
-                        <!--                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>-->
                         <div class="cases__text">
                             <h3>New starter training</h3>
                             <p class="text">Everyday practice shows that the implementation of the planned targets</p>
@@ -165,7 +160,6 @@
                 <div class="cases__item">
                     <div class="cases__item-content">
                         <div class="cases__image"><img src="./assets/img/cases/icon-6.svg" alt=""></div>
-                        <!--                    <div class="cases__image hover"><img src="./assets/img/cases/icon.svg" alt=""></div>-->
                         <div class="cases__text">
                             <h3>Insurance loss prevention</h3>
                             <p class="text">Everyday practice shows that the implementation of the planned targets

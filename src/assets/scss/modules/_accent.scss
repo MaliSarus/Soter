@@ -1,0 +1,40 @@
+.accent{
+  padding-top: 63px;
+  padding-bottom: 63px;
+  background:url("../img/accent/bg-mobile.svg"), #11274B;
+  background-position: top left, center;
+  background-size: contain;
+  background-repeat: no-repeat, no-repeat;
+  @media screen and (min-width: $lg-width){
+    padding-top: 73px;
+    padding-bottom: 73px;
+    background:url("../img/accent/bg-left-desktop.svg"), url("../img/accent/bg-right-desktop.svg"),  #11274B;
+    background-position: top left, top right, center;
+    background-size: contain;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+  }
+  h2{
+    margin-bottom: 32px;
+    @media screen and (min-width: $md-width){
+      margin-bottom: 0;
+      font-size: 50px;
+      line-height: 111%;
+    }
+  }
+  a{
+    width: calc(100% - 10px);
+    margin: 0 auto;
+    @media screen and (min-width: $md-width){
+      width: 100%;
+      margin: unset;
+      max-width: 213px;
+    }
+  }
+  &__item{
+    width: 100%;
+    padding: 0 10px;
+    @media screen and (min-width: $md-width){
+      padding: 0;
+    }
+  }
+}

@@ -323,3 +323,12 @@
     }
   }
 }
+
+.header_static{
+  position: static;
+  padding-bottom: 14px;
+  background: #051834;
+  @media screen and (min-width: $lg-width){
+    padding-bottom: unset;
+  }
+}

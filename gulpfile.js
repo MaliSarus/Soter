@@ -4,7 +4,10 @@ const
     browserSync   = require("browser-sync").create(),
     del           = require('del'),
     cache         = require('gulp-cache'),
-    autoPrefixer  = require('gulp-autoprefixer');
+    autoPrefixer  = require('gulp-autoprefixer'),
+    babel = require('gulp-babel'),
+    sourcemaps = require('gulp-sourcemaps'),
+    concat = require('gulp-concat');
 
 function gulpSass() {
     return gulp
@@ -17,6 +20,19 @@ function gulpSass() {
         .pipe(gulp.dest('./src/assets/css'))
         .pipe(browserSync.stream());
 }
+
+// function gulpBabel() {
+//     return gulp
+//         .src('src/assets/**/script.js')
+//         .pipe(sourcemaps.init())
+//         .pipe(babel({
+//             presets: ['@babel/env']
+//         }))
+//         .pipe(concat('main.js'))
+//         .pipe(sourcemaps.write('.'))
+//         .pipe(gulp.dest('./src/assets/js'))
+//         .pipe(browserSync.stream());
+// }
 
 function startServer(done) {
     browserSync.init({
@@ -43,7 +59,7 @@ function watchFiles(done) {
     gulp.watch('./src/assets/css/**/*.css', gulp.parallel(reload));
     gulp.watch("./src/**/*.html", gulp.parallel(reload));
     gulp.watch("./src/**/*.php", gulp.parallel(reload));
-    gulp.watch('./src/assets/js/**/*.js', gulp.parallel(reload));
+    gulp.watch('./src/assets/js/**/script.js', gulp.parallel(reload));
     done();
 }
 

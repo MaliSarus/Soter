@@ -54,7 +54,8 @@
         margin-top:25px;
       }
       @media screen and (min-width: $lg-width){
-
+        margin-left: unset;
+        margin-right: unset;
       }
     }
   }
