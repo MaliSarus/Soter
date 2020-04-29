@@ -393,8 +393,19 @@
         if ($(window).width() >= 992) {
             const footerSocials = $('.footer__socials').data('mobile', $('.footer__socials').parent().attr('class'))
             footerSocials.detach().appendTo('.footer__left');
+        }else{
+            $('#navbarNav > li').on('mouseenter', function () {
+                const dropdown = $(this).find('.dropdown');
+                if(isSet($('.dropdown.active'))){
+                    $('.dropdown.active').fadeOut(250, function () {
+                        $(this).removeClass('active');
+                        dropdown.fadeIn(250).addClass('active');
+                    });
+                } else{
+                    dropdown.fadeIn(250).addClass('active');
+                }
+            })
         }
-
     });
 
 })(jQuery); // <----- Конец обертки

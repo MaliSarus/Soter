@@ -114,9 +114,11 @@
           }
 
           &:hover{
-            .dropdown {
-              visibility: visible;
-              opacity: 1;
+            @media screen and (min-width: 961px){
+              .dropdown {
+                visibility: visible;
+                opacity: 1;
+              }
             }
           }
           >a{
@@ -161,24 +163,29 @@
 }
 
 .dropdown{
-  position: absolute;
-  left: 0px;
-  z-index: 10;
-  opacity: 0;
+  display: none;
   overflow: hidden;
-  display: block;
-  visibility: hidden;
-  transition: opacity .25s;
+  background: lighten($main-color,10);
+  border-radius: 10px;
   @media screen and (min-width: $lg-width){
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: block;
     background: white;
     border-radius: 20px;
     width: 250px;
     top: 97px;
     left: 50%;
     transform: translateX(-50%);
+    transition: opacity .25s;
   }
   >li{
     position: relative;
+    &::before{
+      content: '';
+      display: none;
+    }
     @media screen and (min-width: $lg-width){
       &::before{
         content: '';
@@ -199,9 +206,17 @@
       display: block;
       width: 100%;
       text-align: center;
+      color: white;
+      padding: 15px 0;
+      transition: background-color .25s, color .25s;
+      &:hover{
+        text-decoration: none;
+        color: $accent-color;
+        background: white;
+      }
       @media screen and (min-width: $lg-width){
+        color: $main-color;
         padding: 20px 25px;
-        transition: background-color .25s, color .25s;
         &:hover{
           text-decoration: none;
           color: $accent-color;
