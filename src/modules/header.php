@@ -24,7 +24,7 @@
                <ul id="navbarNav">
                    <li class="current-menu-item">
                        <a href="#">Solutions</a>
-                       <ul class="dropdown">
+                       <ul class="sub-menu">
                            <li><a href="#">Ссылка</a></li>
                            <li><a href="#">Ссылка</a></li>
                            <li><a href="#">Ссылка</a></li>
@@ -32,14 +32,14 @@
                        </ul>
                    </li>
                    <li><a href="#">Use Cases</a>
-                       <ul class="dropdown hide">
+                       <ul class="sub-menu">
                            <li><a href="#">Ссылка</a></li>
                            <li><a href="#">Ссылка</a></li>
                            <li><a href="#">Ссылка</a></li>
                            <li><a href="#">Ссылка</a></li>
                        </ul></li>
                    <li><a href="#">Resources</a>
-                       <ul class="dropdown hide">
+                       <ul class="sub-menu">
                            <li><a href="#">Ссылка</a></li>
                            <li><a href="#">Ссылка</a></li>
                            <li><a href="#">Ссылка</a></li>

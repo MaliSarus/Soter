@@ -2661,7 +2661,7 @@ button {
 }
 
 @media screen and (min-width: 961px) {
-  .header__navbar-nav > ul > li:hover .dropdown {
+  .header__navbar-nav > ul > li:hover .sub-menu {
     visibility: visible;
     opacity: 1;
   }
@@ -2710,21 +2710,21 @@ button {
   }
 }
 
-.dropdown {
+.sub-menu {
   display: none;
   overflow: hidden;
   background: #1a3d75;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 @media screen and (min-width: 992px) {
-  .dropdown {
+  .sub-menu {
     opacity: 0;
     visibility: hidden;
     position: absolute;
     display: block;
     background: white;
-    border-radius: 20px;
+    border-radius: 4px;
     width: 250px;
     top: 97px;
     left: 50%;
@@ -2737,31 +2737,32 @@ button {
   }
 }
 
-.dropdown > li {
+.sub-menu > li {
   position: relative;
 }
 
-.dropdown > li::before {
+.sub-menu > li::before {
   content: '';
-  display: none;
+  display: block;
+  height: 1px;
+  position: absolute;
+  bottom: -0.5px;
+  left: 25px;
+  width: calc(100% - 50px);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 @media screen and (min-width: 992px) {
-  .dropdown > li::before {
-    content: '';
-    height: 1px;
-    position: absolute;
-    bottom: 0;
-    left: 25px;
-    width: calc(100% - 50px);
+  .sub-menu > li::before {
     background: rgba(32, 150, 243, 0.5);
-  }
-  .dropdown > li:last-child::before {
-    display: none;
   }
 }
 
-.dropdown > li > a {
+.sub-menu > li:last-child::before {
+  display: none;
+}
+
+.sub-menu > li > a {
   display: block;
   width: 100%;
   text-align: center;
@@ -2772,18 +2773,18 @@ button {
   transition: background-color .25s, color .25s;
 }
 
-.dropdown > li > a:hover {
+.sub-menu > li > a:hover {
   text-decoration: none;
   color: #2096F3;
   background: white;
 }
 
 @media screen and (min-width: 992px) {
-  .dropdown > li > a {
+  .sub-menu > li > a {
     color: #11274B;
     padding: 20px 25px;
   }
-  .dropdown > li > a:hover {
+  .sub-menu > li > a:hover {
     text-decoration: none;
     color: #2096F3;
     background: #ededed;

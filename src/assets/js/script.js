@@ -11,15 +11,37 @@
             console.log(element.siblings());
         }
     };
+    
+    function dropdownMobileMenuOn() {
+        if ($(window).width() < 992) {
+            $('#navbarNav > li').on('click', function (event) {
+                const submenu = $(this).find('.sub-menu');
+                const current = ($('.sub-menu').index(submenu));
+                const active = $('.sub-menu').index($('.sub-menu.active'));
+                console.log(isSet($('.sub-menu.active')) && active != current);
+                if (isSet($('.sub-menu.active')) && active != current) {
+                    $($('.sub-menu')[active]).fadeOut(250, function () {
+                        $(this).removeClass('active');
+                        submenu.fadeIn(250).addClass('active');
+                    });
+                } else {
+                    submenu.fadeToggle().toggleClass('active');
+                }
+            })
+        }
+    }
 
     const hamburgerInit = () => {
         const hamburger = $('.hamburger');
         hamburger.css({
             outline: 'none'
         });
-        $('.hamburger').on('click', function () {
+        hamburger.on('click', function () {
             $(this).toggleClass('is-active');
             $('body').toggleClass('hidden');
+            if($(this).hasClass('is-active') === false){
+                $('.sub-menu').removeClass('active').removeAttr('style');
+            }
         });
     };
 
@@ -393,19 +415,8 @@
         if ($(window).width() >= 992) {
             const footerSocials = $('.footer__socials').data('mobile', $('.footer__socials').parent().attr('class'))
             footerSocials.detach().appendTo('.footer__left');
-        }else{
-            $('#navbarNav > li').on('mouseenter', function () {
-                const dropdown = $(this).find('.dropdown');
-                if(isSet($('.dropdown.active'))){
-                    $('.dropdown.active').fadeOut(250, function () {
-                        $(this).removeClass('active');
-                        dropdown.fadeIn(250).addClass('active');
-                    });
-                } else{
-                    dropdown.fadeIn(250).addClass('active');
-                }
-            })
         }
+        dropdownMobileMenuOn();
     });
 
 })(jQuery); // <----- Конец обертки

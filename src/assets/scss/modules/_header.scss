@@ -115,7 +115,7 @@
 
           &:hover{
             @media screen and (min-width: 961px){
-              .dropdown {
+              .sub-menu {
                 visibility: visible;
                 opacity: 1;
               }
@@ -162,18 +162,18 @@
   }
 }
 
-.dropdown{
+.sub-menu{
   display: none;
   overflow: hidden;
   background: lighten($main-color,10);
-  border-radius: 10px;
+  border-radius: 4px;
   @media screen and (min-width: $lg-width){
     opacity: 0;
     visibility: hidden;
     position: absolute;
     display: block;
     background: white;
-    border-radius: 20px;
+    border-radius: 4px;
     width: 250px;
     top: 97px;
     left: 50%;
@@ -184,22 +184,23 @@
     position: relative;
     &::before{
       content: '';
-      display: none;
+      display: block;
+      height: 1px;
+      position: absolute;
+      bottom: -0.5px;
+      left: 25px;
+      width: calc(100% - 50px);
+      background: rgba(white,.5);
     }
     @media screen and (min-width: $lg-width){
       &::before{
-        content: '';
-        height: 1px;
-        position: absolute;
-        bottom: 0;
-        left: 25px;
-        width: calc(100% - 50px);
         background: rgba($accent-color,.5);
       }
-      &:last-child{
-        &::before{
-          display: none;
-        }
+    }
+
+    &:last-child{
+      &::before{
+        display: none;
       }
     }
     >a{
