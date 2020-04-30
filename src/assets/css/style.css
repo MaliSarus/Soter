@@ -2786,8 +2786,8 @@ button {
   }
   .sub-menu > li > a:hover {
     text-decoration: none;
-    color: #2096F3;
-    background: #ededed;
+    color: white;
+    background: #0851BF;
   }
 }
 
