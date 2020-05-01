@@ -22,7 +22,7 @@
             </button>
             <div class="header__navbar-nav">
                <ul id="navbarNav">
-                   <li class="current-menu-item">
+                   <li class="current-menu-item menu-item-has-children">
                        <a href="#">Solutions</a>
                        <ul class="sub-menu">
                            <li><a href="#">Ссылка</a></li>
@@ -31,14 +31,14 @@
                            <li><a href="#">Ссылка</a></li>
                        </ul>
                    </li>
-                   <li><a href="#">Use Cases</a>
+                   <li class="menu-item-has-children"><a href="#">Use Cases</a>
                        <ul class="sub-menu">
                            <li><a href="#">Ссылка</a></li>
                            <li><a href="#">Ссылка</a></li>
                            <li><a href="#">Ссылка</a></li>
                            <li><a href="#">Ссылка</a></li>
                        </ul></li>
-                   <li><a href="#">Resources</a>
+                   <li  class="menu-item-has-children"><a href="#">Resources</a>
                        <ul class="sub-menu">
                            <li><a href="#">Ссылка</a></li>
                            <li><a href="#">Ссылка</a></li>

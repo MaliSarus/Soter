@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="row how-we-work__bottom">
-            <div class="col-12 col-md-4 how-we-work__item">
+            <div class="col-12 col-sm-6 col-md-4 how-we-work__item">
                 <div class="how-we-work__card">
                     <div class="how-we-work__card-top">
                         <div class="how-we-work__card-step">step <b>01</b></div>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 how-we-work__item">
+            <div class="col-12 col-sm-6 col-md-4 how-we-work__item">
                 <div class="how-we-work__card">
                     <div class="how-we-work__card-top">
                         <div class="how-we-work__card-step">step <b>02</b></div>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 how-we-work__item">
+            <div class="col-12 col-sm-6 col-md-4 how-we-work__item">
                 <div class="how-we-work__card">
                     <div class="how-we-work__card-top">
                         <div class="how-we-work__card-step">step <b>03</b></div>

@@ -128,7 +128,6 @@
           height: 100%;
           object-fit: contain;
           @media screen and (min-width: $xl-width){
-            width: unset;
             height: unset;
           }
         }

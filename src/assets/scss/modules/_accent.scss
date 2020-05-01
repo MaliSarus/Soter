@@ -16,9 +16,24 @@
   h2{
     margin-bottom: 32px;
     @media screen and (min-width: $md-width){
+      padding-left: 51px;
+      position: relative;
       margin-bottom: 0;
       font-size: 50px;
       line-height: 111%;
+      &::before{
+        display: block;
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: white;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+      }
     }
   }
   a{
