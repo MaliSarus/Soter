@@ -49,7 +49,7 @@
 <section class="clients">
     <div class="container-fluid container-lg">
         <div class="row">
-            <div class="col-12 clients__head"><h2 class="title_dark">SoterAnalytics Clients Success Stories</h2></div>
+            <div class="col-12 clients__head"><h2 class="title_dark">SoterSpine Clients Success Stories</h2></div>
         </div>
         <div class="row">
             <div class="col-12 clients__content">

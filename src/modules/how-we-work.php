@@ -4,7 +4,7 @@
             <div class="col-12">
                 <div class="how-we-work__top">
                     <h2 class="title title_dark">
-                        How SoterCoach Works
+                        How SoterSpine Works
                     </h2>
                     <p class="text">
                         SoterCoach puts the worker first through human-centric design what makes it very easy to use,

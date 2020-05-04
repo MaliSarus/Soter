@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 col-md-9 text-center text-md-left">
                 <div class="accent__item">
-                    <h2 class="title title_light">Try SoterCoach <span class="text_accent">With Your Workforce</span>
+                    <h2 class="title title_light">Try SoterSpine <span class="text_accent">With Your Workforce</span>
                     </h2>
                 </div>
             </div>
