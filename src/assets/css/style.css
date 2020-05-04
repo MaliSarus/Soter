@@ -207,7 +207,6 @@ ul li {
   font-weight: 500;
   font-size: 14px;
   line-height: 121%;
-  margin-bottom: 14px;
 }
 
 ul li:last-child {
@@ -5712,6 +5711,16 @@ img.align-center {
 @media screen and (min-width: 768px) {
   .product-list__description > ul {
     margin: 30px 0;
+  }
+}
+
+.product-list__description > ul li {
+  margin-bottom: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .product-list__description > ul li {
+    margin-bottom: auto;
   }
 }
 

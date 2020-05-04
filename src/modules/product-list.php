@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="product-list__image">
+                <div class="product-list__image balls-c-sm balls-rb-md">
                     <img src="./assets/img/products/1.png" alt="">
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="product-list__image">
+                <div class="product-list__image balls-cr-sm balls-cl-md">
                     <img src="./assets/img/products/1.png" alt="">
                 </div>
             </div>
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="product-list__image">
+                <div class="product-list__image balls-lb-sm balls-rt-md">
                     <img src="./assets/img/products/1.png" alt="">
                 </div>
             </div>
