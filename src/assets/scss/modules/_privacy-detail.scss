@@ -1,4 +1,4 @@
-.pricacy-detail {
+.privacy-detail {
   padding-top: 55px;
   padding-bottom: 62px;
   @media screen and (min-width: $lg-width) {
@@ -7,6 +7,12 @@
   }
 
   .pagecontent {
+    img{
+      max-width: 50%;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+    }
     >*{
       &:last-child{
         margin-bottom: 0;
@@ -18,14 +24,20 @@
       line-height: 120%;
       text-align: center;
       color: $main-color;
-      padding-bottom: 26px;
-      border-bottom: 1px solid #E2EEFF;
+      padding-bottom: 25px;
       @media screen and (min-width: $md-width) {
         text-align: left;
         font-size: 64px;
         line-height: 71px;
         max-width: 645px;
+        padding-bottom: 34px;
       }
+    }
+
+    hr{
+      border-top: 1px solid #E2EEFF;
+      margin-top: 0;
+      margin-bottom: 29px;
     }
 
     >h2 {

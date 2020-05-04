@@ -20,7 +20,7 @@
                 <div class="how-we-work__card">
                     <div class="how-we-work__card-top">
                         <div class="how-we-work__card-step">step <b>01</b></div>
-                        <div class="how-we-work__card-image"><img src="./assets/img/how-we-work/1.svg"
+                        <div class="how-we-work__card-image"><img src="./assets/img/how-we-work/1.png"
                                                                   alt="Изображение"></div>
                     </div>
                     <div class="how-we-work__card-bottom">
@@ -33,7 +33,7 @@
                 <div class="how-we-work__card">
                     <div class="how-we-work__card-top">
                         <div class="how-we-work__card-step">step <b>02</b></div>
-                        <div class="how-we-work__card-image"><img src="./assets/img/how-we-work/2.svg"
+                        <div class="how-we-work__card-image"><img src="./assets/img/how-we-work/2.png"
                                                                   alt="Изображение"></div>
                     </div>
                     <div class="how-we-work__card-bottom">
@@ -45,7 +45,7 @@
                 <div class="how-we-work__card">
                     <div class="how-we-work__card-top">
                         <div class="how-we-work__card-step">step <b>03</b></div>
-                        <div class="how-we-work__card-image"><img src="./assets/img/how-we-work/3.svg"
+                        <div class="how-we-work__card-image"><img src="./assets/img/how-we-work/3.png"
                                                                   alt="Изображение"></div>
                     </div>
                     <div class="how-we-work__card-bottom">

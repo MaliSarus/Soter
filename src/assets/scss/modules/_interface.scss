@@ -332,3 +332,38 @@
     padding-bottom: unset;
   }
 }
+
+.align-left{
+  text-align: left!important;
+}
+.align-right{
+  text-align: right!important;
+}
+.align-center{
+  text-align: center!important;
+}
+
+img.align-left{
+  display: inline-block;
+  float: left;
+  margin: 10px 10px 10px 0;
+  @media screen and (min-width: $md-width){
+    margin: 20px 20px 20px 0;
+  }
+}
+img.align-right{
+  display: inline-block;
+  float: right;
+  margin: 10px 0 10px 10px;
+  @media screen and (min-width: $md-width){
+    margin: 20px 0 20px 20px;
+  }
+}
+
+img.align-center{
+  display: block;
+  margin: 10px auto;
+  @media screen and (min-width: $md-width){
+    margin: 20px auto;
+  }
+}

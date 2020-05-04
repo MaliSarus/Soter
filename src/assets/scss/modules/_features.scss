@@ -39,9 +39,7 @@
   &__row{
     display: flex;
     flex-wrap: wrap;
-    padding: 0 10px;
     @media screen and (min-width: $lg-width){
-      padding: 0;
       margin-left: -30px;
       margin-right: -30px;
     }

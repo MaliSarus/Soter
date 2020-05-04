@@ -10,7 +10,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-6">
-                <div class="request__block p-sx-30">
+                <div class="request__block">
                     <form action="#">
                         <div class="request__form-row">
                             <div class="request__input-wrapper">
@@ -51,7 +51,7 @@
         </div>
         <div class="row ">
             <div class="col-12 col-lg-6">
-                <div class="request__bottom p-xs-30">
+                <div class="request__bottom">
                     <p>By submitting this form, you confirm that you have read and agree to the Privacy Policy and Terms &
                         Conditions and consent to the storage and usage of the personal data submitted to allow one of our
                         team to contact you. You also wish to sign up for our monthly newsletter to receive the latest
