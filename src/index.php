@@ -17,6 +17,7 @@ require './modules/how-we-work.php';
 require './modules/training-and-clients.php';
 require './modules/privacy.php';
 require './modules/privacy-detail.php';
+require './modules/product-list.php';
 
 require './modules/footer.php';
 ?>
