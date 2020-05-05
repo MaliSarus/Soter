@@ -15,6 +15,7 @@
     function dropdownMobileMenuOn() {
         if ($(window).width() < 992) {
             $('#navbarNav > li').on('click', function (event) {
+                event.preventDefault();
                 const submenu = $(this).find('.sub-menu');
                 const current = ($('.sub-menu').index(submenu));
                 const active = $('.sub-menu').index($('.sub-menu.active'));

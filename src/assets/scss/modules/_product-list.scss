@@ -1,63 +1,179 @@
-.product-list{
+.product-list {
   background: #F6FAFF;
-  .row{
+
+  .row {
     padding: 50px 0;
-    @media screen and (min-width: $lg-width){
-      padding: 100px;
+    @media screen and (min-width: $lg-width) {
+      padding: 100px 0;
     }
-    &:nth-child(2n){
+
+    img {
+      @media screen and (min-width: $md-width) {
+        object-position: right;
+      }
+    }
+
+    &:nth-child(2n) {
       flex-direction: row-reverse;
+
+      img {
+        @media screen and (min-width: $md-width) {
+          object-position: left;
+        }
+      }
     }
   }
-  &__description{
+
+  &__description {
     color: $main-color;
-    >*{
-      &:last-child{
+
+    > * {
+      &:last-child {
         margin-bottom: 0;
       }
     }
-    >h2{
+
+    > h2 {
       font-weight: bold;
       font-size: 25px;
       line-height: 120%;
       text-align: center;
       margin-bottom: 12px;
-      @media screen and (min-width: $md-width){
+      @media screen and (min-width: $md-width) {
         font-size: 55px;
         line-height: 120%;
         margin-bottom: 33px;
         text-align: left;
       }
     }
-    >p{
+
+    > p {
       font-size: 14px;
       line-height: 160%;
       text-align: center;
       margin: 12px 0;
-      @media screen and (min-width: $md-width){
+      @media screen and (min-width: $md-width) {
         font-size: 22px;
         text-align: left;
         line-height: 160%;
         margin: 30px 0;
       }
     }
-    >ul{
+
+    > ul {
       margin: 20px 0;
-      @media screen and (min-width: $md-width){
+      @media screen and (min-width: $md-width) {
         margin: 30px 0;
       }
-      li{
+
+      li {
         margin-bottom: 14px;
-        @media screen and (min-width: $md-width){
-          margin-bottom: auto;
-        }
       }
     }
   }
-  &__image{
-    img{
+
+  &__image {
+    padding-top: 26px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: $md-width) {
+      padding-top: auto;
+    }
+
+    img {
+      position: relative;
+      z-index: 2;
       width: 100%;
       object-fit: contain;
+      object-position: center;
+      max-height: 455px;
+      @media screen and (min-width: $md-width) {
+        max-height: 615px;
+      }
+    }
+  }
+}
+
+.balls {
+  &-c-sm {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: url("../img/product-list/balls-c-sm.svg");
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-cr-sm {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: url("../img/product-list/balls-cr-sm.svg");
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &-lb-sm {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: url("../img/product-list/balls-lb-sm.svg");
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &-rb-md {
+    position: relative;
+    @media screen and (min-width: $md-width) {
+      &::before {
+        content: url("../img/product-list/balls-rb-md.svg");
+        left: unset;
+        top: unset;
+        right: -222px;
+        bottom: 0;
+        transform: unset;
+      }
+    }
+  }
+
+  &-cl-md {
+    position: relative;
+    @media screen and (min-width: $md-width) {
+      &::before {
+        content: url("../img/product-list/balls-cl-md.svg");
+        left: -111px;
+        right: unset;
+        bottom: unset;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &-rt-md {
+    position: relative;
+    @media screen and (min-width: $md-width) {
+      &::before {
+        content: url("../img/product-list/balls-rt-md.svg");
+        right: -222px;
+        top: 0;
+        left: unset;
+        bottom: unset;
+      }
     }
   }
 }
