@@ -20,11 +20,14 @@ require './modules/accent.php';
 require './modules/how-we-work.php';
 require './modules/training-and-clients.php';
 require './modules/product-list.php';
+//<!--04052020-->
+
+//<!--07052020-->
 require './modules/use-cases.php';
 require './modules/use-cases-product.php';
 require './modules/answer.php';
 require './modules/try-soter.php';
-//<!--04052020-->
+//<!--07052020-->
 
 require './modules/footer.php';
 ?>

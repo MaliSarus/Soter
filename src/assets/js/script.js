@@ -16,9 +16,9 @@
         if ($(window).width() < 992) {
             $('#navbarNav > li').on('click', function (event) {
                 event.preventDefault();
-                const submenu = $(this).find('.sub-menu');
-                const current = ($('.sub-menu').index(submenu));
-                const active = $('.sub-menu').index($('.sub-menu.active'));
+                var submenu = $(this).find('.sub-menu');
+                var current = ($('.sub-menu').index(submenu));
+                var active = $('.sub-menu').index($('.sub-menu.active'));
                 if (isSet($('.sub-menu.active')) && active != current) {
                     $($('.sub-menu')[active]).fadeOut(250, function () {
                         $(this).removeClass('active').siblings('a').removeClass('opened');
@@ -31,8 +31,8 @@
         }
     }
 
-    const hamburgerInit = () => {
-        const hamburger = $('.hamburger');
+    var hamburgerInit = () => {
+        var hamburger = $('.hamburger');
         hamburger.css({
             outline: 'none'
         });
@@ -45,11 +45,11 @@
         });
     };
 
-    const sliderButtonsHandler = () => {
-        const btns = $('.nav-dot');
-        const paginationWrapper = $('.pagination-wrapper');
-        const bigDotContainer = $('.big-dot-container');
-        const littleDot = $('.little-dot');
+    var sliderButtonsHandler = () => {
+        var btns = $('.nav-dot');
+        var paginationWrapper = $('.pagination-wrapper');
+        var bigDotContainer = $('.big-dot-container');
+        var littleDot = $('.little-dot');
 
         btns.on('click', btnClick);
 
@@ -72,8 +72,8 @@
         }
     };
 
-    const sponsorsSliderInit = () => {
-        const mySwiper = new Swiper('.sponsors__slider', {
+    var sponsorsSliderInit = () => {
+        var mySwiper = new Swiper('.sponsors__slider', {
             // Optional parameters
             slidesPerView: 1,
             spaceBetween: 0,
@@ -97,14 +97,14 @@
                     }
                 },
                 slideNextTransitionStart: function () {
-                    const paginationWrapper = $('.pagination-wrapper');
+                    var paginationWrapper = $('.pagination-wrapper');
                     paginationWrapper.addClass('transition-next');
                     setTimeout(function () {
                         paginationWrapper.removeClass('transition-next')
                     }, 500);
                 },
                 slidePrevTransitionStart: function () {
-                    const paginationWrapper = $('.pagination-wrapper');
+                    var paginationWrapper = $('.pagination-wrapper');
                     paginationWrapper.addClass('transition-prev');
                     setTimeout(function () {
                         paginationWrapper.removeClass('transition-prev')
@@ -133,17 +133,17 @@
             }
         });
         setInterval(function () {
-            mySwiper.update(true);
+            mySwiper.update(true)
         }, 1000);
-        const arrowPrev = $('.sponsors__head .arrow-prev');
-        const arrowNext = $('.sponsors__head .arrow-next');
+        var arrowPrev = $('.sponsors__head .arrow-prev');
+        var arrowNext = $('.sponsors__head .arrow-next');
         arrowPrev.on('click', function () {
             mySwiper.slidePrev(400, true);
         });
         arrowNext.on('click', function () {
             mySwiper.slideNext(400, true);
         });
-        const dots = $('.sponsors__content .little-dot');
+        var dots = $('.sponsors__content .little-dot');
         dots.on('click', function (event) {
             if ($('.little-dot--first').is(event.target)) {
                 mySwiper.slidePrev(400, true);
@@ -153,8 +153,8 @@
             }
         })
     };
-    const feedbackSliderInit = () => {
-        const mySwiper = new Swiper('.feedback__slider', {
+    var feedbackSliderInit = () => {
+        var mySwiper = new Swiper('.feedback__slider', {
             // Optional parameters
             slidesPerView: 1,
             spaceBetween: 9,
@@ -173,14 +173,14 @@
                     }
                 },
                 slideNextTransitionStart: function () {
-                    const paginationWrapper = $('.pagination-wrapper');
+                    var paginationWrapper = $('.pagination-wrapper');
                     paginationWrapper.addClass('transition-next');
                     setTimeout(function () {
                         paginationWrapper.removeClass('transition-next')
                     }, 500);
                 },
                 slidePrevTransitionStart: function () {
-                    const paginationWrapper = $('.pagination-wrapper');
+                    var paginationWrapper = $('.pagination-wrapper');
                     paginationWrapper.addClass('transition-prev');
                     setTimeout(function () {
                         paginationWrapper.removeClass('transition-prev')
@@ -204,8 +204,8 @@
             }
         });
     };
-    const clientsSliderInit = () => {
-        const mySwiper = new Swiper('.clients__slider', {
+    var clientsSliderInit = () => {
+        var mySwiper = new Swiper('.clients__slider', {
             // Optional parameters
             slidesPerView: 1,
             spaceBetween: 9,
@@ -225,14 +225,14 @@
                     }
                 },
                 slideNextTransitionStart: function () {
-                    const paginationWrapper = $('.pagination-wrapper');
+                    var paginationWrapper = $('.pagination-wrapper');
                     paginationWrapper.addClass('transition-next');
                     setTimeout(function () {
                         paginationWrapper.removeClass('transition-next')
                     }, 500);
                 },
                 slidePrevTransitionStart: function () {
-                    const paginationWrapper = $('.pagination-wrapper');
+                    var paginationWrapper = $('.pagination-wrapper');
                     paginationWrapper.addClass('transition-prev');
                     setTimeout(function () {
                         paginationWrapper.removeClass('transition-prev')
@@ -263,15 +263,15 @@
         if (isSet($('.products'))) {
             if ($(window).width() < 992 && !(isSet($('.products .desktop')))) {
                 $('.products__block').each(function () {
-                    const image = $(this).find('.products__image');
-                    const contentToPrepend = $(this).find('.products__content .button');
+                    var image = $(this).find('.products__image');
+                    var contentToPrepend = $(this).find('.products__content .button');
                     image.parent().addClass('desktop');
                     image.detach().insertBefore(contentToPrepend);
                 });
             } else if ($(window).width() >= 992 && isSet($('.products .desktop'))) {
                 $('.products__block').each(function () {
-                    const desktopPlace = $(this).find('.desktop');
-                    const image = $(this).find('.products__image');
+                    var desktopPlace = $(this).find('.desktop');
+                    var image = $(this).find('.products__image');
                     image.detach().appendTo(desktopPlace);
                 });
                 $('.products .desktop').removeClass('desktop');
@@ -280,15 +280,15 @@
         if (isSet($('.successes'))) {
             if ($(window).width() < 992 && !(isSet($('.successes .desktop')))) {
                 $('.successes__block').each(function () {
-                    const video = $(this).find('.successes__video');
-                    const contentToPrepend = $(this).find('.successes__content .button');
+                    var video = $(this).find('.successes__video');
+                    var contentToPrepend = $(this).find('.successes__content .button');
                     video.parent().addClass('desktop');
                     video.detach().insertBefore(contentToPrepend);
                 });
             } else if ($(window).width() >= 992 && isSet($('.successes .desktop'))) {
                 $('.successes__block').each(function () {
-                    const desktopPlace = $(this).find('.desktop');
-                    const video = $(this).find('.successes__video');
+                    var desktopPlace = $(this).find('.desktop');
+                    var video = $(this).find('.successes__video');
                     video.detach().appendTo(desktopPlace);
                 });
                 $('.successes .desktop').removeClass('desktop');
@@ -297,13 +297,13 @@
 
         if (isSet($('.use-cases-product'))) {
             if ($(window).width() < 992 && !(isSet($('.use-cases-product .desktop')))) {
-                const image = $('.use-cases-product__image').find('img');
-                const contentToPrepend = $('.use-cases-product__text .button');
+                var image = $('.use-cases-product__image').find('img');
+                var contentToPrepend = $('.use-cases-product__text .button');
                 image.parent().addClass('desktop');
                 image.detach().insertBefore(contentToPrepend);
             } else if ($(window).width() >= 992 && isSet($('.use-cases-product .desktop'))) {
-                const desktopPlace = $('.use-cases-product .desktop');
-                const image = $('.use-cases-product img');
+                var desktopPlace = $('.use-cases-product .desktop');
+                var image = $('.use-cases-product img');
                 image.detach().appendTo(desktopPlace);
                 desktopPlace.removeClass('desktop');
             }
@@ -326,13 +326,13 @@
         }
         if ($(window).width() < 992) {
             if ($('.footer__socials').data('mobile') !== undefined) {
-                const footerSocialsPlace = '.' + $('.footer__socials').data('mobile');
-                const footerSocials = $('.footer__socials');
+                var footerSocialsPlace = '.' + $('.footer__socials').data('mobile');
+                var footerSocials = $('.footer__socials');
                 footerSocials.detach().appendTo(footerSocialsPlace);
             }
         }
         if ($(window).width() >= 992 && $('.footer__socials').data('mobile') === undefined) {
-            const footerSocials = $('.footer__socials').data('mobile', $('.footer__socials').parent().attr('class'));
+            var footerSocials = $('.footer__socials').data('mobile', $('.footer__socials').parent().attr('class'));
             footerSocials.detach().appendTo('.footer__left');
         }
         if ($(window).width() >= 992 && $('.footer__socials').data('mobile') !== undefined) {
@@ -350,8 +350,8 @@
         if (isSet($('.products'))) {
             if ($(window).width() < 992 && !(isSet($('.products .desktop')))) {
                 $('.products__block').each(function () {
-                    const image = $(this).find('.products__image');
-                    const contentToPrepend = $(this).find('.products__content .button');
+                    var image = $(this).find('.products__image');
+                    var contentToPrepend = $(this).find('.products__content .button');
                     image.parent().addClass('desktop');
                     image.detach().insertBefore(contentToPrepend);
                 })
@@ -360,8 +360,8 @@
         if (isSet($('.successes'))) {
             if ($(window).width() < 992 && !(isSet($('.successes .desktop')))) {
                 $('.successes__block').each(function () {
-                    const video = $(this).find('.successes__video');
-                    const contentToPrepend = $(this).find('.successes__content .button');
+                    var video = $(this).find('.successes__video');
+                    var contentToPrepend = $(this).find('.successes__content .button');
                     video.parent().addClass('desktop');
                     video.detach().insertBefore(contentToPrepend);
                 })
@@ -370,8 +370,8 @@
 
         if (isSet($('.use-cases-product'))) {
             if ($(window).width() < 992 && !(isSet($('.use-cases-product .desktop')))) {
-                const image = $('.use-cases-product__image').find('img');
-                const contentToPrepend = $('.use-cases-product__text .button');
+                var image = $('.use-cases-product__image').find('img');
+                var contentToPrepend = $('.use-cases-product__text .button');
                 image.parent().addClass('desktop');
                 image.detach().insertBefore(contentToPrepend);
             }
@@ -397,12 +397,12 @@
 
 
         if (isSet($('.request'))) {
-            const requestInputs = $('.request__input');
-            const phoneInput = $('#request-phone');
-            const nameInput = $('#request-name');
-            const companyInput = $('#request-company');
-            const messageInput = $('#request-message');
-            const requestSubmit = $('.request form button[type="submit"]');
+            var requestInputs = $('.request__input');
+            var phoneInput = $('#request-phone');
+            var nameInput = $('#request-name');
+            var companyInput = $('#request-company');
+            var messageInput = $('#request-message');
+            var requestSubmit = $('.request form button[type="submit"]');
 
 
             requestInputs.on('input', function () {
@@ -474,8 +474,8 @@
 
         }
 
-        const pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
-        const mailInput = $('[name="email"]');
+        var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
+        var mailInput = $('[name="email"]');
         mailInput.on('input', function () {
             if ($(this).val().search(pattern) == 0) {
                 $(this).parent().removeClass('invalid').addClass('valid');
@@ -500,8 +500,17 @@
             }
 
         });
+
+        if(isSet($('.try-soter'))){
+            $('.try-soter__right input').on('focus', function () {
+                $(this).parent('.request__input-wrapper').addClass('focused');
+            });
+            $('.try-soter__right input').on('blur', function () {
+                $(this).parent('.request__input-wrapper').removeClass('focused');
+            })
+        }
         if ($(window).width() >= 992) {
-            const footerSocials = $('.footer__socials').data('mobile', $('.footer__socials').parent().attr('class'))
+            var footerSocials = $('.footer__socials').data('mobile', $('.footer__socials').parent().attr('class'))
             footerSocials.detach().appendTo('.footer__left');
         }
         dropdownMobileMenuOn();
