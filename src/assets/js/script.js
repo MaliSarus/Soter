@@ -294,6 +294,20 @@
                 $('.successes .desktop').removeClass('desktop');
             }
         }
+
+        if (isSet($('.use-cases-product'))) {
+            if ($(window).width() < 992 && !(isSet($('.use-cases-product .desktop')))) {
+                const image = $('.use-cases-product__image').find('img');
+                const contentToPrepend = $('.use-cases-product__text .button');
+                image.parent().addClass('desktop');
+                image.detach().insertBefore(contentToPrepend);
+            } else if ($(window).width() >= 992 && isSet($('.use-cases-product .desktop'))) {
+                const desktopPlace = $('.use-cases-product .desktop');
+                const image = $('.use-cases-product img');
+                image.detach().appendTo(desktopPlace);
+                desktopPlace.removeClass('desktop');
+            }
+        }
         if (isSet($('.feedback'))) {
             if ($(window).width() < 992) {
                 $('.feedback__slider > .swiper-wrapper').removeAttr('style');
@@ -303,7 +317,7 @@
             }
         }
         if (isSet($('.clients'))) {
-            if ($(window).width() < 992 ) {
+            if ($(window).width() < 992) {
                 $('.clients__slider > .swiper-wrapper').removeAttr('style');
                 clientsSliderInit();
             } else {
@@ -353,6 +367,16 @@
                 })
             }
         }
+
+        if (isSet($('.use-cases-product'))) {
+            if ($(window).width() < 992 && !(isSet($('.use-cases-product .desktop')))) {
+                const image = $('.use-cases-product__image').find('img');
+                const contentToPrepend = $('.use-cases-product__text .button');
+                image.parent().addClass('desktop');
+                image.detach().insertBefore(contentToPrepend);
+            }
+        }
+
         if (isSet($('.feedback'))) {
             if ($(window).width() < 992) {
                 $('.feedback__slider > .swiper-wrapper').removeAttr('style');

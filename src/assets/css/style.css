@@ -5750,13 +5750,14 @@ img.align-center {
 @media screen and (min-width: 768px) {
   .product-list__image {
     padding-top: auto;
+    padding-top: 0;
   }
 }
 
 .product-list__image img {
   position: relative;
   z-index: 2;
-  width: 100%;
+  max-width: 100%;
   -o-object-fit: contain;
   object-fit: contain;
   -o-object-position: center;
@@ -5857,6 +5858,218 @@ img.align-center {
     top: 0;
     left: unset;
     bottom: unset;
+  }
+}
+
+.use-cases .row {
+  padding: 25px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .use-cases .row {
+    padding: 71.5px 0;
+  }
+}
+
+.use-cases .row:first-child {
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+@media screen and (min-width: 992px) {
+  .use-cases .row:first-child {
+    padding-top: 143px;
+    padding-bottom: 71.5px;
+  }
+}
+
+.use-cases .row:last-child {
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+@media screen and (min-width: 992px) {
+  .use-cases .row:last-child {
+    padding-bottom: 143px;
+    padding-top: 71.5px;
+  }
+}
+
+.use-cases .row:nth-child(2n) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.use-cases__text > *:last-child {
+  margin-bottom: 0;
+}
+
+.use-cases__text h2 {
+  text-align: center;
+  color: #11274B;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .use-cases__text h2 {
+    text-align: left;
+    margin-bottom: 29px;
+  }
+}
+
+.use-cases__text p {
+  text-align: center;
+  color: #11274B;
+  margin-bottom: 18px;
+  line-height: 160%;
+}
+
+@media screen and (min-width: 768px) {
+  .use-cases__text p {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 29px;
+  }
+}
+
+.use-cases__text ul {
+  margin: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .use-cases__text ul {
+    margin: 29px;
+  }
+}
+
+.use-cases__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .use-cases__image {
+    margin-top: 0;
+  }
+}
+
+.use-cases__image img {
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.use-cases-product {
+  padding: 50px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .use-cases-product {
+    padding: 90px;
+  }
+}
+
+.use-cases-product__text > *:last-child {
+  margin-bottom: 0;
+}
+
+.use-cases-product__text h2 {
+  text-align: center;
+  color: #11274B;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 992px) {
+  .use-cases-product__text h2 {
+    text-align: left;
+    margin-bottom: 29px;
+  }
+}
+
+.use-cases-product__text p {
+  text-align: center;
+  color: #11274B;
+  margin-bottom: 18px;
+  line-height: 160%;
+}
+
+@media screen and (min-width: 992px) {
+  .use-cases-product__text p {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 29px;
+  }
+}
+
+.use-cases-product__text img {
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  max-height: 383px;
+}
+
+@media screen and (min-width: 992px) {
+  .use-cases-product__text img {
+    max-height: 547px;
+  }
+}
+
+.use-cases-product__text ul {
+  margin: 18px;
+}
+
+@media screen and (min-width: 992px) {
+  .use-cases-product__text ul {
+    margin: 29px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .use-cases-product__text a.button {
+    max-width: 213px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .use-cases-product__text a.button {
+    margin: unset;
+  }
+}
+
+.use-cases-product__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 18px;
+}
+
+@media screen and (min-width: 992px) {
+  .use-cases-product__image {
+    margin-top: 0;
+  }
+}
+
+.use-cases-product__image img {
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  max-height: 383px;
+}
+
+@media screen and (min-width: 992px) {
+  .use-cases-product__image img {
+    max-height: 547px;
   }
 }
 

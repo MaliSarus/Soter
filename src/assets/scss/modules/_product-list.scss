@@ -81,12 +81,13 @@
     align-items: center;
     @media screen and (min-width: $md-width) {
       padding-top: auto;
+      padding-top: 0;
     }
 
     img {
       position: relative;
       z-index: 2;
-      width: 100%;
+      max-width: 100%;
       object-fit: contain;
       object-position: center;
       max-height: 455px;
