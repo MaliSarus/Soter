@@ -31,7 +31,7 @@
         }
     }
 
-    var hamburgerInit = () => {
+    function hamburgerInit() {
         var hamburger = $('.hamburger');
         hamburger.css({
             outline: 'none'
@@ -45,7 +45,7 @@
         });
     };
 
-    var sliderButtonsHandler = () => {
+    function sliderButtonsHandler() {
         var btns = $('.nav-dot');
         var paginationWrapper = $('.pagination-wrapper');
         var bigDotContainer = $('.big-dot-container');
@@ -72,7 +72,7 @@
         }
     };
 
-    var sponsorsSliderInit = () => {
+    function sponsorsSliderInit() {
         var mySwiper = new Swiper('.sponsors__slider', {
             // Optional parameters
             slidesPerView: 1,
@@ -94,6 +94,7 @@
                     if ($(window).width() >= 1200) {
                         this.destroy(false, true);
                         this.init();
+                        mySwiperControl = document.querySelector('.sponsors__slider.swiper-container').swiper;
                     }
                 },
                 slideNextTransitionStart: function () {
@@ -132,28 +133,29 @@
                 }
             }
         });
+        var mySwiperControl = document.querySelector('.sponsors__slider.swiper-container').swiper
         setInterval(function () {
-            mySwiper.update(true)
+            mySwiperControl.update(true)
         }, 1000);
         var arrowPrev = $('.sponsors__head .arrow-prev');
         var arrowNext = $('.sponsors__head .arrow-next');
         arrowPrev.on('click', function () {
-            mySwiper.slidePrev(400, true);
+            mySwiperControl.slidePrev(400, true);
         });
         arrowNext.on('click', function () {
-            mySwiper.slideNext(400, true);
+            mySwiperControl.slideNext(400, true);
         });
         var dots = $('.sponsors__content .little-dot');
         dots.on('click', function (event) {
             if ($('.little-dot--first').is(event.target)) {
-                mySwiper.slidePrev(400, true);
+                mySwiperControl.slidePrev(400, true);
             }
             if ($('.little-dot--last').is(event.target)) {
-                mySwiper.slideNext(400, true);
+                mySwiperControl.slideNext(400, true);
             }
         })
     };
-    var feedbackSliderInit = () => {
+    function feedbackSliderInit() {
         var mySwiper = new Swiper('.feedback__slider', {
             // Optional parameters
             slidesPerView: 1,
@@ -204,7 +206,7 @@
             }
         });
     };
-    var clientsSliderInit = () => {
+    function clientsSliderInit() {
         var mySwiper = new Swiper('.clients__slider', {
             // Optional parameters
             slidesPerView: 1,
@@ -396,7 +398,6 @@
         }
 
 
-        if (isSet($('.request'))) {
             var requestInputs = $('.request__input');
             var phoneInput = $('#request-phone');
             var nameInput = $('#request-name');
@@ -417,7 +418,7 @@
                 }
             });
             requestSubmit.on('click', function (event) {
-                let failFlag = 0;
+                var failFlag = 0;
                 requestInputs.each(function () {
                     if ($(this).hasClass('invalid')) {
                         failFlag = 1
@@ -470,9 +471,6 @@
                     $(this).siblings('label').removeClass('invalid').addClass('valid');
                 }
             })
-
-
-        }
 
         var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
         var mailInput = $('[name="email"]');
