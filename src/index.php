@@ -29,5 +29,9 @@ require './modules/answer.php';
 require './modules/try-soter.php';
 //<!--07052020-->
 
+//<!--08052020-->
+require './modules/key-features.php';
+//<!--08052020-->
+
 require './modules/footer.php';
 ?>

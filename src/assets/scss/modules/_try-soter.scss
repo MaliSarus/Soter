@@ -10,9 +10,9 @@
     }
     form{
       background: linear-gradient(90deg, #1F94F1 0%, #0851BF 102.4%);
-      border-radius: 3px;
       padding: 33px 30px 49px;
       @media screen and (min-width: $md-width){
+        border-radius: 3px;
         padding: 33px 59px 47px;
       }
       >p{
@@ -135,6 +135,7 @@
     @media screen and (min-width: $md-width){
       padding-top: 0;
       padding-bottom: 0;
+      padding-left: 30px;
     }
   }
   &__top-text{

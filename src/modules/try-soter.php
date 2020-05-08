@@ -1,7 +1,7 @@
 <section class="try-soter">
     <div class="container-fluid container-md">
         <div class="row">
-            <div class="col-12 col-md-6 try-soter__left">
+            <div class="col-12 col-md-6 col-lg-7 try-soter__left">
                 <div class="try-soter__top-text">
                     <h2>Try SoterSpine With Your Workforce</h2>
                     <p>Ensure how the wearable device can reduce ergonomic injuries in your workplace by 55%</p>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 try-soter__right">
+            <div class="col-12 col-md-6 col-lg-5 try-soter__right">
                 <form action="#">
                     <p>Fill out the form and our team members will contact you!</p>
                     <div class="request__form-row">
