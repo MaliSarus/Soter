@@ -3,6 +3,7 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div class="request__top p-sx-30">
+                    <div class="success-image"></div>
                     <h2 class="title title_light">Leave A Request</h2>
                     <p class="text text_light">One of Our Team Will Contact You</p>
                 </div>
@@ -12,6 +13,8 @@
             <div class="col-12 col-lg-6">
                 <div class="request__block">
                     <form action="#">
+                        <input type="hidden" name="formname" value="request form">
+                        <input type="hidden" name="formname-second" value="Contact form">
                         <div class="request__form-row">
                             <div class="request__input-wrapper">
                                 <input type="text" name="name" class="request__input form-control" id="request-name"

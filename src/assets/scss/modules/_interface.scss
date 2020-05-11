@@ -367,3 +367,26 @@ img.align-center{
     margin: 20px auto;
   }
 }
+
+.success-image{
+  width: 100%;
+  min-height: 220px;
+  max-width: 220px;
+  max-height: 220px;
+  background: url("../img/request/success.svg") center / contain no-repeat;
+  margin-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  opacity: .24;
+  display: none;
+  @media screen and (min-width: $lg-width){
+    min-height: unset;
+    max-height: none;
+    max-width: none;
+    margin: 0;
+    opacity: 1;
+    margin-bottom: 34px;
+    width: 100px;
+    height: 100px;
+  }
+}

@@ -38,6 +38,17 @@
       transform: translateY(50%);
     }
   }
+  &_success{
+    padding-top: 117px;
+    padding-bottom: 117px;
+    @media screen and (min-width: $lg-width ){
+      padding-top: 115px;
+      padding-bottom: 146px;
+    }
+    .request__top{
+      margin-bottom: 0;
+    }
+  }
   &__top{
     text-align: center;
     margin-bottom: 24px;

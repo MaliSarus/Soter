@@ -47,6 +47,10 @@
         </div>
         <div class="row footer__bottom">
             <div class="col-12 col-lg-6">
+                <div class="footer__bottom-success">
+                    <img src="./assets/img/footer/success.svg" alt="Иконка">
+                    Thank you for subscribing!
+                </div>
                 <p>Subscribe to our newsletter</p>
                 <form action="#">
                     <div class="request__input-wrapper request__mail">

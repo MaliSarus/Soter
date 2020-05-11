@@ -35,6 +35,35 @@
     padding-top: 297px;
     padding-bottom: 217px;
   }
+  &_simple{
+    background: #051834!important;
+    padding-top: 77px;
+    padding-bottom: 115px;
+    &::before,&::after{
+      content: '';
+    }
+    &::before{
+      display: none;
+    }
+    &::after{
+      height: 10px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, #2095F2 0%, #0851BF 100%);;
+    }
+    .main-top__text{
+      padding-left: 0;
+      &::before,&::after{
+        content: '';
+        display: none;
+      }
+    }
+    @media screen and (min-width: $lg-width){
+      padding-top: 250px;
+      padding-bottom: 162px;
+    }
+  }
   &__text{
     text-align: center;
     margin-bottom: 21px;

@@ -30,6 +30,31 @@
     @media screen and (min-width: $lg-width) {
       padding-top: 47px;
     }
+    &-success{
+      display: none;
+      background: #1D3357;
+      border-radius: 3px;
+      padding: 23px 29px 23px 23px;
+      align-items: center;
+      max-width: 316px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 15px;
+      @media screen and (min-width: $lg-width){
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      img{
+        width: 33px;
+        height: 33px;
+        margin-right: 17px;
+      }
+    }
     p{
       font-weight: bold;
       font-size: 14px;

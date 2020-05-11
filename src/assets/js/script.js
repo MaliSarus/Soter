@@ -8,7 +8,6 @@
             element.css({
                 color: 'red'
             });
-            console.log(element.siblings());
         }
     };
 
@@ -155,6 +154,7 @@
             }
         })
     };
+
     function feedbackSliderInit() {
         var mySwiper = new Swiper('.feedback__slider', {
             // Optional parameters
@@ -206,6 +206,7 @@
             }
         });
     };
+
     function clientsSliderInit() {
         var mySwiper = new Swiper('.clients__slider', {
             // Optional parameters
@@ -398,79 +399,88 @@
         }
 
 
-            var requestInputs = $('.request__input');
-            var phoneInput = $('#request-phone');
-            var nameInput = $('#request-name');
-            var companyInput = $('#request-company');
-            var messageInput = $('#request-message');
-            var requestSubmit = $('.request form button[type="submit"]');
+        var requestInputs = $('.request__input');
+        var phoneInput = $('.request__phone > input');
+        var nameInput = $('.request__user > input');
+        var companyInput = $('.request__company > input');
+        var messageInput = $('#request-message');
+        var requestSubmit = $('.request form button[type="submit"]');
 
 
-            requestInputs.on('input', function () {
-                if ($(this).is(':valid')) {
-                    if (!($(this).is('#request-phone')) || !($(this).is('#request-email'))) {
-                        $(this).parent().removeClass('invalid').addClass('valid');
-                        $(this).siblings('label').removeClass('invalid').addClass('valid');
-                    }
-                } else {
-                    $(this).parent().removeClass('valid').addClass('invalid');
-                    $(this).siblings('label').removeClass('valid').addClass('invalid');
-                }
-            });
-            requestSubmit.on('click', function (event) {
-                var failFlag = 0;
-                requestInputs.each(function () {
-                    if ($(this).hasClass('invalid')) {
-                        failFlag = 1
-                    }
-                });
-                if (failFlag == 1) {
-                    event.preventDefault();
-                }
-            });
-
-            nameInput.on('input', function () {
-                $(this).val($(this).val().replace(/[0-9]/, ''));
-            });
-
-            phoneInput.on('input', function () {
-                if (!(Inputmask.isValid($(this).val(), "+9-(999)-999-9999"))) {
-                    // $(this).removeClass('valid').addClass('invalid');
-                    $(this).parent().removeClass('valid').addClass('invalid');
-                    $(this).siblings('label').removeClass('valid').addClass('invalid');
-                } else {
-                    // $(this).removeClass('invalid').addClass('valid');
+        requestInputs.on('input', function () {
+            if ($(this).is(':valid')) {
+                if (!($(this).is('#request-phone')) || !($(this).is('#request-email'))) {
                     $(this).parent().removeClass('invalid').addClass('valid');
                     $(this).siblings('label').removeClass('invalid').addClass('valid');
                 }
-            });
+            } else {
+                $(this).parent().removeClass('valid').addClass('invalid');
+                $(this).siblings('label').removeClass('valid').addClass('invalid');
+            }
+        });
 
-            phoneInput.on('focus', function () {
-                phoneInput.inputmask({
-                    "mask": "+9-(999)-999-9999",
-                    showMaskOnHover: false,
-                    showMaskOnFocus: true,
-                    'onincomplete': function () {
-                        phoneInput.inputmask("remove")
-                    },
-                    "oncomplete": function () {
-                        $(this).parent().removeClass('invalid').addClass('valid');
-                        $(this).siblings('label').removeClass('invalid').addClass('valid');
-                    }
-                });
-            });
-            phoneInput.on('blur', function () {
-                if (!(Inputmask.isValid($(this).val(), "+9-(999)-999-9999"))) {
-
-                    // $(this).removeClass('valid').addClass('invalid');
-                    $(this).parent().removeClass('valid').addClass('invalid');
-                    $(this).siblings('label').removeClass('valid').addClass('invalid');
-                } else {
-                    // $(this).removeClass('invalid').addClass('valid');
-                    $(this).parent().removeClass('invalid').addClass('valid');
-                    $(this).siblings('label').removeClass('invalid').addClass('valid');
+        requestSubmit.on('click submit', function (event) {
+            var failFlag = 0;
+            requestInputs.each(function () {
+                if ($(this).hasClass('invalid')) {
+                    failFlag = 1
                 }
-            })
+            });
+            if (failFlag == 1) {
+                event.preventDefault();
+                $('.success-image').css('display', 'block');
+                $('.request__block, .request__bottom').css('display', 'none');
+            } else {
+                event.preventDefault();
+                $('.success-image').css('display', 'block');
+                $('.request__block, .request__bottom').css('display', 'none');
+                $('.request__top h2').html('Thank you for the request!');
+                $('.request__top p').html('Our team member will contact you soon');
+                $('.request').addClass('request_success');
+            }
+        });
+
+        nameInput.on('input', function () {
+            $(this).val($(this).val().replace(/[0-9]/, ''));
+        });
+
+        phoneInput.on('input', function () {
+            if (!(Inputmask.isValid($(this).val(), "+9-(999)-999-9999"))) {
+                // $(this).removeClass('valid').addClass('invalid');
+                $(this).parent().removeClass('valid').addClass('invalid');
+                $(this).siblings('label').removeClass('valid').addClass('invalid');
+            } else {
+                // $(this).removeClass('invalid').addClass('valid');
+                $(this).parent().removeClass('invalid').addClass('valid');
+                $(this).siblings('label').removeClass('invalid').addClass('valid');
+            }
+        });
+        // phoneInput.on('focus', function () {
+        phoneInput.inputmask({
+            "mask": "+9-(999)-999-9999",
+            showMaskOnHover: false,
+            showMaskOnFocus: true,
+            'onincomplete': function () {
+                phoneInput.inputmask("remove")
+            },
+            "oncomplete": function () {
+                $(this).parent().removeClass('invalid').addClass('valid');
+                $(this).siblings('label').removeClass('invalid').addClass('valid');
+            }
+        });
+        // });
+        phoneInput.on('blur', function () {
+            if (!(Inputmask.isValid($(this).val(), "+9-(999)-999-9999"))) {
+
+                // $(this).removeClass('valid').addClass('invalid');
+                $(this).parent().removeClass('valid').addClass('invalid');
+                $(this).siblings('label').removeClass('valid').addClass('invalid');
+            } else {
+                // $(this).removeClass('invalid').addClass('valid');
+                $(this).parent().removeClass('invalid').addClass('valid');
+                $(this).siblings('label').removeClass('invalid').addClass('valid');
+            }
+        });
 
         var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.([a-z]{1,6}\.)?[a-z]{2,6}$/i;
         var mailInput = $('[name="email"]');
@@ -499,13 +509,35 @@
 
         });
 
-        if(isSet($('.try-soter'))){
+        var footerForm = $('.footer__bottom form');
+        var footerSubmit = footerForm.find('button[type="submit"]');
+        footerSubmit.on('click submit', function (event) {
+            var failFlag = 0;
+            if (footerForm.find('.request__input').hasClass('invalid')) {
+                failFlag = 1
+            }
+            if (failFlag == 1) {
+                event.preventDefault();
+            } else {
+                event.preventDefault();
+                footerForm.hide().siblings('p').hide().siblings('.footer__bottom-success').css('display','flex');
+            }
+        });
+
+        if (isSet($('.try-soter'))) {
             $('.try-soter__right input').on('focus', function () {
                 $(this).parent('.request__input-wrapper').addClass('focused');
             });
             $('.try-soter__right input').on('blur', function () {
                 $(this).parent('.request__input-wrapper').removeClass('focused');
             })
+        }
+        if (isSet($('.copy'))) {
+            var textBLock = $('.copy__text-item');
+            textBLock.find('ul > li').each(function (index) {
+                $(this).attr('data-step', '0' + (index + 1))
+            });
+
         }
         if ($(window).width() >= 992) {
             var footerSocials = $('.footer__socials').data('mobile', $('.footer__socials').parent().attr('class'))

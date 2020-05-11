@@ -33,5 +33,10 @@ require './modules/try-soter.php';
 require './modules/key-features.php';
 //<!--08052020-->
 
+//<!--11052020-->
+require './modules/soter-spine.php';
+require './modules/copy.php';
+require './modules/product.php';
+////<!--11052020-->
 require './modules/footer.php';
 ?>

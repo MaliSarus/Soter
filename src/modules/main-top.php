@@ -1,4 +1,4 @@
-<section class="main-top" style="background-image: url(./assets/img/main-top/bg-image.png)">
+<section class="main-top main-top_simple" style="background-image: url(./assets/img/main-top/bg-image.png)">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-9">
