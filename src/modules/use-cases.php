@@ -11,7 +11,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-12 col-xl-6">
+            <div class="col-12 col-xl-6 d-flex align-items-center justify-content-center">
                 <div class="use-cases__image">
                     <img src="./assets/img/use-cases/1.jpg" alt="Картинка">
                 </div>
@@ -26,8 +26,10 @@
                         impact of interventions.
                     </p>
             </div>
-            <div class="col-12 col-xl-6 use-cases__image">
+            <div class="col-12 col-xl-6 d-flex align-items-center justify-content-center">
+                <div class="use-cases__image">
                     <img src="./assets/img/use-cases/2.jpg" alt="Картинка">
+                </div>
             </div>
         </div>
 

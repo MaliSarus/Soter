@@ -4,6 +4,11 @@
     @media screen and (min-width: $lg-width){
       padding: 71.5px 0;
     }
+    .use-cases__image{
+      &::after{
+        right: -45px;
+      }
+    }
     &:first-child{
       padding-top: 50px;
       padding-bottom: 25px;
@@ -22,6 +27,11 @@
     }
     &:nth-child(2n){
       flex-direction: row-reverse;
+      .use-cases__image{
+        &::after{
+          left: -45px;
+        }
+      }
     }
   }
   &__text{
@@ -62,13 +72,21 @@
     }
   }
   &__image{
-    display: flex;
-    align-items: center;
-    margin-top: 18px;
+    position: relative;
+    margin-top: 25px;
     @media screen and (min-width: $xl-width){
       margin-top: 0;
     }
+    &::after{
+      position: absolute;
+      display: block;
+      content: url("../img/use-cases/balls.svg");
+      bottom: -45px;
+      z-index: 0;
+    }
     img{
+      position: relative;
+      z-index: 1;
       width: 100%;
       object-fit: contain;
     }

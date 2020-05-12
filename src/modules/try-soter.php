@@ -1,7 +1,7 @@
 <section class="try-soter">
     <div class="container-fluid container-md">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg- try-soter__left">
+            <div class="col-12 col-md-6 col-lg-7 try-soter__left">
                 <div class="try-soter__top-text">
                     <h2>Try SoterSpine With Your Workforce</h2>
                     <p>Ensure how the wearable device can reduce ergonomic injuries in your workplace by 55%</p>
@@ -69,7 +69,7 @@
                         <div class="request__input-wrapper request__mail">
                             <input type="email" name="email" class="request__input form-control" id="request-email"
                                    required>
-                            <label for="request-email">EMAIL</label>
+                            <label for="request-email">E-mail</label>
                         </div>
                         <div class="request__input-wrapper request__company">
                             <input type="text" name="company" class="request__input form-control"

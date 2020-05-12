@@ -6,7 +6,7 @@
                 <h1>Thank You!</h1>
                 <h2>Your Payment is Successfull</h2>
                 <p>You will receive an email with confirmation details. If you have any questions regarding your
-                    payment, please send a request through the <a href="#">form below</a></p>
+                    payment, please send a request through the <a href="#"><i>form below</i></a></p>
                 <a href="#" class="button button_blue">Back to home</a>
             </div>
         </div>
