@@ -35,8 +35,10 @@
       color: $main-color;
       margin-bottom: 16px;
       @media screen and (min-width: $md-width){
-        text-align: left;
         margin-bottom: 29px;
+      }
+      @media screen and (min-width: $xl-width){
+        text-align: left;
       }
     }
     p{
@@ -45,9 +47,11 @@
       margin-bottom: 18px;
       line-height: 160%;
       @media screen and (min-width: $md-width){
-        text-align: left;
         font-size: 18px;
         margin-bottom: 29px;
+      }
+      @media screen and (min-width: $xl-width){
+        text-align: left;
       }
     }
     ul{
@@ -61,7 +65,7 @@
     display: flex;
     align-items: center;
     margin-top: 18px;
-    @media screen and (min-width: $md-width){
+    @media screen and (min-width: $xl-width){
       margin-top: 0;
     }
     img{

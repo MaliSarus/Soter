@@ -327,6 +327,20 @@
                 $('.clients__slider > .swiper-wrapper').css('flex-wrap', 'wrap')
             }
         }
+
+        if (isSet($('[data-position]'))){
+            $('[data-position]').each(function () {
+                var style = $(this).attr('data-position').replace( /\s/g, "").split(';');
+                $(this).css({
+                    position: 'relative',
+                    left: style[0] + 'px'
+                });
+                if($(window).width() >= 1200){
+                    $(this).css('left', style[1] + 'px');
+                }
+            });
+        }
+
         if ($(window).width() < 992) {
             if ($('.footer__socials').data('mobile') !== undefined) {
                 var footerSocialsPlace = '.' + $('.footer__socials').data('mobile');
@@ -544,6 +558,21 @@
             footerSocials.detach().appendTo('.footer__left');
         }
         dropdownMobileMenuOn();
+        if (isSet($('[data-position]'))){
+            $('[data-position]').each(function () {
+               var style = $(this).attr('data-position').replace( /\s/g, "").split(';');
+               $(this).css({
+                   position: 'relative',
+                   left: style[0] + 'px'
+               });
+                if(window.matchMedia('(min-width: 1200px)').matches){
+                   $(this).css('left', style[1] + 'px');
+                }
+            });
+
+        }
+
+
     });
 
 })(jQuery); // <----- Конец обертки

@@ -1,7 +1,7 @@
 <section class="use-cases">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-xl-6">
                 <div class="use-cases__text">
                     <h2>Target and retrain the movement causes of work related back injuries</h2>
                     <p>
@@ -11,14 +11,14 @@
                     </p>
                 </div>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-xl-6">
                 <div class="use-cases__image">
                     <img src="./assets/img/use-cases/1.jpg" alt="Картинка">
                 </div>
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-12 col-md-6 use-cases__text">
+            <div class="col-12 col-xl-6 use-cases__text">
                     <h2>Leverage the data to eliminate hazardous handling </h2>
                     <p>
                         The data available for review identifies hotspots of risk. Analysis available on the dashboard
@@ -26,7 +26,7 @@
                         impact of interventions.
                     </p>
             </div>
-            <div class="col-12 col-md-6 use-cases__image">
+            <div class="col-12 col-xl-6 use-cases__image">
                     <img src="./assets/img/use-cases/2.jpg" alt="Картинка">
             </div>
         </div>

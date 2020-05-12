@@ -1,15 +1,27 @@
 .product-list {
   overflow: hidden;
-  background: #F6FAFF;
+  background: linear-gradient(90deg, #F6FAFF 0%, #EBF4FF 100%);;
 
   .row {
-    padding: 50px 0;
+    padding: 25px 0;
+    &:first-child{
+      padding-top: 50px;
+    }
+    &:last-child{
+      padding-bottom: 50px;
+    }
     @media screen and (min-width: $lg-width) {
       padding: 100px 0;
+      &:first-child{
+        padding-top: 100px;
+      }
+      &:last-child{
+        padding-bottom: 100px;
+      }
     }
 
     img {
-      @media screen and (min-width: $md-width) {
+      @media screen and (min-width: $lg-width) {
         object-position: right;
       }
     }
@@ -18,7 +30,7 @@
       flex-direction: row-reverse;
 
       img {
-        @media screen and (min-width: $md-width) {
+        @media screen and (min-width: $lg-width) {
           object-position: left;
         }
       }
@@ -44,6 +56,8 @@
         font-size: 55px;
         line-height: 120%;
         margin-bottom: 33px;
+      }
+      @media screen and (min-width: $lg-width){
         text-align: left;
       }
     }
@@ -55,15 +69,17 @@
       margin: 12px 0;
       @media screen and (min-width: $md-width) {
         font-size: 22px;
-        text-align: left;
         line-height: 160%;
         margin: 30px 0;
+      }
+      @media screen and (min-width: $lg-width){
+        text-align: left;
       }
     }
 
     > ul {
       margin: 20px 0;
-      @media screen and (min-width: $md-width) {
+      @media screen and (min-width: $lg-width) {
         margin: 30px 0;
       }
 
@@ -74,13 +90,12 @@
   }
 
   &__image {
+    max-width: 100%;
     padding-top: 26px;
-    width: 100%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    @media screen and (min-width: $md-width) {
+    @media screen and (min-width: $lg-width) {
       padding-top: auto;
       padding-top: 0;
     }
@@ -92,7 +107,7 @@
       object-fit: contain;
       object-position: center;
       max-height: 455px;
-      @media screen and (min-width: $md-width) {
+      @media screen and (min-width: $lg-width) {
         max-height: 615px;
       }
     }
@@ -133,20 +148,20 @@
       position: absolute;
       display: block;
       content: url("../img/product-list/balls-lb-sm.svg");
-      left: 0;
-      bottom: 0;
+      left: -5px;
+      bottom: -10px;
     }
   }
 
   &-rb-md {
     position: relative;
-    @media screen and (min-width: $md-width) {
+    @media screen and (min-width: $lg-width) {
       &::before {
         content: url("../img/product-list/balls-rb-md.svg");
         left: unset;
         top: unset;
         right: -222px;
-        bottom: 0;
+        bottom: 50px;
         transform: unset;
       }
     }
@@ -154,10 +169,10 @@
 
   &-cl-md {
     position: relative;
-    @media screen and (min-width: $md-width) {
+    @media screen and (min-width: $lg-width) {
       &::before {
         content: url("../img/product-list/balls-cl-md.svg");
-        left: -111px;
+        left: -235px;
         right: unset;
         bottom: unset;
         top: 50%;
@@ -168,11 +183,11 @@
 
   &-rt-md {
     position: relative;
-    @media screen and (min-width: $md-width) {
+    @media screen and (min-width: $lg-width) {
       &::before {
         content: url("../img/product-list/balls-rt-md.svg");
-        right: -222px;
-        top: 0;
+        right: -200px;
+        top: -34px;
         left: unset;
         bottom: unset;
       }
