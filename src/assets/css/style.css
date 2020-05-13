@@ -6164,15 +6164,14 @@ img.align-center {
 }
 
 .use-cases-product__text a.button {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 576px) {
   .use-cases-product__text a.button {
     max-width: 213px;
     margin: 0 auto;
+    margin-top: 10px;
   }
 }
 
@@ -6304,7 +6303,7 @@ img.align-center {
 
 .answer__block a.button {
   color: white;
-  width: calc(100% - 10px);
+  width: calc(100% - 32px);
   margin: 0 auto;
 }
 
