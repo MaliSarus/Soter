@@ -36,6 +36,7 @@
     padding-bottom: 217px;
   }
   &_simple{
+    position: relative;
     background: #051834!important;
     padding-top: 77px;
     padding-bottom: 115px;
@@ -48,9 +49,11 @@
     &::after{
       height: 10px;
       width: 100%;
+      top: unset;
       left: 0;
       bottom: 0;
-      background: linear-gradient(90deg, #2095F2 0%, #0851BF 100%);;
+      background: linear-gradient(90deg, #2095F2 0%, #0851BF 100%);
+      transform: none;
     }
     .main-top__text{
       padding-left: 0;

@@ -1,4 +1,22 @@
 </main>
+<div class="modal">
+    <div class="modal__block">
+        <span class="modal-close"><img src="./assets/img/modal/close.svg" alt="Закрыть"></span>
+        <form action="#">
+            <p>Enter Your Details</p>
+            <div class="modal__wrapper request__user">
+                <input type="text" name="order-name" id="order-name" required>
+                <label for="order-name">First Name</label></div>
+            <div class="modal__wrapper request__mail">
+                <input type="e-mail" name="order-mail" id="order-mail" required>
+                <label for="order-mail">E-mail</label></div>
+            <div class="modal__wrapper request__company">
+                <input type="Company name" name="order-company" id="order-company" required>
+                <label for="order-company">Company name</label></div>
+            <button type="submit" class="button button_blue">Buy soter</button>
+        </form>
+    </div>
+</div>
 <footer class="footer">
     <div class="container">
         <div class="row footer__top">
