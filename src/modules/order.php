@@ -31,7 +31,7 @@
                     </p>
                     <small><span>*</span>The device will be send in white or black color depending on its
                         availability</small>
-                    <form action="#" id="order-clipngo-form">
+                    <form action="#" id="order-coach-form">
                         <div class="add-info">
                             If you'd like to order more than 20 devices simply contact us via the <a href="#"><i>form
                                     below</i></a>
@@ -97,7 +97,7 @@
                                     <li>$75 per the device</li>
                                     <li>$125 monthly subscription fee per item</li>
                                 </ul>
-                                <button class="button button_blue" type="button" data-type="coach">order now</button>
+                                <button class="button button_blue" type="button" id="coach-order-button">order now</button>
                             </div>
                         </div>
 
@@ -188,7 +188,7 @@
                                     <li>$75 per the device</li>
                                     <li>$125 monthly subscription fee per item</li>
                                 </ul>
-                                <button class="button button_blue" type="button" data-type="coach">order now</button>
+                                <button class="button button_blue" type="button" id="clipngo-order-button">order now</button>
                             </div>
                         </div>
 

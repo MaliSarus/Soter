@@ -7,12 +7,12 @@
     display: none;
     flex-direction: column;
     align-items: center;
-    padding: 34px 30px 37px;
+    padding: 34px 30px;
     background: #F6FAFF;
     border-radius: 5px;
     @media screen and (min-width: $md-width){
       border-radius: 3px;
-      padding: 41px 45px 25px;
+      padding: 41px 45px;
     }
     img{
       width: 67px;
@@ -138,10 +138,10 @@
       box-sizing: border-box;
       position: relative;
       background: #F6FAFF;
-      padding: 34px 30px 37px;
+      padding: 34px 30px;
       @media screen and (min-width: $md-width){
         border-radius: 3px;
-        padding: 41px 45px 25px;
+        padding: 41px 45px;
       }
       &::before{
         display: block;

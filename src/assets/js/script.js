@@ -589,14 +589,15 @@
 
             var previewImage = $('.order__preview-image');
             previewImage.on('click', function () {
-                var topImage = $('.order__preview-top > img');
+                var previewBlock = $(this).parents('.order__preview');
+                var topImage = $(this).parents('.order__preview').find('.order__preview-top').children('img');
                 var targetImage = $(this).children('img');
                 var that = $(this);
                 topImage.animate({
                     opacity: 0
                 }, function () {
-                    $('.order__preview-top').children('img').detach();
-                    $('.order__preview-top').append(targetImage);
+                    that.parents('.order__preview').find('.order__preview-top').children('img').detach();
+                    that.parents('.order__preview').find('.order__preview-top').append(targetImage);
                 });
                 targetImage.animate({
                     opacity: 0

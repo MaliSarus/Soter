@@ -91,6 +91,11 @@ p{
 ul{
   padding: 0;
   margin: 0;
+  &.fw_normal{
+    li{
+      font-weight: normal;
+    }
+  }
   li{
     display: flex;
     text-align: left;
