@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-5 try-soter__right">
-                <form action="#">
+                <form action="#" id="try-soter-form">
                     <p>Fill out the form and our team members will contact you!</p>
                     <input type="hidden" name="formname" value="try-soter form">
                     <input type="hidden" name="formname-second" value="Try product form">
@@ -82,7 +82,7 @@
                         one of our team to contact you. You also wish to sign up for our monthly newsletter to receive
                         the latest updates from the Soter Team.
                     </small>
-                    <button class="button button_white button_color_dark" type="submit">Try Soter</button>
+                    <button class="button button_white button_color_dark request__submit" id="try-soter-button" type="submit">Try Soter</button>
                 </form>
             </div>
         </div>

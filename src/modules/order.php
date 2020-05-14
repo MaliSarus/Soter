@@ -31,7 +31,7 @@
                     </p>
                     <small><span>*</span>The device will be send in white or black color depending on its
                         availability</small>
-                    <form action="#">
+                    <form action="#" id="order-clipngo-form">
                         <div class="add-info">
                             If you'd like to order more than 20 devices simply contact us via the <a href="#"><i>form
                                     below</i></a>
@@ -140,7 +140,7 @@
                     </p>
                     <small><span>*</span>The device will be send in white or black color depending on its
                         availability</small>
-                    <form action="#">
+                    <form action="#" id="order-clipngo-form">
                         <div class="add-info">
                             If you'd like to order more than 20 devices simply contact us via the <a href="#"><i>form
                                     below</i></a>
@@ -180,24 +180,6 @@
                                     <input type="text" value="125$" name="clipngo-price-order" readonly>
                                 </div>
 
-                            </div>
-                        </div>
-                        <div class="order__form-row">
-                            <div class="order__programs">
-                                <p>Training Programs</p>
-                                <div class="order__programs-wrapper">
-                                    <label for="clipngo-program-manual"><input type="radio" id="clipngo-program-manual"
-                                                                               name="clipngo-program"
-                                                                               value="Manual Handling Training" required
-                                                                               checked><span></span><span
-                                                class="text">Manual Handling Training</span>
-                                    </label>
-                                    <label for="clipngo-program-injury"><input type="radio" id="clipngo-program-injury"
-                                                                               name="clipngo-program"
-                                                                               value="Early Injury Intervention" required><span></span><span
-                                                class="text">Early Injury Intervention</span>
-                                    </label>
-                                </div>
                             </div>
                         </div>
                         <div class="order__form-row">

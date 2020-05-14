@@ -442,7 +442,7 @@
         var nameInput = $('.request__user > input');
         var companyInput = $('.request__company > input');
         var messageInput = $('#request-message');
-        var requestSubmit = $('.request form button[type="submit"]');
+        var requestSubmit = $('.request__submit');
 
 
         requestInputs.on('input', function () {
@@ -457,26 +457,30 @@
             }
         });
 
-        requestSubmit.on('click submit', function (event) {
+        requestSubmit.on('click', function (event) {
             var failFlag = 0;
-            requestInputs.each(function () {
+            $(this).parent().find('.request__input-wrapper').each(function () {
                 if ($(this).hasClass('invalid') || !($(this).hasClass('valid'))) {
                     failFlag = 1
                 }
             });
+            console.log(failFlag);
             if (failFlag == 1) {
                 event.preventDefault();
-                $('.success-image').css('display', 'block');
-                $('.request__block, .request__bottom').css('display', 'none');
             } else {
-                event.preventDefault();
-                $('.success-image').css('display', 'block');
-                $('.request__block, .request__bottom').css('display', 'none');
-                $('.request__top h2').html('Thank you for the request!');
-                $('.request__top p').html('Our team member will contact you soon');
-                $('.request').addClass('request_success');
+                if ($(this).is('#request-button')) {
+                    $('.success-image').css('display', 'block');
+                    $('.request__block, .request__bottom').css('display', 'none');
+                    $('.request__top h2').html('Thank you for the request!');
+                    $('.request__top p').html('Our team member will contact you soon');
+                    $('.request').addClass('request_success');
+                }else if ($(this).is('#copy-button')){
+                    $('.copy__success').css('display','flex');
+                    $('.copy__form form').css('display','none');
+                }
             }
         });
+
 
         nameInput.on('input', function () {
             $(this).val($(this).val().replace(/[0-9]/, ''));
@@ -678,20 +682,15 @@
         var modalSubmit = $('.modal button[type="submit"]');
         modalSubmit.on('click submit', function (event) {
             var failFlag = 0;
-            event.preventDefault();
             modalWrapper.each(function () {
                 if ($(this).hasClass('invalid') || !($(this).hasClass('valid'))) {
                     failFlag = 1
                 }
             });
             if (failFlag == 1) {
-                //fail
-                console.log('fail');
-
+                event.preventDefault();
             } else {
-                //success
                 console.log('success');
-
             }
         });
         var modalName = $('input[name="order-name"]');
@@ -766,6 +765,10 @@
         }
 
 
+        $('form').on('submit', function (e) {
+            console.log($(this));
+            return false;
+        });
     });
 
 })(jQuery); // <----- Конец обертки

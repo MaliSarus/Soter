@@ -14,7 +14,13 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6 col-xl-4 copy__form">
-                <form action="#">
+                <div class="copy__success">
+                    <img src="./assets/img/copy/success.svg" alt="Успех">
+                    <p>Thank you!</p>
+                    <small>Download your copy here</small>
+                    <button class="button button_blue" id="copy__success-button">Download now</button>
+                </div>
+                <form action="#" id="copy-form">
                     <p>Get your copy</p>
                     <input type="hidden" name="formname" value="copy form">
                     <input type="hidden" name="formname-second" value="Get copy form">
@@ -42,7 +48,7 @@
                             <label for="request-company">Company</label>
                         </div>
                     </div>
-                    <button class="button button_blue" type="submit">Download now</button>
+                    <button class="button button_blue request__submit" type="submit" id="copy-button">Download now</button>
                     <small>*By submitting this form, you confirm that you have read and agree to the Privacy Policy and
                         Terms & Conditions and consent to the storage and usage of the personal data submitted to allow
                         one of our team to contact you. You also wish to sign up for our monthly newsletter to receive

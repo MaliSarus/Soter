@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div class="request__block">
-                    <form action="#">
+                    <form action="#" id="request-form">
                         <input type="hidden" name="formname" value="request form">
                         <input type="hidden" name="formname-second" value="Contact form">
                         <div class="request__form-row">
@@ -47,7 +47,7 @@
                                 <label for="request-message">Message</label>
                             </div>
                         </div>
-                        <button class="button button_white" type="submit">Send request</button>
+                        <button class="button button_white request__submit" type="submit" id="request-button">Send request</button>
                     </form>
                 </div>
             </div>

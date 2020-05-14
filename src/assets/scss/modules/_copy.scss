@@ -2,6 +2,45 @@
   @media screen and (min-width: $lg-width){
     padding: 105px 0;
   }
+  &__success{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 34px 30px 37px;
+    background: #F6FAFF;
+    border-radius: 5px;
+    @media screen and (min-width: $md-width){
+      border-radius: 3px;
+      padding: 41px 45px 25px;
+    }
+    img{
+      width: 67px;
+      height: 67px;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      margin-bottom: 15px;
+    }
+    p{
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 130%;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    small{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 130%;
+      text-align: center;
+      color: #000000;
+      margin-bottom: 28px;
+    }
+    button{
+      width: 100%;
+    }
+
+
+  }
 
   &__text{
     display: flex;

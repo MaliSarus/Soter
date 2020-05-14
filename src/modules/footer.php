@@ -2,7 +2,7 @@
 <div class="modal">
     <div class="modal__block">
         <span class="modal-close"><img src="./assets/img/modal/close.svg" alt="Закрыть"></span>
-        <form action="#">
+        <form action="#" id="modal-form">
             <p>Enter Your Details</p>
             <div class="modal__wrapper request__user">
                 <input type="text" name="order-name" id="order-name" required>
