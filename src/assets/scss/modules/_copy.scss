@@ -96,10 +96,10 @@
           &:last-child{
             margin-bottom: 0;
           }
-          &::before{
+          &:before{
+            display: block;
             max-width: none;
             max-height: none;
-            height: 100%;
             font-size: 40px;
             line-height: 120%;
             background: linear-gradient(90deg, #2095F2, #0851BF);
@@ -115,7 +115,6 @@
               position: absolute;
               left: 0;
               top: 50%;
-              display: flex;
               align-items: center;
               transform: translateY(-50%);
             }

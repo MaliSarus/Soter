@@ -7154,10 +7154,10 @@ img.align-center {
   margin-bottom: 0;
 }
 
-.copy__text-item ul li::before {
+.copy__text-item ul li:before {
+  display: block;
   max-width: none;
   max-height: none;
-  height: 100%;
   font-size: 40px;
   line-height: 120%;
   background: -webkit-gradient(linear, left top, right top, from(#2095F2), to(#0851BF));
@@ -7171,19 +7171,16 @@ img.align-center {
 }
 
 @media screen and (min-width: 768px) {
-  .copy__text-item ul li::before {
+  .copy__text-item ul li:before {
     font-size: 61px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .copy__text-item ul li::before {
+  .copy__text-item ul li:before {
     position: absolute;
     left: 0;
     top: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
