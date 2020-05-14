@@ -1,7 +1,7 @@
 <section class="spine">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-8 spine__text">
+            <div class="col-12 col-lg-7 spine__text">
                 <div class="spine__text-item">
                     <h1>Drive Down Worker Injury Rates by Successfully Implementing the SoterSpine Solution</h1>
                     <p>Leveraging technology to address risks and hazards in the workplace can be a lengthy process if not
@@ -16,7 +16,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-12 col-lg-4 spine__image">
+            <div class="col-12 col-lg-5 spine__image">
                 <div class="spine__image-item">
                     <img src="./assets/img/soter-spine/cover.jpg" alt="Обложка">
                 </div>

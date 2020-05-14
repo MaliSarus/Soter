@@ -5311,6 +5311,10 @@ img.align-center {
   }
 }
 
+.clients_simple {
+  padding: 100px 0;
+}
+
 .clients__head {
   margin-bottom: 19px;
 }
@@ -5751,7 +5755,7 @@ img.align-center {
 }
 
 .product-list .row {
-  padding: 25px 0;
+  padding: 2.5px 0;
 }
 
 .product-list .row:first-child {
@@ -5759,7 +5763,7 @@ img.align-center {
 }
 
 .product-list .row:last-child {
-  padding-bottom: 50px;
+  padding-bottom: 73px;
 }
 
 @media screen and (min-width: 992px) {
@@ -5767,10 +5771,10 @@ img.align-center {
     padding: 100px 0;
   }
   .product-list .row:first-child {
-    padding-top: 100px;
+    padding-top: 118px;
   }
   .product-list .row:last-child {
-    padding-bottom: 100px;
+    padding-bottom: 160px;
   }
 }
 
@@ -5894,7 +5898,7 @@ img.align-center {
 
 @media screen and (min-width: 992px) {
   .product-list__image img {
-    max-height: 615px;
+    max-height: 700px;
   }
 }
 
@@ -6685,14 +6689,12 @@ img.align-center {
 }
 
 .key-features {
-  padding-top: 60px;
-  padding-bottom: 70px;
+  padding: 65px 0;
 }
 
 @media screen and (min-width: 992px) {
   .key-features {
-    padding-top: 127px;
-    padding-bottom: 140px;
+    padding: 130px 0;
   }
 }
 
@@ -6818,8 +6820,7 @@ img.align-center {
 
 .spine {
   overflow: hidden;
-  padding-top: 55px;
-  padding-bottom: 73px;
+  padding: 60px 0;
   background: -webkit-gradient(linear, left top, right top, from(#2095F2), to(#0851BF));
   background: -o-linear-gradient(left, #2095F2 0%, #0851BF 100%);
   background: linear-gradient(90deg, #2095F2 0%, #0851BF 100%);
@@ -6827,8 +6828,7 @@ img.align-center {
 
 @media screen and (min-width: 992px) {
   .spine {
-    padding-top: 116px;
-    padding-bottom: 126px;
+    padding: 120px 0;
     position: relative;
   }
   .spine::before, .spine::after {
@@ -7003,8 +7003,7 @@ img.align-center {
 
 @media screen and (min-width: 992px) {
   .copy {
-    padding-top: 114px;
-    padding-bottom: 102px;
+    padding: 105px 0;
   }
 }
 
@@ -7012,8 +7011,7 @@ img.align-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 52px;
-  padding-bottom: 55px;
+  padding: 52.5px 20px;
 }
 
 @media screen and (min-width: 992px) {
@@ -7071,6 +7069,7 @@ img.align-center {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 26px;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -7087,6 +7086,7 @@ img.align-center {
     padding-left: 105px;
     font-weight: 500;
     margin-bottom: 58px;
+    text-align: left;
   }
 }
 
@@ -7156,6 +7156,8 @@ img.align-center {
 }
 
 .copy__form form {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
   background: #F6FAFF;
   padding: 34px 30px 37px;
@@ -7164,7 +7166,7 @@ img.align-center {
 @media screen and (min-width: 768px) {
   .copy__form form {
     border-radius: 3px;
-    padding: 41px 46px 25px 50px;
+    padding: 41px 45px 25px;
   }
 }
 
@@ -7204,6 +7206,12 @@ img.align-center {
 @media screen and (min-width: 768px) {
   .copy__form form > p {
     margin-bottom: 26px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .copy__form form > p {
+    text-align: left;
   }
 }
 
@@ -7306,8 +7314,7 @@ img.align-center {
 
 @media screen and (min-width: 992px) {
   .product {
-    padding-top: 141px;
-    padding-bottom: 168px;
+    padding: 140px 0;
   }
 }
 
@@ -7462,6 +7469,13 @@ img.align-center {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .order__preview {
+    margin-top: 0;
+  }
 }
 
 .order__preview-top {
@@ -7481,12 +7495,14 @@ img.align-center {
 }
 
 .order__preview-top img {
+  min-height: 265px;
   max-height: 265px;
 }
 
 @media screen and (min-width: 768px) {
   .order__preview-top img {
     max-height: none;
+    min-height: 381px;
   }
 }
 
@@ -7661,12 +7677,16 @@ img.align-center {
   display: -ms-flexbox;
   display: flex;
   color: #11274B;
-  margin-top: 20px;
 }
 
 @media screen and (min-width: 768px) {
   .order__main-block form {
     padding: 32px 27px 27px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .order__main-block form {
     margin-top: 26px;
   }
 }

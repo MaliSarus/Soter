@@ -11,6 +11,10 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    margin-top: 20px;
+    @media screen and (min-width: $xl-width){
+      margin-top: 0;
+    }
     &-top{
       display: flex;
       justify-content: center;
@@ -19,9 +23,11 @@
         padding-bottom: 75px;
       }
       img{
+        min-height: 265px;
         max-height: 265px;
         @media screen and (min-width: $md-width){
           max-height: none;
+          min-height: 381px;
         }
       }
     }
@@ -147,9 +153,10 @@
       padding: 22px 25px 27px;
       display: flex;
       color: $main-color;
-      margin-top: 20px;
       @media screen and (min-width: $md-width) {
         padding: 32px 27px 27px;
+      }
+      @media screen and (min-width: $xl-width){
         margin-top: 26px;
       }
 

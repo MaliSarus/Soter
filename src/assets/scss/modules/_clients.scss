@@ -7,6 +7,9 @@
     padding-top: 261px;
     padding-bottom: 138px;
   }
+  &_simple{
+    padding: 100px 0;
+  }
   &__head{
     margin-bottom: 19px;
     @media screen and (min-width: $md-width){

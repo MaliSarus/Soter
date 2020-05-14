@@ -1,9 +1,7 @@
 .key-features{
-  padding-top: 60px;
-  padding-bottom: 70px;
+  padding: 65px 0;
   @media screen and (min-width: $lg-width){
-    padding-top: 127px;
-    padding-bottom: 140px;
+    padding: 130px 0;
   }
   &__top{
     text-align: center;

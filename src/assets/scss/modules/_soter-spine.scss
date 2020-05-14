@@ -1,11 +1,9 @@
 .spine {
   overflow: hidden;
-  padding-top: 55px;
-  padding-bottom: 73px;
+  padding: 60px 0;
   background: linear-gradient(90deg, #2095F2 0%, #0851BF 100%);
   @media screen and (min-width: $lg-width) {
-    padding-top: 116px;
-    padding-bottom: 126px;
+    padding: 120px 0;
     position: relative;
     &::before, &::after {
       display: block;

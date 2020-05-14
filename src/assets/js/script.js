@@ -341,6 +341,30 @@
             });
         }
 
+        if (isSet($('.order'))) {
+            if ($(window).width() < 1200) {
+                $('.order').each(function () {
+                    if (!(isSet($(this).find('.desktop')))) {
+                        var preview = $(this).find('.order__preview');
+                        var contentToPrepend = $(this).find('.order__main-block form');
+                        preview.parent().addClass('desktop');
+                        preview.detach().insertBefore(contentToPrepend);
+                    }
+                })
+            }
+            if ($(window).width() >= 1200) {
+                $('.order').each(function () {
+                    if (isSet($(this).find('.desktop'))) {
+                        var desktopPlace = $(this).find('.desktop');
+                        var preview = $(this).find('.order__preview');
+                        preview.detach().appendTo(desktopPlace);
+                        desktopPlace.removeClass('desktop');
+                    }
+                })
+            }
+        }
+
+
         if ($(window).width() < 992) {
             if ($('.footer__socials').data('mobile') !== undefined) {
                 var footerSocialsPlace = '.' + $('.footer__socials').data('mobile');
@@ -469,20 +493,20 @@
                 $(this).siblings('label').removeClass('invalid').addClass('valid');
             }
         });
-        // phoneInput.on('focus', function () {
-        phoneInput.inputmask({
-            "mask": "+9-(999)-999-9999",
-            showMaskOnHover: false,
-            showMaskOnFocus: true,
-            'onincomplete': function () {
-                phoneInput.inputmask("remove")
-            },
-            "oncomplete": function () {
-                $(this).parent().removeClass('invalid').addClass('valid');
-                $(this).siblings('label').removeClass('invalid').addClass('valid');
-            }
+        phoneInput.on('focus', function () {
+            phoneInput.inputmask({
+                "mask": "+9-(999)-999-9999",
+                showMaskOnHover: false,
+                showMaskOnFocus: true,
+                'onincomplete': function () {
+                    phoneInput.inputmask("remove")
+                },
+                "oncomplete": function () {
+                    $(this).parent().removeClass('invalid').addClass('valid');
+                    $(this).siblings('label').removeClass('invalid').addClass('valid');
+                }
+            });
         });
-        // });
         phoneInput.on('blur', function () {
             if (!(Inputmask.isValid($(this).val(), "+9-(999)-999-9999"))) {
 
@@ -558,6 +582,39 @@
             var buttonDown = $('.order__quantity-button.down');
             var quantityInput = $('input[type="number"]');
             var orderButton = $('.order button[type="button"]');
+
+            var previewImage = $('.order__preview-image');
+            previewImage.on('click', function () {
+                var topImage = $('.order__preview-top > img');
+                var targetImage = $(this).children('img');
+                var that = $(this);
+                topImage.animate({
+                    opacity: 0
+                }, function () {
+                    $('.order__preview-top').children('img').detach();
+                    $('.order__preview-top').append(targetImage);
+                });
+                targetImage.animate({
+                    opacity: 0
+                }, function () {
+                    if (targetImage.attr('data-class') == 'mobile') {
+                        that.removeClass('mobile');
+                    }
+                    that.children('img').detach();
+                    that.append(topImage);
+                    if (topImage.attr('data-class') == 'mobile') {
+                        that.addClass('mobile');
+                    }
+                });
+                topImage.animate({
+                    opacity: 1
+                });
+                targetImage.animate({
+                    opacity: 1
+                });
+
+            });
+
             buttonUp.on('click', function () {
                 var input = $(this).siblings('input[type="number"]');
                 input[0].stepUp();
@@ -583,8 +640,19 @@
                     filter: 'blur(27px)'
                 });
                 $('.modal').addClass('modal_active').removeAttr('style');
-            })
+            });
+            $('[data-class="mobile"]').parent('.order__preview-image').addClass('mobile');
+            if ($(window).width() < 1200) {
+                $('.order').each(function () {
+                    if (!(isSet($(this).find('.desktop')))) {
+                        var preview = $(this).find('.order__preview');
+                        var contentToPrepend = $(this).find('.order__main-block form');
+                        preview.parent().addClass('desktop');
+                        preview.detach().insertBefore(contentToPrepend);
+                    }
+                })
 
+            }
         }
 
         var modalInputs = $('.modal input');

@@ -41,7 +41,5 @@ require './modules/product.php';
 // <!--13052020-->
 require './modules/order.php';
 // <!--13052020-->
-
-require './modules/modal.php';
 require './modules/footer.php';
 ?>
