@@ -7547,7 +7547,7 @@ img.align-center {
   height: 290px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .order__preview-top {
     padding-bottom: 75px;
     height: 470px;
@@ -7556,7 +7556,7 @@ img.align-center {
 
 .order__preview-top img {
   min-height: 265px;
-  max-height: 265px;
+  max-height: 100%;
   max-width: 100%;
   -o-object-fit: contain;
   object-fit: contain;
@@ -7564,7 +7564,7 @@ img.align-center {
 
 @media screen and (min-width: 768px) {
   .order__preview-top img {
-    max-height: none;
+    max-height: 100%;
     min-height: 381px;
   }
 }
@@ -7597,6 +7597,7 @@ img.align-center {
 .order__preview-image {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  border-radius: 3px;
   padding: 12px 8px;
   margin: 0 10px;
   -ms-flex-preferred-size: calc(100% / 3 - 20px);
