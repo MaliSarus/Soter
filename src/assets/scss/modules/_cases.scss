@@ -54,6 +54,7 @@
       padding: 62px 36px 35px 36px;
     }
 
+
     &::before {
       display: block;
       content: '';
@@ -62,9 +63,43 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background: url("../img/cases/hover-bg.png") center / cover no-repeat;
+      background-image: url("../img/cases/hover-bg.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       opacity: 0;
       transition: opacity .25s;
+    }
+
+    &[data-item="1"]{
+      &::before {
+        background-image: url("../img/cases/1.jpg");
+      }
+    }
+    &[data-item="2"]{
+      &::before {
+        background-image: url("../img/cases/2.jpg");
+      }
+    }
+    &[data-item="3"]{
+      &::before {
+        background-image: url("../img/cases/3.jpg");
+      }
+    }
+    &[data-item="4"]{
+      &::before {
+        background-image: url("../img/cases/4.jpg");
+      }
+    }
+    &[data-item="5"]{
+      &::before {
+        background-image: url("../img/cases/5.jpg");
+      }
+    }
+    &[data-item="6"]{
+      &::before {
+        background-image: url("../img/cases/6.jpg");
+      }
     }
 
     &::after {
