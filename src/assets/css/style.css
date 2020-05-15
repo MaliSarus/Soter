@@ -7522,8 +7522,7 @@ img.align-center {
 }
 
 .order {
-  padding-top: 44px;
-  padding-bottom: 55px;
+  padding: 50px 0;
   background: -webkit-gradient(linear, left top, right top, from(#F6FAFF), to(#EBF4FF));
   background: -o-linear-gradient(left, #F6FAFF 0%, #EBF4FF 100%);
   background: linear-gradient(90deg, #F6FAFF 0%, #EBF4FF 100%);
@@ -7531,8 +7530,7 @@ img.align-center {
 
 @media screen and (min-width: 992px) {
   .order {
-    padding-top: 112px;
-    padding-bottom: 106px;
+    padding: 110px 0;
   }
 }
 
@@ -8430,7 +8428,7 @@ img.align-center {
 
 @media screen and (min-width: 768px) {
   .solutions-list__list ul li {
-    padding: 47px 30px 47px 157px;
+    padding: 47px 100px 47px 157px;
     font-size: 23px;
     line-height: 111.2%;
     margin-bottom: 20px;

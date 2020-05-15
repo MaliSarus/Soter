@@ -1,10 +1,8 @@
 .order {
-  padding-top: 44px;
-  padding-bottom: 55px;
+  padding: 50px 0;
   background: linear-gradient(90deg, #F6FAFF 0%, #EBF4FF 100%);
   @media screen and (min-width: $lg-width) {
-    padding-top: 112px;
-    padding-bottom: 106px;
+    padding: 110px 0 ;
   }
   &__left{
     display: flex;
