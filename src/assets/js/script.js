@@ -644,6 +644,16 @@
             });
         }
 
+        if(isSet($('.faq'))){
+            var listItem = $('.faq__list ul > li');
+            listItem.on('click',function () {
+                $(this).toggleClass('open').children('p').slideToggle();
+            })
+            listItem.each(function () {
+                $(this).append('<div class="point"><span></span><span></span></div>')
+            })
+        }
+
         if ($(window).width() >= 992) {
             var footerSocials = $('.footer__socials').data('mobile', $('.footer__socials').parent().attr('class'))
             footerSocials.detach().appendTo('.footer__left');

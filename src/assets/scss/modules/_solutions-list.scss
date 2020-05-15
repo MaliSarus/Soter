@@ -53,7 +53,8 @@
         vertical-align: middle;
         padding: 21px 17px 19px 66px;
         @media screen and (min-width: $md-width){
-          padding: 47px 100px 47px 157px;
+          min-height: 120px;
+          padding: 20px 100px 20px 157px;
           font-size: 23px;
           line-height: 111.2%;
           margin-bottom: 20px;

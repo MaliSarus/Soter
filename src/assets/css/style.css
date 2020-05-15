@@ -8432,7 +8432,8 @@ img.align-center {
 
 @media screen and (min-width: 768px) {
   .solutions-list__list ul li {
-    padding: 47px 100px 47px 157px;
+    min-height: 120px;
+    padding: 20px 100px 20px 157px;
     font-size: 23px;
     line-height: 111.2%;
     margin-bottom: 20px;
@@ -8544,6 +8545,9 @@ img.align-center {
 }
 
 .faq__list ul li {
+  position: relative;
+  border-bottom: 1px solid #D6DEEB;
+  cursor: pointer;
   display: block;
   font-weight: 500;
   font-size: 16px;
@@ -8559,21 +8563,72 @@ img.align-center {
   }
 }
 
+.faq__list ul li.open .point span:last-child {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.faq__list ul li:hover {
+  background: #D6DEEB;
+}
+
 .faq__list ul li::before {
   display: none;
 }
 
+.faq__list ul li:first-child {
+  border-top: 1px solid #D6DEEB;
+}
+
 .faq__list ul li > p {
+  display: none;
   font-weight: normal;
   font-size: 14px;
   line-height: 150%;
+  padding-top: 10px;
 }
 
 @media screen and (min-width: 768px) {
   .faq__list ul li > p {
+    padding-top: 17px;
     font-size: 16px;
     line-height: 150%;
   }
+}
+
+.faq__list ul li .point {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 17px;
+  top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .faq__list ul li .point {
+    top: 24px;
+    right: 20px;
+  }
+}
+
+.faq__list ul li .point span {
+  width: 100%;
+  height: 1.25px;
+  background: #000;
+  background: #11274B;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 2px;
+  -webkit-transition: -webkit-transform .25s;
+  transition: -webkit-transform .25s;
+  -o-transition: transform .25s;
+  transition: transform .25s;
+  transition: transform .25s, -webkit-transform .25s;
 }
 
 .modal {

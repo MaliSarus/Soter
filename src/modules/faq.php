@@ -11,7 +11,7 @@
             <div class="col-12">
                 <div class="faq__list">
                     <ul>
-                        <li>How many SoterCoach devices I can order at a go?
+                        <li >How many SoterCoach devices I can order at a go?
                             <p>We do offer up to 20 devices per one order. If you would like to order more than 20,
                                 simply contact us via the request form below.</p>
                         </li>
