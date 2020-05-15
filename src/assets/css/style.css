@@ -8577,7 +8577,7 @@ img.align-center {
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
-  padding: 18px 20px 18px 18px;
+  padding: 18px 46px 18px 18px;
 }
 
 @media screen and (min-width: 768px) {
@@ -8586,6 +8586,10 @@ img.align-center {
     line-height: 111.2%;
     padding: 22px 25px;
   }
+}
+
+.faq__list ul li.open {
+  background: #D6DEEB;
 }
 
 .faq__list ul li.open .point span:last-child {
@@ -8612,10 +8616,12 @@ img.align-center {
   font-size: 14px;
   line-height: 150%;
   padding-top: 10px;
+  width: calc(100% + 26px);
 }
 
 @media screen and (min-width: 768px) {
   .faq__list ul li > p {
+    width: auto;
     padding-top: 17px;
     font-size: 16px;
     line-height: 150%;
@@ -8627,7 +8633,7 @@ img.align-center {
   width: 16px;
   height: 16px;
   right: 17px;
-  top: 30px;
+  top: 21px;
 }
 
 @media screen and (min-width: 768px) {
