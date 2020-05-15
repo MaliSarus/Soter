@@ -648,26 +648,16 @@
             var listItem = $('.faq__list ul > li');
             listItem.on('click',function () {
                 $(this).toggleClass('open').children('p').slideToggle();
-            })
+            });
             listItem.each(function () {
                 $(this).append('<div class="point"><span></span><span></span></div>')
             })
         }
 
         if(isSet($('.measures'))){
-            var listItem = $('.measures__list ul > li');
-            listItem.each(function (index) {
-                $(this).attr('data-num','0' + (index + 1));
-            });
+            var listItem = $('.measures__list ol > li');
             var totalCount = $('.measures__total-count');
             totalCount.html(listItem.length);
-        }
-
-        if(isSet($('.phases'))){
-            var listItem = $('.phases__list ul > li');
-            listItem.each(function (index) {
-                $(this).attr('data-num','phase ' + (index + 1));
-            });
         }
 
         if ($(window).width() >= 992) {

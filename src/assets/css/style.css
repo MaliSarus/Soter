@@ -6984,12 +6984,6 @@ img.align-center {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .spine__image {
-    padding-right: 0;
-  }
-}
-
 .spine__image-item {
   position: relative;
 }
@@ -7222,7 +7216,6 @@ img.align-center {
 
 @media screen and (min-width: 992px) {
   .copy__form {
-    padding-right: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -8427,12 +8420,13 @@ img.align-center {
   }
 }
 
-.solutions-list__list ul {
+.solutions-list__list ol {
   position: relative;
   z-index: 1;
+  counter-reset: myCounter;
 }
 
-.solutions-list__list ul li {
+.solutions-list__list ol li {
   background: white;
   position: relative;
   display: -webkit-box;
@@ -8456,7 +8450,7 @@ img.align-center {
 }
 
 @media screen and (min-width: 768px) {
-  .solutions-list__list ul li {
+  .solutions-list__list ol li {
     min-height: 120px;
     padding: 20px 100px 20px 157px;
     font-size: 23px;
@@ -8465,15 +8459,15 @@ img.align-center {
   }
 }
 
-.solutions-list__list ul li:last-child {
+.solutions-list__list ol li:last-child {
   margin-bottom: 0;
 }
 
-.solutions-list__list ul li:before {
+.solutions-list__list ol li:before {
   display: none;
 }
 
-.solutions-list__list ul li span {
+.solutions-list__list ol li span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8499,18 +8493,18 @@ img.align-center {
 }
 
 @media screen and (min-width: 768px) {
-  .solutions-list__list ul li span {
+  .solutions-list__list ol li span {
     font-size: 53px;
     width: 120px;
   }
 }
 
-.solutions-list__list ul li img {
+.solutions-list__list ol li img {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .solutions-list__list ul li img {
+  .solutions-list__list ol li img {
     display: block;
     position: absolute;
     width: 60px;
@@ -8796,7 +8790,9 @@ img.align-center {
   }
 }
 
-.measures__list ul {
+.measures__list ol {
+  padding: 0;
+  counter-reset: myCounter;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8806,20 +8802,21 @@ img.align-center {
 }
 
 @media screen and (min-width: 576px) {
-  .measures__list ul {
+  .measures__list ol {
     margin: 0 -5px;
     margin-bottom: -30px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .measures__list ul {
+  .measures__list ol {
     margin: 0 -15px;
     margin-bottom: -30px;
   }
 }
 
-.measures__list ul li {
+.measures__list ol li {
+  list-style: none;
   font-weight: normal;
   font-size: 14px;
   line-height: 160%;
@@ -8827,13 +8824,13 @@ img.align-center {
   color: #11274B;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
-  display: block;
+  display: list-item;
   min-height: 69px;
   margin-bottom: 30px;
 }
 
 @media screen and (min-width: 576px) {
-  .measures__list ul li {
+  .measures__list ol li {
     padding: 0 5px;
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
@@ -8842,7 +8839,7 @@ img.align-center {
 }
 
 @media screen and (min-width: 768px) {
-  .measures__list ul li {
+  .measures__list ol li {
     -ms-flex-preferred-size: calc(100% / 3);
     flex-basis: calc(100% / 3);
     padding: 0 15px;
@@ -8852,16 +8849,17 @@ img.align-center {
 }
 
 @media screen and (min-width: 992px) {
-  .measures__list ul li {
+  .measures__list ol li {
     -ms-flex-preferred-size: calc(100% / 4);
     flex-basis: calc(100% / 4);
   }
 }
 
-.measures__list ul li::before {
+.measures__list ol li::before {
+  counter-increment: myCounter;
+  content: counter(myCounter, decimal-leading-zero);
   margin: 0;
   display: block;
-  content: attr(data-num);
   font-weight: 900;
   font-size: 40px;
   line-height: 120%;
@@ -8870,7 +8868,7 @@ img.align-center {
 }
 
 @media screen and (min-width: 576px) {
-  .measures__list ul li::before {
+  .measures__list ol li::before {
     text-align: left;
   }
 }
@@ -8958,7 +8956,9 @@ img.align-center {
   }
 }
 
-.phases__list ul {
+.phases__list ol {
+  padding: 0;
+  counter-reset: myCounter;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8967,15 +8967,16 @@ img.align-center {
 }
 
 @media screen and (min-width: 768px) {
-  .phases__list ul {
+  .phases__list ol {
     margin: 0 -12.5px;
   }
 }
 
-.phases__list ul li {
+.phases__list ol li {
+  list-style: none;
+  display: list-item;
   background: #253D64;
   border-radius: 5px;
-  display: block;
   color: white;
   font-weight: normal;
   font-size: 14px;
@@ -8989,7 +8990,7 @@ img.align-center {
 }
 
 @media screen and (min-width: 768px) {
-  .phases__list ul li {
+  .phases__list ol li {
     -ms-flex-preferred-size: calc(100% / 3 - 25px);
     flex-basis: calc(100% / 3 - 25px);
     margin: 0 12.5px;
@@ -8997,20 +8998,21 @@ img.align-center {
 }
 
 @media screen and (min-width: 992px) {
-  .phases__list ul li {
+  .phases__list ol li {
     padding: 28px 34px;
     text-align: left;
   }
 }
 
-.phases__list ul li:last-child {
+.phases__list ol li:last-child {
   margin-bottom: 0;
 }
 
-.phases__list ul li::before {
+.phases__list ol li::before {
   margin: 0 0 15px;
   display: block;
-  content: attr(data-num);
+  counter-increment: myCounter;
+  content: "phase " counter(myCounter);
   font-weight: bold;
   font-size: 20px;
   line-height: 120%;
@@ -9019,7 +9021,7 @@ img.align-center {
 }
 
 @media screen and (min-width: 992px) {
-  .phases__list ul li::before {
+  .phases__list ol li::before {
     text-align: left;
   }
 }

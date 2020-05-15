@@ -34,9 +34,10 @@
         right: -86px;
       }
     }
-    ul{
+    ol{
       position: relative;
       z-index: 1;
+      counter-reset: myCounter;
       li{
         background: white;
         position: relative;

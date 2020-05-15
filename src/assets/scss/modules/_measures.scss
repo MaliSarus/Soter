@@ -79,7 +79,9 @@
     }
   }
   &__list{
-    ul{
+    ol{
+      padding: 0;
+      counter-reset: myCounter;
       display: flex;
       flex-wrap: wrap;
       margin-bottom: -30px;
@@ -92,13 +94,14 @@
         margin-bottom: -30px;
       }
       li{
+        list-style: none;
         font-weight: normal;
         font-size: 14px;
         line-height: 160%;
         text-align: center;
         color: $main-color;
         flex-basis: 100%;
-        display: block;
+        display: list-item;
         min-height: 69px;
         margin-bottom: 30px;
         @media screen and (min-width: $sm-width){
@@ -116,9 +119,10 @@
           flex-basis: calc(100% / 4);
         }
         &::before{
+          counter-increment: myCounter;
+          content:counter(myCounter, decimal-leading-zero);
           margin: 0;
           display: block;
-          content: attr(data-num);
           font-weight: 900;
           font-size: 40px;
           line-height: 120%;

@@ -57,16 +57,20 @@
     @media screen and (min-width: $lg-width){
       margin-bottom: 41px;
     }
-    ul{
+    ol{
+      padding: 0;
+      counter-reset: myCounter;
       display: flex;
       flex-wrap: wrap;
       @media screen and (min-width:$md-width){
         margin: 0 -12.5px;
       }
       li{
+        list-style: none;
+        display: list-item;
         background: #253D64;
         border-radius: 5px;
-        display: block;
+        //display: block;
         color: white;
         font-weight: normal;
         font-size: 14px;
@@ -90,7 +94,9 @@
         &::before{
           margin: 0 0 15px;
           display: block;
-          content: attr(data-num);
+          //content: attr(data-num);
+          counter-increment: myCounter;
+          content:"phase " counter(myCounter);
           font-weight: bold;
           font-size: 20px;
           line-height: 120%;

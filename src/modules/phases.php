@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="phases__list">
-                    <ul>
+                    <ol>
                         <li>
                             At Soter Analytics we're building a system that self-learns and gives personalised feedback
                             to each individual worker, helping them avoid the movements that might increase their own
@@ -35,7 +35,7 @@
                             System continually self-learns to calculate how the worker's risk is adjusting and provides
                             increasingly personalised feedback.
                         </li>
-                    </ul>
+                    </ol>
                 </div>
             </div>
         </div>

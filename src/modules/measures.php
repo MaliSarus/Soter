@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="measures__list">
-                    <ul>
+                    <ol>
                         <li>Lifting movements with poor technique (primarily sagittal flexion)</li>
                         <li>Overreaching (sagittal flexion)</li>
                         <li>Twisting (rotation of the trunk)</li>
@@ -25,7 +25,7 @@
                         <li>Sustained & high forces</li>
                         <li>Sudden impact forces</li>
                         <li>Full-body vibrations</li>
-                    </ul>
+                    </ol>
                 </div>
             </div>
         </div>
