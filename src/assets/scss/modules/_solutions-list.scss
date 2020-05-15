@@ -52,6 +52,7 @@
         overflow: hidden;
         vertical-align: middle;
         padding: 21px 17px 19px 66px;
+        min-height: 82px;
         @media screen and (min-width: $md-width){
           min-height: 120px;
           padding: 20px 100px 20px 157px;

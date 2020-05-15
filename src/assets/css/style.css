@@ -7651,6 +7651,7 @@ img.align-center {
 }
 
 .order__preview-image {
+  overflow: hidden;
   cursor: pointer;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -7671,6 +7672,11 @@ img.align-center {
   -ms-flex-align: center;
   align-items: center;
   max-width: 80px;
+  -webkit-transition: background-color .25s, -webkit-box-shadow .25s;
+  transition: background-color .25s, -webkit-box-shadow .25s;
+  -o-transition: box-shadow .25s, background-color .25s;
+  transition: box-shadow .25s, background-color .25s;
+  transition: box-shadow .25s, background-color .25s, -webkit-box-shadow .25s;
 }
 
 @media screen and (min-width: 768px) {
@@ -7684,9 +7690,25 @@ img.align-center {
   }
 }
 
+.order__preview-image:hover {
+  -webkit-box-shadow: 0 0 20px rgba(32, 150, 243, 0.1);
+  box-shadow: 0 0 20px rgba(32, 150, 243, 0.1);
+  background: #ecf4ff;
+}
+
+.order__preview-image:hover img {
+  -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+}
+
 .order__preview-image img {
   max-width: 100%;
   max-height: 100%;
+  -webkit-transition: -webkit-filter .25s;
+  transition: -webkit-filter .25s;
+  -o-transition: filter .25s;
+  transition: filter .25s;
+  transition: filter .25s, -webkit-filter .25s;
 }
 
 .order__preview-image.mobile {
@@ -8346,10 +8368,12 @@ img.align-center {
 
 .order__additional button {
   width: 100%;
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 1200px) {
   .order__additional button {
+    margin-top: 0;
     max-width: 217px;
     margin-left: 30px;
   }
@@ -8428,6 +8452,7 @@ img.align-center {
   overflow: hidden;
   vertical-align: middle;
   padding: 21px 17px 19px 66px;
+  min-height: 82px;
 }
 
 @media screen and (min-width: 768px) {
@@ -8564,9 +8589,9 @@ img.align-center {
 }
 
 .faq__list ul li.open .point span:last-child {
-  -webkit-transform: translateY(-50%) rotate(90deg);
-  -ms-transform: translateY(-50%) rotate(90deg);
-  transform: translateY(-50%) rotate(90deg);
+  -webkit-transform: translateY(-50%) rotate(0);
+  -ms-transform: translateY(-50%) rotate(0);
+  transform: translateY(-50%) rotate(0);
 }
 
 .faq__list ul li:hover {
@@ -8629,6 +8654,12 @@ img.align-center {
   -o-transition: transform .25s;
   transition: transform .25s;
   transition: transform .25s, -webkit-transform .25s;
+}
+
+.faq__list ul li .point span:last-child {
+  -webkit-transform: translateY(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
 }
 
 .modal {

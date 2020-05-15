@@ -2,69 +2,77 @@
   padding: 50px 0;
   background: linear-gradient(90deg, #F6FAFF 0%, #EBF4FF 100%);
   @media screen and (min-width: $lg-width) {
-    padding: 110px 0 ;
+    padding: 110px 0;
   }
-  &__left{
+
+  &__left {
     display: flex;
     align-items: center;
   }
-  &__right{
+
+  &__right {
     display: flex;
     align-items: center;
   }
-  &__preview{
+
+  &__preview {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     margin-top: 20px;
-    @media screen and (min-width: $xl-width){
+    @media screen and (min-width: $xl-width) {
       margin-top: 0;
       height: 100%;
     }
-    &-top{
+
+    &-top {
       box-sizing: content-box;
       display: flex;
       justify-content: center;
       padding-bottom: 20px;
       max-width: 100%;
       height: 290px;
-      @media screen and (min-width: $md-width){
+      @media screen and (min-width: $md-width) {
         padding-bottom: 75px;
         height: 380px;
       }
-      @media screen and (min-width: $xl-width){
+      @media screen and (min-width: $xl-width) {
         box-sizing: border-box;
         flex-basis: 50%;
         padding-bottom: 20px;
         flex-grow: 1;
       }
-      img{
+
+      img {
         min-height: 265px;
         max-height: 100%;
         max-width: 100%;
         object-fit: contain;
-        @media screen and (min-width: $md-width){
+        @media screen and (min-width: $md-width) {
           max-height: 100%;
           min-height: 380px;
         }
       }
     }
-    &-bottom{
+
+    &-bottom {
       margin: 0 -10px;
       display: flex;
       flex-wrap: wrap;
       padding: 20px 0;
       justify-content: center;
-      @media screen and (min-width: $md-width){
+      @media screen and (min-width: $md-width) {
         margin: 0 -16px;
       }
-      @media screen and (min-width: $xl-width){
+      @media screen and (min-width: $xl-width) {
         padding: 20px 0 0;
         align-items: flex-end;
       }
     }
-    &-image{
+
+    &-image {
+      overflow: hidden;
       cursor: pointer;
       box-sizing: border-box;
       border-radius: 3px;
@@ -77,21 +85,34 @@
       justify-content: center;
       align-items: center;
       max-width: 80px;
-      @media screen and (min-width: $md-width){
+      transition: box-shadow .25s, background-color .25s;
+      @media screen and (min-width: $md-width) {
         max-width: none;
         padding: 24px 8px;
         margin: 0 16px;
         height: 185px;
         flex-basis: calc(100% / 3 - 32px);
       }
-      img{
+
+      &:hover {
+        box-shadow: 0 0 20px rgba($accent-color, .1);
+        background: lighten(#E2EEFF, 2);
+
+        img {
+          filter: drop-shadow(0 0 10px rgba(black, .4));
+        }
+      }
+
+      img {
         max-width: 100%;
         max-height: 100%;
+        transition: filter .25s;
       }
-      &.mobile{
+
+      &.mobile {
         padding: 0;
         padding-top: 12px;
-        @media screen and (min-width: $md-width){
+        @media screen and (min-width: $md-width) {
           padding-top: 24px;
         }
         justify-content: flex-end;
@@ -101,14 +122,16 @@
   }
 
   &__main-block {
-    @media screen and (min-width: $xl-width){
+    @media screen and (min-width: $xl-width) {
       display: flex;
       flex-wrap: wrap;
       height: 100%;
     }
-    >*{
+
+    > * {
       flex-basis: 100%;
     }
+
     h2 {
       font-weight: bold;
       font-size: 25px;
@@ -264,10 +287,12 @@
       background: url("../img/order/up-button.svg") center / contain no-repeat;
       right: 5px;
       transition: filter .25s;
-      &:hover{
+
+      &:hover {
         filter: drop-shadow(0 0 5px rgba($accent-color, .8));
       }
-      &:active{
+
+      &:active {
         filter: grayscale(1);
       }
 
@@ -406,7 +431,7 @@
       padding-left: 22.5px;
       padding-right: 22.5px;
       margin-bottom: 0;
-      &::before{
+      &::before {
         position: absolute;
         content: '';
         height: 59px;
@@ -442,7 +467,8 @@
         text-align: center;
         margin-left: 0;
       }
-      &:focus{
+
+      &:focus {
         border: none;
       }
     }
@@ -456,8 +482,9 @@
     @media screen and (min-width: $xl-width) {
       margin-bottom: 0;
     }
-    >p{
-      @media screen and (min-width: $xl-width){
+
+    > p {
+      @media screen and (min-width: $xl-width) {
         margin-bottom: 17px;
       }
     }
@@ -470,7 +497,7 @@
       @media screen and (min-width: $lg-width) {
         flex-wrap: nowrap;
       }
-      @media screen and (min-width: $xl-width){
+      @media screen and (min-width: $xl-width) {
         display: block;
       }
 
@@ -555,19 +582,22 @@
 
     ul {
       color: $main-color;
-      >*{
-        &:last-child{
+
+      > * {
+        &:last-child {
           margin-bottom: 0;
         }
       }
-      >p{
+
+      > p {
         font-size: 16px;
         line-height: 160%;
         margin-bottom: 11px;
-        @media screen and (min-width: $xl-width){
+        @media screen and (min-width: $xl-width) {
           margin-bottom: 8px;
         }
       }
+
       li {
         font-size: 14px;
         margin-bottom: 11px;
@@ -579,7 +609,9 @@
 
     button {
       width: 100%;
+      margin-top: 20px;
       @media screen and (min-width: $xl-width) {
+        margin-top: 0;
         max-width: 217px;
         margin-left: 30px;
       }

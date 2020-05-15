@@ -39,7 +39,7 @@
         &.open{
           .point{
             span:last-child{
-              transform: translateY(-50%) rotate(90deg);
+              transform: translateY(-50%) rotate(0);
             }
           }
         }
@@ -87,6 +87,9 @@
             -moz-border-radius: 2px;
             border-radius: 2px;
             transition: transform .25s;
+            &:last-child{
+              transform: translateY(-50%) rotate(90deg);
+            }
           }
         }
       }
