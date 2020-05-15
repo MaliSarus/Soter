@@ -13,16 +13,30 @@
                     <div class="sponsors__content">
                         <div class="swiper-container sponsors__slider">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide sponsors__slide"><img src="./assets/img/sponsors/nhs-logo.png"
+                                <div class="swiper-slide sponsors__slide"><img src="./assets/img/sponsors/bb-logo.png"
                                                                                alt="Лого спонсора"></div>
                                 <div class="swiper-slide sponsors__slide"><img
-                                        src="./assets/img/sponsors/innovate-uk-logo.png" alt="Лого спонсора"></div>
+                                        src="./assets/img/sponsors/chevron-logo.png" alt="Лого спонсора"></div>
                                 <div class="swiper-slide sponsors__slide"><img
-                                        src="./assets/img/sponsors/curtin-logo.png" alt="Лого спонсора"></div>
+                                        src="./assets/img/sponsors/dhl-logo.png" alt="Лого спонсора"></div>
                                 <div class="swiper-slide sponsors__slide"><img
-                                        src="./assets/img/sponsors/csiro-logo.png" alt="Лого спонсора"></div>
+                                        src="./assets/img/sponsors/emerson-logo.png" alt="Лого спонсора"></div>
                                 <div class="swiper-slide sponsors__slide"><img
-                                        src="./assets/img/sponsors/mriwa-logo.png" alt="Лого спонсора"></div>
+                                        src="./assets/img/sponsors/everest-logo.png" alt="Лого спонсора"></div>
+                                <div class="swiper-slide sponsors__slide"><img
+                                        src="./assets/img/sponsors/gianteagle-logo.png" alt="Лого спонсора"></div>
+                                <div class="swiper-slide sponsors__slide"><img
+                                        src="./assets/img/sponsors/jognofgod-logo.png" alt="Лого спонсора"></div>
+                                <div class="swiper-slide sponsors__slide"><img
+                                        src="./assets/img/sponsors/merck-logo.png" alt="Лого спонсора"></div>
+                                <div class="swiper-slide sponsors__slide"><img
+                                        src="./assets/img/sponsors/pepsico-logo.png" alt="Лого спонсора"></div>
+                                <div class="swiper-slide sponsors__slide"><img
+                                        src="./assets/img/sponsors/swissport-logo.png" alt="Лого спонсора"></div>
+                                <div class="swiper-slide sponsors__slide"><img
+                                        src="./assets/img/sponsors/travisperkins-logo.png" alt="Лого спонсора"></div>
+                                <div class="swiper-slide sponsors__slide"><img
+                                        src="./assets/img/sponsors/woolworths-logo.png" alt="Лого спонсора"></div>
                             </div>
                             <div class="swiper-nav swiper-button-next"></div>
                             <div class="swiper-nav swiper-button-prev"></div>
