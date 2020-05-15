@@ -555,6 +555,11 @@
 
     ul {
       color: $main-color;
+      >*{
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
       >p{
         font-size: 16px;
         line-height: 160%;

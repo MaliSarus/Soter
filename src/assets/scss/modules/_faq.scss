@@ -11,12 +11,40 @@
       text-align: center;
       color: $main-color;
       max-width: 280px;
-      margin: 0 auto;
-      margin-bottom: 27px;
+      margin: 0 auto 27px;
       @media screen and (min-width: $md-width){
         max-width: 803px;
         font-size: 64px;
         line-height: 111.2%;
+        margin-bottom: 48px;
+      }
+    }
+  }
+  &__list{
+    ul{
+      li{
+        display: block;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        padding: 18px 20px 18px 18px;
+        @media screen and (min-width: $md-width){
+          font-size: 18px;
+          line-height: 111.2%;
+          padding: 22px 25px;
+        }
+        &::before{
+          display: none;
+        }
+        >p{
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 150%;
+          @media screen and (min-width: $md-width){
+            font-size: 16px;
+            line-height: 150%;
+          }
+        }
       }
     }
   }

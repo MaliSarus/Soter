@@ -8317,6 +8317,10 @@ img.align-center {
   color: #11274B;
 }
 
+.order__additional ul > *:last-child {
+  margin-bottom: 0;
+}
+
 .order__additional ul > p {
   font-size: 16px;
   line-height: 160%;
@@ -8527,8 +8531,7 @@ img.align-center {
   text-align: center;
   color: #11274B;
   max-width: 280px;
-  margin: 0 auto;
-  margin-bottom: 27px;
+  margin: 0 auto 27px;
 }
 
 @media screen and (min-width: 768px) {
@@ -8536,6 +8539,40 @@ img.align-center {
     max-width: 803px;
     font-size: 64px;
     line-height: 111.2%;
+    margin-bottom: 48px;
+  }
+}
+
+.faq__list ul li {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  padding: 18px 20px 18px 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .faq__list ul li {
+    font-size: 18px;
+    line-height: 111.2%;
+    padding: 22px 25px;
+  }
+}
+
+.faq__list ul li::before {
+  display: none;
+}
+
+.faq__list ul li > p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+@media screen and (min-width: 768px) {
+  .faq__list ul li > p {
+    font-size: 16px;
+    line-height: 150%;
   }
 }
 
