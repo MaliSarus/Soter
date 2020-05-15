@@ -44,6 +44,8 @@ require './modules/order.php';
 // <!--13052020-->
 require './modules/solutions-list.php';
 require './modules/faq.php';
+require './modules/measures.php';
+require './modules/phases.php';
 // <!--13052020-->
 require './modules/footer.php';
 ?>
