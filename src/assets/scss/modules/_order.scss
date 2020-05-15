@@ -557,6 +557,14 @@
 
     ul {
       color: $main-color;
+      >p{
+        font-size: 16px;
+        line-height: 160%;
+        margin-bottom: 11px;
+        @media screen and (min-width: $xl-width){
+          margin-bottom: 8px;
+        }
+      }
       li {
         font-size: 14px;
         margin-bottom: 11px;

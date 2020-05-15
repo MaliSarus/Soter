@@ -43,6 +43,7 @@ require './modules/order.php';
 // <!--13052020-->
 // <!--13052020-->
 require './modules/solutions-list.php';
+require './modules/faq.php';
 // <!--13052020-->
 require './modules/footer.php';
 ?>

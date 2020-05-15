@@ -8319,6 +8319,18 @@ img.align-center {
   color: #11274B;
 }
 
+.order__additional ul > p {
+  font-size: 16px;
+  line-height: 160%;
+  margin-bottom: 11px;
+}
+
+@media screen and (min-width: 1200px) {
+  .order__additional ul > p {
+    margin-bottom: 8px;
+  }
+}
+
 .order__additional ul li {
   font-size: 14px;
   margin-bottom: 11px;
@@ -8497,6 +8509,35 @@ img.align-center {
   .solutions-list__footer p {
     font-size: 35px;
     line-height: 120%;
+  }
+}
+
+.faq {
+  padding-bottom: 62px;
+}
+
+@media screen and (min-width: 768px) {
+  .faq {
+    padding-bottom: 135px;
+  }
+}
+
+.faq__head h2 {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 120%;
+  text-align: center;
+  color: #11274B;
+  max-width: 280px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+}
+
+@media screen and (min-width: 768px) {
+  .faq__head h2 {
+    max-width: 803px;
+    font-size: 64px;
+    line-height: 111.2%;
   }
 }
 
