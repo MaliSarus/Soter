@@ -6,16 +6,26 @@
     padding-top: 112px;
     padding-bottom: 106px;
   }
-
+  &__left{
+    display: flex;
+    align-items: center;
+  }
+  &__right{
+    display: flex;
+    align-items: center;
+  }
   &__preview{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     margin-top: 20px;
     @media screen and (min-width: $xl-width){
       margin-top: 0;
+      height: 100%;
     }
     &-top{
+      box-sizing: content-box;
       display: flex;
       justify-content: center;
       padding-bottom: 20px;
@@ -23,7 +33,14 @@
       height: 290px;
       @media screen and (min-width: $md-width){
         padding-bottom: 75px;
-        height: 470px;
+        height: 380px;
+      }
+      @media screen and (min-width: $xl-width){
+        box-sizing: border-box;
+        height: auto;
+        flex-basis: 50%;
+        padding-bottom: 20px;
+        flex-grow: 1;
       }
       img{
         min-height: 265px;
@@ -32,7 +49,7 @@
         object-fit: contain;
         @media screen and (min-width: $md-width){
           max-height: 100%;
-          min-height: 381px;
+          min-height: 380px;
         }
       }
     }
@@ -46,10 +63,12 @@
         margin: 0 -16px;
       }
       @media screen and (min-width: $xl-width){
-        padding: 75px 0;
+        padding: 20px 0 0;
+        align-items: flex-end;
       }
     }
     &-image{
+      cursor: pointer;
       box-sizing: border-box;
       border-radius: 3px;
       padding: 12px 8px;
@@ -85,6 +104,14 @@
   }
 
   &__main-block {
+    @media screen and (min-width: $xl-width){
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+    }
+    >*{
+      flex-basis: 100%;
+    }
     h2 {
       font-weight: bold;
       font-size: 25px;
@@ -100,7 +127,7 @@
         max-width: none;
       }
       @media screen and (min-width: $lg-width) {
-        margin: 0;
+        margin: 0 0 28px;
         text-align: left;
         max-width: none;
       }
@@ -121,7 +148,7 @@
         width: calc(100% - 8px);
       }
       @media screen and (min-width: $lg-width) {
-        margin: 0 0 28px;
+        margin: 0 0 22px;
         width: 100%;
         text-align: left;
         max-width: none;
@@ -139,7 +166,7 @@
         font-size: 14px;
         text-align: left;
         width: 100%;
-        margin: 0;
+        margin: 0 0 26px;
       }
 
       span {
@@ -151,19 +178,17 @@
     }
 
     form {
+      align-self: flex-end;
       flex-wrap: wrap;
       box-sizing: border-box;
       background: #E2EEFF;
       border-radius: 3px;
       overflow: hidden;
-      padding: 22px 25px 27px;
+      padding: 22px 25px;
       display: flex;
       color: $main-color;
       @media screen and (min-width: $md-width) {
-        padding: 32px 27px 27px;
-      }
-      @media screen and (min-width: $xl-width){
-        margin-top: 26px;
+        padding: 32px 27px;
       }
 
       input {
@@ -377,12 +402,23 @@
     align-items: center;
     margin-bottom: 20px;
     @media screen and (min-width: $xl-width) {
+      position: relative;
       flex-direction: column;
       flex-basis: 90px;
       flex-grow: 1;
-      padding-left: 45px;
-      border-left: 1px solid #CFDEF5;
+      padding-left: 22.5px;
+      padding-right: 22.5px;
       margin-bottom: 0;
+      &::before{
+        position: absolute;
+        content: '';
+        height: 59px;
+        width: 1px;
+        display: block;
+        background: #CFDEF5;
+        left: 0;
+        bottom: 0;
+      }
     }
 
     p {
@@ -409,6 +445,9 @@
         text-align: center;
         margin-left: 0;
       }
+      &:focus{
+        border: none;
+      }
     }
   }
 
@@ -420,6 +459,11 @@
     @media screen and (min-width: $xl-width) {
       margin-bottom: 0;
     }
+    >p{
+      @media screen and (min-width: $xl-width){
+        margin-bottom: 17px;
+      }
+    }
 
     &-wrapper {
       display: flex;
@@ -428,6 +472,9 @@
       flex-wrap: wrap;
       @media screen and (min-width: $lg-width) {
         flex-wrap: nowrap;
+      }
+      @media screen and (min-width: $xl-width){
+        display: block;
       }
 
       label {
@@ -506,9 +553,11 @@
       margin-top: 4px;
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
     }
 
     ul {
+      color: $main-color;
       li {
         font-size: 14px;
         margin-bottom: 11px;

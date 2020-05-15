@@ -78,7 +78,7 @@
     display: flex;
     @media screen and (min-width: $md-width){
       min-height: 400px;
-      height: auto;
+      height: 100%;
     }
     @media screen and ($lg-width){
 

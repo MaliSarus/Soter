@@ -474,9 +474,9 @@
                     $('.request__top h2').html('Thank you for the request!');
                     $('.request__top p').html('Our team member will contact you soon');
                     $('.request').addClass('request_success');
-                }else if ($(this).is('#copy-button')){
-                    $('.copy__success').css('display','flex');
-                    $('.copy__form form').css('display','none');
+                } else if ($(this).is('#copy-button')) {
+                    $('.copy__success').css('display', 'flex');
+                    $('.copy__form form').css('display', 'none');
                 }
             }
         });
@@ -632,6 +632,9 @@
             });
             quantityInput.on('input change', function () {
                 var addInfo = $(this).parents('form').find('.add-info');
+                if ($(this).val() < 1){
+                    $(this).val(1);
+                }
                 if ($(this).val() > 20) {
                     addInfo.addClass('add-info_active');
                 } else {
@@ -745,6 +748,13 @@
             }
         });
 
+        $('.scrolling').on('click', function (e) {
+            e.preventDefault();
+            var destination = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(destination).position().top
+            }, 700);
+        });
 
         if ($(window).width() >= 992) {
             var footerSocials = $('.footer__socials').data('mobile', $('.footer__socials').parent().attr('class'))
