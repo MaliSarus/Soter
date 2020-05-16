@@ -274,6 +274,9 @@
       margin-right: 46px;
       margin-bottom: 0;
     }
+    input[type='number'] {
+      -moz-appearance: textfield;
+    }
 
     &-wrapper {
       position: relative;
@@ -307,6 +310,7 @@
     }
 
     input {
+      -moz-appearance:textfield;
       width: 100%;
       border: 1px solid #E2EEFF;
       box-sizing: border-box;
@@ -324,7 +328,10 @@
 
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
+        -moz-appearance:textfield;
         appearance: none;
+        -webkit-appearance: none;
+        margin: 0;
       }
     }
   }

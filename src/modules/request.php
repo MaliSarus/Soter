@@ -16,7 +16,6 @@
                         <input type="hidden" name="formname" value="request form">
                         <input type="hidden" name="formname-second" value="Contact form">
                         <div class="request__form-row">
-                            й
                             <div class="request__input-wrapper request__phone">
                                 <input type="tel" name="phone" class="request__input form-control" id="request-phone"
                                        required>

@@ -7958,6 +7958,10 @@ img.align-center {
   }
 }
 
+.order__quantity input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .order__quantity-wrapper {
   position: relative;
   overflow: hidden;
@@ -7998,6 +8002,7 @@ img.align-center {
 }
 
 .order__quantity input {
+  -moz-appearance: textfield;
   width: 100%;
   border: 1px solid #E2EEFF;
   -webkit-box-sizing: border-box;
@@ -8021,8 +8026,10 @@ img.align-center {
 }
 
 .order__quantity input::-webkit-outer-spin-button, .order__quantity input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  -moz-appearance: textfield;
   appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .order__subs {

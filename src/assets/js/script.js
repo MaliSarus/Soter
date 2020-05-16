@@ -324,7 +324,8 @@
             var failFlag = 0;
             $(this).parent().find('.request__input-wrapper').each(function () {
                 if ($(this).hasClass('invalid') || !($(this).hasClass('valid'))) {
-                    failFlag = 1
+                    failFlag = 1;
+                    $(this).addClass('invalid').children('label').addClass('invalid');
                 }
             });
             console.log(failFlag);
@@ -347,6 +348,10 @@
 
         nameInput.on('input', function () {
             $(this).val($(this).val().replace(/[0-9]/, ''));
+            if ($(this).val() == ''){
+                $(this).parent().removeClass('valid').addClass('invalid');
+                $(this).siblings('label').removeClass('valid').addClass('invalid');
+            }
         });
 
         phoneInput.on('input', function () {
