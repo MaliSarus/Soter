@@ -867,6 +867,11 @@ img.align-center {
   }
 }
 
+.wrapper_flex {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
