@@ -1,8 +1,10 @@
 .button {
+  max-height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  display: block;
-  padding: 19px 38px;
-  padding-top: 26px;
+  padding: 26px 38px 19px;
   border-radius: 3px;
   border: none;
   outline:none;
@@ -15,8 +17,8 @@
   text-align: center;
   font-size: 14px;
   @media screen and (min-width: $lg-width){
-    padding: 23px 38px;
-    padding-top: 26px;
+    max-height: none;
+    padding: 26px 38px 23px;
     font-size: 16px;
   }
   &:hover{

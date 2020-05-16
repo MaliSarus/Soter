@@ -44,7 +44,6 @@
     }
     >p{
       margin-top: 13px;
-      margin-bottom: 31px;
       @media screen and (min-width: $md-width){
         max-width: 505px;
         font-size: 16px;
@@ -64,21 +63,33 @@
     margin: 0 auto;
     margin-top: 34px;
     @media screen and (min-width: $md-width){
+      display: inline-block;
       margin-top: 42px;
-      width: 100%;
-      max-width: 266px;
+      width: auto;
+      padding-left: 39px;
+      padding-right: 42px;
+      //max-width: 266px;
     }
     @media screen and (min-width: $lg-width){
       margin: 0;
       margin-top: 42px;
     }
+    //&.wp{
+    //  @media screen and (min-width: $md-width){
+    //    max-width: 352px;
+    //  }
+    //}
   }
   &__video{
+    margin-top: 31px;
     height: 280px;
     display: flex;
     @media screen and (min-width: $md-width){
       min-height: 400px;
       height: 100%;
+    }
+    @media screen and (min-width: $lg-width){
+      margin-top: 0;
     }
     img{
       width: 100%;

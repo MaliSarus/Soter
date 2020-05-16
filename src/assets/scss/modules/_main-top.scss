@@ -127,9 +127,6 @@
   &__nav{
     display: flex;
     flex-wrap: wrap;
-    @media screen and (min-width: $lg-width){
-      padding-left: 26px;
-    }
     a{
       flex-basis: 100%;
       margin-bottom: 11px;

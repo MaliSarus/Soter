@@ -64,7 +64,7 @@
       margin-bottom: 10px;
       @media screen and (min-width: $xl-width){
         font-size: 154px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
       }
     }
     span{
@@ -122,6 +122,7 @@
           counter-increment: myCounter;
           content:counter(myCounter, decimal-leading-zero);
           margin: 0;
+          margin-bottom: 12px;
           display: block;
           font-weight: 900;
           font-size: 40px;

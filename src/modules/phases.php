@@ -23,9 +23,8 @@
                 <div class="phases__list">
                     <ol>
                         <li>
-                            At Soter Analytics we're building a system that self-learns and gives personalised feedback
-                            to each individual worker, helping them avoid the movements that might increase their own
-                            risk of injury.
+                            Measure the individual strength of each worker with our highly-innovative intensity model
+                            which identifies how difficult each movement is.
                         </li>
                         <li>Identify when an individual or group of movements are increasing the fatigue of a worker or
                             if they begin overcompensating with different working techniques to avoid particular pain or

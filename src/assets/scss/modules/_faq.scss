@@ -25,7 +25,7 @@
       padding-left: 0;
       li{
         position: relative;
-        border-bottom: 1px solid #D6DEEB;;
+        border-bottom: 1px solid #D6DEEB;
         cursor: pointer;
         display: block;
         font-weight: 500;
@@ -39,6 +39,10 @@
         }
         &.open{
           background: #D6DEEB;
+          border-color: darken(#D6DEEB,5);
+          &:last-child{
+            border-color: transparent;
+          }
           .point{
             span:last-child{
               transform: translateY(-50%) rotate(0);

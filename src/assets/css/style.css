@@ -341,10 +341,18 @@ button {
 }
 
 .button {
+  max-height: 62px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-decoration: none;
-  display: block;
-  padding: 19px 38px;
-  padding-top: 26px;
+  padding: 26px 38px 19px;
   border-radius: 3px;
   border: none;
   outline: none;
@@ -361,8 +369,8 @@ button {
 
 @media screen and (min-width: 992px) {
   .button {
-    padding: 23px 38px;
-    padding-top: 26px;
+    max-height: none;
+    padding: 26px 38px 23px;
     font-size: 16px;
   }
 }
@@ -3153,12 +3161,6 @@ img.align-center {
   flex-wrap: wrap;
 }
 
-@media screen and (min-width: 992px) {
-  .main-top__nav {
-    padding-left: 26px;
-  }
-}
-
 .main-top__nav a {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
@@ -4158,7 +4160,6 @@ img.align-center {
 
 .successes__content > p {
   margin-top: 13px;
-  margin-bottom: 31px;
 }
 
 @media screen and (min-width: 768px) {
@@ -4187,9 +4188,11 @@ img.align-center {
 
 @media screen and (min-width: 768px) {
   .successes__button {
+    display: inline-block;
     margin-top: 42px;
-    width: 100%;
-    max-width: 266px;
+    width: auto;
+    padding-left: 39px;
+    padding-right: 42px;
   }
 }
 
@@ -4201,6 +4204,7 @@ img.align-center {
 }
 
 .successes__video {
+  margin-top: 31px;
   height: 280px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4211,6 +4215,12 @@ img.align-center {
   .successes__video {
     min-height: 400px;
     height: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .successes__video {
+    margin-top: 0;
   }
 }
 
@@ -8619,6 +8629,11 @@ img.align-center {
 
 .faq__list ul li.open {
   background: #D6DEEB;
+  border-color: #c5d0e3;
+}
+
+.faq__list ul li.open:last-child {
+  border-color: transparent;
 }
 
 .faq__list ul li.open .point span:last-child {
@@ -8807,7 +8822,7 @@ img.align-center {
 @media screen and (min-width: 1200px) {
   .measures__total-count {
     font-size: 154px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 }
 
@@ -8894,6 +8909,7 @@ img.align-center {
   counter-increment: myCounter;
   content: counter(myCounter, decimal-leading-zero);
   margin: 0;
+  margin-bottom: 12px;
   display: block;
   font-weight: 900;
   font-size: 40px;
@@ -9018,7 +9034,7 @@ img.align-center {
   line-height: 152.5%;
   text-align: center;
   min-height: 200px;
-  padding: 28px 28px 22px;
+  padding: 25px 28px;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   margin-bottom: 20px;
