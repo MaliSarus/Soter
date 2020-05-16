@@ -3,14 +3,6 @@
         return element.length !== 0;
     }
 
-    function validation(element) {
-        if (element === '') {
-            element.css({
-                color: 'red'
-            });
-        }
-    };
-
     function dropdownMobileMenuOn() {
         if ($(window).width() < 992) {
             $('#navbarNav > li').on('click', function (event) {
@@ -426,13 +418,12 @@
         var footerSubmit = footerForm.find('button[type="submit"]');
         footerSubmit.on('click submit', function (event) {
             var failFlag = 0;
-            if (footerForm.find('.request__input').hasClass('invalid')) {
+            if (footerForm.find('.request__input-wrapper').hasClass('invalid') || !(footerForm.find('.request__input-wrapper').hasClass('valid'))) {
                 failFlag = 1
             }
             if (failFlag == 1) {
                 event.preventDefault();
             } else {
-                event.preventDefault();
                 footerForm.hide().siblings('p').hide().siblings('.footer__bottom-success').css('display', 'flex');
             }
         });
