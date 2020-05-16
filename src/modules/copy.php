@@ -18,7 +18,7 @@
                     <img src="./assets/img/copy/success.svg" alt="Успех">
                     <p>Thank you!</p>
                     <small>Download your copy here</small>
-                    <button class="button button_blue" id="copy__success-button">Download now</button>
+                    <a href="https://drive.google.com/file/d/1JZY49zKlAmLv8Ropd7yFHZHcJw35CYVM/view?usp=sharing" class="button button_blue" id="copy__success-button">Download now</a>
                 </div>
                 <form action="#" id="copy-form">
                     <p>Get your copy</p>

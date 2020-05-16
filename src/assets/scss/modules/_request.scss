@@ -73,13 +73,11 @@
     form{
       button{
         width: 100%;
-        padding-bottom: 21px;
         @media screen and (min-width: $md-width){
           width: auto;
           margin: 0 auto;
         }
         @media screen and (min-width: $lg-width){
-          padding-bottom: 23px;
           margin: unset;
         }
       }

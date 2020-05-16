@@ -66,11 +66,11 @@
       display: inline-block;
       margin-top: 42px;
       width: auto;
-      padding-left: 39px;
-      padding-right: 42px;
+      padding: 23px 42px 23px 39px;
       //max-width: 266px;
     }
     @media screen and (min-width: $lg-width){
+      padding-top: 25px;
       margin: 0;
       margin-top: 42px;
     }
