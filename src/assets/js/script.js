@@ -556,7 +556,8 @@
             var failFlag = 0;
             modalWrapper.each(function () {
                 if ($(this).hasClass('invalid') || !($(this).hasClass('valid'))) {
-                    failFlag = 1
+                    failFlag = 1;
+                    $(this).addClass('invalid').children('label').addClass('invalid');
                 }
             });
             if (failFlag == 1) {
