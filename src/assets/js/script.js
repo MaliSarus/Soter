@@ -424,7 +424,8 @@
         footerSubmit.on('click submit', function (event) {
             var failFlag = 0;
             if (footerForm.find('.request__input-wrapper').hasClass('invalid') || !(footerForm.find('.request__input-wrapper').hasClass('valid'))) {
-                failFlag = 1
+                failFlag = 1;
+                footerForm.find('.request__input-wrapper').addClass('invalid').children('label').addClass('invalid');
             }
             if (failFlag == 1) {
                 event.preventDefault();
