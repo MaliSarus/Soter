@@ -6,14 +6,15 @@
             </div>
         </div>
         <div class="row successes__block">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 ">
                 <div class="successes__video">
                     <iframe width="100%" height="auto" src="https://www.youtube.com/embed/pabs8IHMUmQ" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
+<!--                    <img src="./assets/img/successes/img.jpg" alt="Картинка">-->
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 d-lg-flex align-items-lg-center">
                 <div class="successes__content">
                     <h3>The UK’s largest building merchant reduced manual handling injuries by 55%</h3>
                     <p class="text">

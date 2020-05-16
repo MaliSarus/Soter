@@ -23,7 +23,7 @@
   &__content{
     text-align: center;
     @media screen and (min-width:$lg-width){
-      padding: 17px 0px 14px 40px;
+      padding: 0 0 0 40px;
       text-align: left;
     }
     >h3{
@@ -80,8 +80,9 @@
       min-height: 400px;
       height: 100%;
     }
-    @media screen and ($lg-width){
-
+    img{
+      width: 100%;
+      max-width: 100%;
     }
   }
 }

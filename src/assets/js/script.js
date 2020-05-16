@@ -15,6 +15,7 @@
         if ($(window).width() < 992) {
             $('#navbarNav > li').on('click', function (event) {
                 event.preventDefault();
+                event.stopPropagation();
                 var submenu = $(this).find('.sub-menu');
                 var current = ($('.sub-menu').index(submenu));
                 var active = $('.sub-menu').index($('.sub-menu.active'));
@@ -26,6 +27,10 @@
                 } else {
                     submenu.fadeToggle().toggleClass('active').siblings('a').toggleClass('opened');
                 }
+            });
+            $('.sub-menu a').on('click', function () {
+                const url = $(this).attr('href');
+                $(location).attr('href', url);
             })
         }
     }

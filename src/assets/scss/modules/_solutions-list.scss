@@ -34,7 +34,8 @@
         right: -86px;
       }
     }
-    ol{
+    ul{
+      padding-left: 0;
       position: relative;
       z-index: 1;
       counter-reset: myCounter;

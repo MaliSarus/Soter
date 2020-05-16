@@ -88,6 +88,7 @@
         flex-wrap: wrap;
 
         > li {
+          list-style: none;
           display: block;
           text-align: center;
           position: relative;
@@ -130,7 +131,7 @@
               }
             }
 
-            @media screen and (min-width: 961px) {
+            @media screen and (min-width: $lg-width) {
               >a{
                 &::before{
                   content: '';
@@ -241,6 +242,7 @@
 }
 
 .sub-menu {
+  padding-left: 0;
   display: none;
   overflow: hidden;
   background: lighten($main-color, 10);
@@ -261,6 +263,7 @@
   }
 
   > li {
+    list-style: none;
     position: relative;
 
     &::before {

@@ -89,7 +89,7 @@ p{
 }
 
 ul{
-  padding: 0;
+  padding: 0 0 0 21px;
   margin: 0;
   &.fw_normal{
     li{
@@ -97,7 +97,7 @@ ul{
     }
   }
   li{
-    display: flex;
+    list-style: url("../img/interface/list-style-image.svg");
     text-align: left;
     color: $main-color;
     font-weight: 500;
@@ -106,12 +106,12 @@ ul{
     &:last-child{
       margin-bottom: 0;
     }
-    &::before{
-      display: block;
-      content:  url("../img/interface/list-style-image.svg");
-      margin-right: 13px;
-      margin-top: 1px;
-    }
+    //&::before{
+    //  display: block;
+    //  content:  url("../img/interface/list-style-image.svg");
+    //  margin-right: 13px;
+    //  margin-top: 1px;
+    //}
     @media screen and (min-width:$md-width){
       font-weight: 500;
       font-size: 16px;
