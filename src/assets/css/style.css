@@ -252,12 +252,18 @@ ul li::before {
   position: absolute;
   content: '';
   left: 0;
-  top: 6px;
+  top: 1px;
   width: 14px;
   height: 100%;
   max-height: 100%;
   background: url("../img/interface/list-style-image.svg") left top no-repeat;
   background-size: contain;
+}
+
+@media screen and (min-width: 768px) {
+  ul li::before {
+    top: 6px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -2770,6 +2776,10 @@ img.align-center {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .header__navbar-nav > ul > li {
@@ -2778,6 +2788,7 @@ img.align-center {
   display: block;
   text-align: center;
   position: relative;
+  max-width: 325px;
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
@@ -2785,6 +2796,7 @@ img.align-center {
 
 @media screen and (min-width: 992px) {
   .header__navbar-nav > ul > li {
+    max-width: none;
     -webkit-flex-basis: unset;
     -ms-flex-preferred-size: unset;
     flex-basis: unset;
@@ -3013,7 +3025,7 @@ img.align-center {
   width: 100%;
   text-align: center;
   color: white;
-  padding: 15px 0;
+  padding: 15px 25px;
   -webkit-transition: background-color .25s, color .25s;
   -o-transition: background-color .25s, color .25s;
   transition: background-color .25s, color .25s;
