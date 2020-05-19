@@ -124,6 +124,10 @@
       animation-delay: .25s;
       animation-duration: .5s;
       animation-fill-mode: both;
+      -moz-animation-name: change-paddings;
+      -moz-animation-delay: .25s;
+      -moz-animation-duration: .5s;
+      -moz-animation-fill-mode: both;
 
       &::before {
         opacity: 1;
@@ -138,6 +142,10 @@
         animation-name: hide-regular;
         animation-duration: .25s;
         animation-fill-mode: forwards;
+        -moz-animation-name: hide-regular;
+        -moz-animation-duration: .25s;
+        -moz-animation-fill-mode: forwards;
+        display: none;
       }
       >.cases__item-content_hover{
         transition: transform .25s;
@@ -146,6 +154,10 @@
         animation-duration: .5s;
         animation-delay: .25s;
         animation-fill-mode: both;
+        -moz-animation-name: show-hover;
+        -moz-animation-duration: .5s;
+        -moz-animation-delay: .25s;
+        -moz-animation-fill-mode: both;
         position: relative;
         z-index: 2;
         display: block;
@@ -268,24 +280,28 @@
 @keyframes hide-regular {
   from {
     opacity: 1;
-    max-height: 100%
+    max-height: 100%;
+    height: 100%;
   }
   to {
     opacity: 0;
     max-height: 0;
+    height: 0;
   }
 }
 
 @keyframes show-hover {
   from {
-    min-height: 0;
+    max-height: 0;
     opacity: 0;
   }
   99%{
     opacity: 1;
+    max-height: 1000px;
   }
   to {
-    max-height: 500px;
+
+    max-height: none;
   }
 }
 

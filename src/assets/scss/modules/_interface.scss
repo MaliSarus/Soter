@@ -26,7 +26,7 @@
   }
   &_blue{
     color: white;
-    transition: background .5s;
+    transition: background 1s;
     position: relative;
     background: none;
     z-index: 1;
@@ -61,7 +61,7 @@
       color: white;
       &::before{
         opacity: 0;
-        transition: opacity .5s;
+        //transition: opacity .5s;
       }
     }
     &:active{

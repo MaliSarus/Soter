@@ -7,13 +7,16 @@
             <div class="modal__wrapper request__user">
                 <input type="text" name="order-name" id="order-name" required>
                 <label for="order-name">First Name</label></div>
+            <div class="modal__wrapper request__lastname">
+                <input type="text" name="order-last-name" id="order-last-name" required>
+                <label for="order-name">Last Name</label></div>
             <div class="modal__wrapper request__mail">
                 <input type="e-mail" name="order-mail" id="order-mail" required>
                 <label for="order-mail">E-mail</label></div>
             <div class="modal__wrapper request__company">
                 <input type="Company name" name="order-company" id="order-company" required>
                 <label for="order-company">Company name</label></div>
-            <button type="submit" class="button button_blue">Buy soter</button>
+            <button type="submit" class="button button_blue" id="modal-button">Buy soter</button>
         </form>
     </div>
 </div>

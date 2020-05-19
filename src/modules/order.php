@@ -54,12 +54,14 @@
                                                                                name="coach-subs-order"
                                                                                checked
                                                                                value="3 month"
-                                                                               required><span></span><span
+                                                                               required
+                                        ><span></span><span
                                                 class="text">3 months</span>
                                     </label>
                                     <label for="coach-subs-order-year"><input type="radio" id="coach-subs-order-year"
                                                                               name="coach-subs-order"
-                                                                              value="1 year" required><span></span><span
+                                                                              value="1 year" required
+                                        ><span></span><span
                                                 class="text">1 year</span>
                                     </label>
                                 </div>
@@ -67,7 +69,7 @@
                             <div class="order__price">
                                 <p>Price</p>
                                 <div class="order__price-wrapper">
-                                    <input type="text" value="125$" name="coach-price-order" readonly>
+                                    <input type="text" value="125$" name="coach-price-order" id="coach-price-order" readonly>
                                 </div>
 
                             </div>
@@ -92,15 +94,18 @@
                         </div>
                         <div class="order__form-row">
                             <div class="order__additional">
-                                <ul>
-                                    <li>$75 per the device</li>
-                                    <li>$125 monthly subscription fee per item</li>
+                                <ul id="coach-month-list">
+                                    <li id="coach-month-quantity">1 Soter Device</li>
+                                    <li id="coach-month-price">$375 for 3 months of subscription per device</li>
+                                </ul>
+                                <ul id="coach-annual-list">
+                                    <li id="coach-annual-quantity">1 Soter Device</li>
+                                    <li id="coach-annual-price">$1200 for annual subscription per device</li>
                                 </ul>
                                 <button class="button button_blue" type="button" id="coach-order-button">order now
                                 </button>
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>
@@ -149,16 +154,16 @@
                         <input type="hidden" name="formname" value="order form">
                         <input type="hidden" name="formname-second" value="Order form">
                         <div class="order__form-row">
-                            <div class="order__quantity">
-                                <p>Quantity</p>
-                                <div class="order__quantity-wrapper">
-                                    <span class="order__quantity-button up"></span>
-                                    <span class="order__quantity-button down"></span>
-                                    <input type="number" id="clipngo-quantity-order" min="1"
-                                           name="clipngo-quantity-order"
-                                           value="1" required>
-                                </div>
-                            </div>
+<!--                            <div class="order__quantity">-->
+<!--                                <p>Quantity</p>-->
+<!--                                <div class="order__quantity-wrapper">-->
+<!--                                    <span class="order__quantity-button up"></span>-->
+<!--                                    <span class="order__quantity-button down"></span>-->
+<!--                                    <input type="number" id="clipngo-quantity-order" min="1"-->
+<!--                                           name="clipngo-quantity-order"-->
+<!--                                           value="1" required>-->
+<!--                                </div>-->
+<!--                            </div>-->
                             <div class="order__subs">
                                 <p>Subscription</p>
                                 <div class="order__subs-wrapper">
@@ -182,7 +187,7 @@
                             <div class="order__price">
                                 <p>Price</p>
                                 <div class="order__price-wrapper">
-                                    <input type="text" value="125$" name="clipngo-price-order" readonly>
+                                    <input type="text" value="125$" name="clipngo-price-order" id="clipngo-price-order" readonly>
                                 </div>
 
                             </div>
@@ -191,9 +196,15 @@
                             <div class="order__additional">
                                 <ul>
                                     <p><b>What’s included in the pack:</b></p>
-                                    <li>Charging hub and tablet</li>
-                                    <li>10 wearable devices</li>
-                                    <li>10x subscriptions</li>
+                                    <li>1 Charging Hub & Tablet</li>
+                                    <li>10 Soter Devices</li>
+                                    <li>10x 3 month of subscription per device</li>
+                                </ul>
+                                <ul>
+                                    <p><b>What’s included in the pack:</b></p>
+                                    <li>1 Charging Hub & Tablet</li>
+                                    <li>10 Soter Devices</li>
+                                    <li>10x annual subscriptions per device</li>
                                 </ul>
                                 <button class="button button_blue" type="button" id="clipngo-order-button">order now
                                 </button>

@@ -14,7 +14,7 @@ function gulpSass() {
         .src('./src/assets/scss/**/*.scss')
         .pipe(sass({ outputStyle: "expanded" }))
         .pipe(autoPrefixer({
-            browsers: ['last 4 versions'],
+            browsers: ['last 10 versions'],
             cascade: false
         }))
         .pipe(gulp.dest('./src/assets/css'))

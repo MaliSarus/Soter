@@ -29,6 +29,8 @@ body{
 
 *{
   font-family: "Gotham Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smooth: antialiased;
 }
 
 input{
@@ -89,7 +91,7 @@ p{
 }
 
 ul{
-  padding: 0 0 0 21px;
+  padding: 0 0 0 0px;
   margin: 0;
   &.fw_normal{
     li{
@@ -97,14 +99,28 @@ ul{
     }
   }
   li{
-    list-style: url("../img/interface/list-style-image.svg");
+    padding-left: 24px;
+    list-style: none;
     text-align: left;
     color: $main-color;
     font-weight: 500;
     font-size: 14px;
     line-height: 121%;
+    position: relative;
     &:last-child{
       margin-bottom: 0;
+    }
+    &::before{
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 6px;
+      width: 14px;
+      height: 100%;
+      max-height: 100%;
+      background: url("../img/interface/list-style-image.svg") left top no-repeat;
+      background-size: contain;
     }
     //&::before{
     //  display: block;

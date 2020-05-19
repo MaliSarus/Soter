@@ -98,6 +98,9 @@
             margin-bottom: 0;
           }
           &:before{
+            width: auto;
+            height: auto;
+            max-height: none;
             display: block;
             max-width: none;
             max-height: none;

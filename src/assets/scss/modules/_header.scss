@@ -88,6 +88,7 @@
         flex-wrap: wrap;
 
         > li {
+          padding-left: 0;
           list-style: none;
           display: block;
           text-align: center;
@@ -139,6 +140,7 @@
                 }
               }
               &::before {
+                top: unset;
                 display: block;
                 position: absolute;
                 content: '';
@@ -263,12 +265,14 @@
   }
 
   > li {
+    padding-left: 0;
     list-style: none;
     position: relative;
 
     &::before {
       content: '';
       display: block;
+      top: unset;
       height: 1px;
       position: absolute;
       bottom: -0.5px;
