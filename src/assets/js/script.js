@@ -5,7 +5,7 @@
 
     function dropdownMobileMenuOn() {
         if ($(window).width() < 992) {
-            $('#navbarNav > li').on('click', function (event) {
+            $('#navbarNav > li.menu-item-has-children').on('click', function (event) {
                 event.preventDefault();
                 event.stopPropagation();
                 var submenu = $(this).find('.sub-menu');
@@ -321,6 +321,7 @@
         });
 
         requestSubmit.on('click', function (event) {
+            event.preventDefault();
             var failFlag = 0;
             $(this).parent().find('.request__input-wrapper').each(function () {
                 if ($(this).hasClass('invalid') || !($(this).hasClass('valid'))) {
@@ -330,7 +331,7 @@
             });
             console.log(failFlag);
             if (failFlag == 1) {
-                event.preventDefault();
+                console.log(('fail'))
             } else {
                 if ($(this).is('#request-button')) {
                     $('.success-image').css('display', 'block');
@@ -502,22 +503,35 @@
 
             buttonUp.on('click', function () {
                 var input = $(this).siblings('input[type="number"]');
+                var addInfo = input.parents('form').find('.add-info');
                 input[0].stepUp();
+                if ($(input[0]).val() > 20){
+                    addInfo.addClass('add-info_active');
+                    $(input[0]).val(20);
+                }
                 input.trigger('change');
             });
             buttonDown.on('click', function () {
                 var input = $(this).siblings('input[type="number"]');
+                var addInfo = input.parents('form').find('.add-info');
                 input[0].stepDown();
+                if ($(input[0]).val() < 20){
+                    addInfo.removeClass('add-info_active');
+                }
                 input.trigger('change');
+
             });
             quantityInput.on('input change', function () {
-                var addInfo = $(this).parents('form').find('.add-info');
                 if ($(this).val() < 1) {
                     $(this).val(1);
                 }
-                if ($(this).val() > 20) {
+                if($(this).val() > 20){
+                    var addInfo = $(this).parents('form').find('.add-info');
                     addInfo.addClass('add-info_active');
-                } else {
+                    $(this).val(20);
+                }
+                if($(this).val() < 20){
+                    var addInfo = $(this).parents('form').find('.add-info');
                     addInfo.removeClass('add-info_active');
                 }
             });
@@ -543,19 +557,19 @@
             }
             var radio = $('.order form .order__subs-wrapper input[type="radio"]');
             radio.each(function () {
-                if ($(this).prop('checked')){
-                   var form = $(this).parents('form');
-                   var index = form.find('.order__subs-wrapper input[type="radio"]').index($(this));
-                   var list = form.find('.order__additional > ul');
-                   $(list[index]).addClass('active');
+                if ($(this).prop('checked')) {
+                    var form = $(this).parents('form');
+                    var index = form.find('.order__subs-wrapper input[type="radio"]').index($(this));
+                    var list = form.find('.order__additional > ul');
+                    $(list[index]).addClass('active');
                 }
             });
-            $('form#order-coach-form .order__subs-wrapper input[type="radio"]').on('change',function () {
+            $('form#order-coach-form .order__subs-wrapper input[type="radio"]').on('change', function () {
                 var index = $('form#order-coach-form .order__subs-wrapper input[type="radio"]').index($(this));
                 $('form#order-coach-form .order__additional ul').removeClass('active');
                 $($('form#order-coach-form .order__additional ul')[index]).addClass('active');
             });
-            $('form#order-clipngo-form .order__subs-wrapper input[type="radio"]').on('change',function () {
+            $('form#order-clipngo-form .order__subs-wrapper input[type="radio"]').on('change', function () {
                 var index = $('form#order-clipngo-form .order__subs-wrapper input[type="radio"]').index($(this));
                 $('form#order-clipngo-form .order__additional ul').hide();
                 $($('form#order-clipngo-form .order__additional ul')[index]).show();
@@ -580,10 +594,31 @@
                 $(this).parent().removeClass('valid').addClass('invalid');
                 $(this).siblings('label').removeClass('valid').addClass('invalid');
             }
+            if(!$(this).is('#order-agree')) {
+                if ($(this).val() != '') {
+                    $(this).siblings('label').css('visibility', 'hidden');
+                } else {
+                    $(this).siblings('label').css('visibility', 'visible');
+                }
+            }
         });
         var modalWrapper = $('.modal__wrapper');
         var modalSubmit = $('.modal button[type="submit"]');
+        setInterval(function () {
+            var fail = 0;
+            modalWrapper.each(function () {
+                if ($(this).hasClass('invalid') || !($(this).hasClass('valid'))) {
+                    fail = 1;
+                }
+                if (fail == 1) {
+                    modalSubmit.addClass('disactive')
+                } else {
+                    modalSubmit.removeClass('disactive')
+                }
+            })
+        }, 1)
         modalSubmit.on('click submit', function (event) {
+            event.preventDefault();
             var failFlag = 0;
             modalWrapper.each(function () {
                 if ($(this).hasClass('invalid') || !($(this).hasClass('valid'))) {
@@ -591,8 +626,8 @@
                     $(this).addClass('invalid').children('label').addClass('invalid');
                 }
             });
-            if (failFlag == 1) {
-                event.preventDefault();
+            if (failFlag == 1 || modalSubmit.hasClass('disactive')) {
+                console.log('fail');
             } else {
                 console.log('success');
             }
@@ -631,9 +666,9 @@
         modalClose.on('click', function () {
             $('body').css({
                 overflow: 'auto',
-            }).removeAttr('style').children().css({
+            }).children().css({
                 filter: 'blur(0px)'
-            }).removeAttr('style');
+            });
             $('.modal').removeClass('modal_active').removeAttr('style');
         });
         var modalForm = $('.modal');
@@ -641,10 +676,60 @@
             if (!($(this).children().is(event.target)) && $(this).children().has(event.target).length === 0) {
                 $('body').css({
                     overflow: 'auto',
+                }).children().css({
+                    filter: 'blur(0px)'
+                });
+                $('.modal').removeClass('modal_active').removeAttr('style');
+            }
+        });
+
+        var changeCurrencyButton = $('.order__button-wrapper small');
+        var changeCurrencySubmit = $('.change-currency form button');
+        var changeCurrencyClose = $('.change-currency-close');
+        var changeCurrency = $('.change-currency');
+
+        changeCurrencyButton.on('click', '.call-change-currency',function () {
+            $('body').css({
+                overflow: 'hidden',
+            }).children().css({
+                filter: 'blur(27px)'
+            });
+            $('.change-currency').addClass('change-currency_active').removeAttr('style');
+        });
+
+
+        changeCurrencySubmit.on('click', function () {
+            $('body').css({
+                overflow: 'auto',
+            }).removeAttr('style').children().css({
+                filter: 'blur(0px)'
+            }).removeAttr('style');
+            $('.change-currency').removeClass('change-currency_active').removeAttr('style');
+            var checked =  $('.change-currency input[type="radio"]:checked').val();
+            var callButton = $('.call-change-currency');
+            callButton.each(function () {
+                $(this).parent().html('Prices shown in ' + checked + ' ').append($(this));
+            })
+        });
+
+        changeCurrencyClose.on('click', function () {
+            $('body').css({
+                overflow: 'auto',
+            }).removeAttr('style').children().css({
+                filter: 'blur(0px)'
+            }).removeAttr('style');
+            $('[data-call="true"]').removeAttr('data-call');
+            $('.change-currency').removeClass('change-currency_active').removeAttr('style');
+        });
+
+        changeCurrency.on('click', function (event) {
+            if (!($(this).children().is(event.target)) && $(this).children().has(event.target).length === 0) {
+                $('body').css({
+                    overflow: 'auto',
                 }).removeAttr('style').children().css({
                     filter: 'blur(0px)'
                 }).removeAttr('style');
-                $('.modal').removeClass('modal_active').removeAttr('style');
+                $('.change-currency').removeClass('change-currency_active').removeAttr('style');
             }
         });
 
@@ -698,11 +783,49 @@
 
         }
 
+        //Cookies
+        function getCookie(name) {
+            var matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+            ));
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+        }
+        function setCookie(name, value, options = {}) {
 
-        $('form').on('submit', function (e) {
-            console.log($(this));
-            return false;
+            options = {
+                path: '/',
+                // при необходимости добавьте другие значения по умолчанию
+                ...options
+            };
+
+            if (options.expires instanceof Date) {
+                options.expires = options.expires.toUTCString();
+            }
+
+            var updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+            for (var optionKey in options) {
+                updatedCookie += "; " + optionKey;
+                var optionValue = options[optionKey];
+                if (optionValue !== true) {
+                    updatedCookie += "=" + optionValue;
+                }
+            }
+
+            document.cookie = updatedCookie;
+        }
+
+        $('.cookies__submit').on('click', function () {
+            setCookie('agree','yes');
+            var cookies = $('.cookies');
+            cookies.removeClass('active');
         });
+
+        if (getCookie('agree') === undefined || getCookie('agree') !== 'yes'){
+            var cookies = $('.cookies');
+            cookies.addClass('active')
+        }
+
     });
 
     $(window).on('resize', function () {

@@ -69,7 +69,8 @@
                             <div class="order__price">
                                 <p>Price</p>
                                 <div class="order__price-wrapper">
-                                    <input type="text" value="125$" name="coach-price-order" id="coach-price-order" readonly>
+                                    <input type="text" value="125$" name="coach-price-order" id="coach-price-order"
+                                           readonly>
                                 </div>
 
                             </div>
@@ -102,8 +103,12 @@
                                     <li id="coach-annual-quantity">1 Soter Device</li>
                                     <li id="coach-annual-price">$1200 for annual subscription per device</li>
                                 </ul>
-                                <button class="button button_blue" type="button" id="coach-order-button">order now
-                                </button>
+                                <div class="order__button-wrapper">
+                                    <button class="button button_blue" type="button" id="coach-order-button">order now
+                                    </button>
+                                    <small>Prices shown in USD <span class="call-change-currency" id="coach-currency">Change</span></small>
+                                </div>
+
                             </div>
                         </div>
                     </form>
@@ -154,16 +159,6 @@
                         <input type="hidden" name="formname" value="order form">
                         <input type="hidden" name="formname-second" value="Order form">
                         <div class="order__form-row">
-<!--                            <div class="order__quantity">-->
-<!--                                <p>Quantity</p>-->
-<!--                                <div class="order__quantity-wrapper">-->
-<!--                                    <span class="order__quantity-button up"></span>-->
-<!--                                    <span class="order__quantity-button down"></span>-->
-<!--                                    <input type="number" id="clipngo-quantity-order" min="1"-->
-<!--                                           name="clipngo-quantity-order"-->
-<!--                                           value="1" required>-->
-<!--                                </div>-->
-<!--                            </div>-->
                             <div class="order__subs">
                                 <p>Subscription</p>
                                 <div class="order__subs-wrapper">
@@ -187,7 +182,8 @@
                             <div class="order__price">
                                 <p>Price</p>
                                 <div class="order__price-wrapper">
-                                    <input type="text" value="125$" name="clipngo-price-order" id="clipngo-price-order" readonly>
+                                    <input type="text" value="125$" name="clipngo-price-order" id="clipngo-price-order"
+                                           readonly>
                                 </div>
 
                             </div>
@@ -206,8 +202,11 @@
                                     <li>10 Soter Devices</li>
                                     <li>10x annual subscriptions per device</li>
                                 </ul>
-                                <button class="button button_blue" type="button" id="clipngo-order-button">order now
-                                </button>
+                                <div class="order__button-wrapper">
+                                    <button class="button button_blue" type="button" id="clipngo-order-button">order now
+                                    </button>
+                                    <small>Prices shown in USD <span class="call-change-currency" id="clipngo-currency">Change</span></small>
+                                </div>
                             </div>
                         </div>
 

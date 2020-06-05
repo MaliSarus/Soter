@@ -57,12 +57,23 @@
         &:focus ~ label,
         &:valid ~ label{
           opacity: 0;
+          //visibility: hidden;
         }
       }
       button{
         margin-top: 10px;
         width: 203px;
         outline: none;
+        &.disactive{
+          &:before{
+            opacity: 0;
+          }
+          &:after{
+            filter: brightness(0.1) hue-rotate(70deg);
+          }
+          background: #E2EEFF;
+          color: $main-color;
+        }
       }
     }
   }
@@ -78,6 +89,35 @@
     position: relative;
     margin-bottom: 20px;
     width: calc(100% - 40px);
+    &.agree{
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      border-radius: 0px;
+      overflow: visible;
+      input{
+        height: auto;
+        width: auto;
+        &:focus ~ label,
+        &:valid ~ label,{
+          opacity: 1;
+        }
+      }
+      label{
+        font-size: 14px;
+        a{
+          color: $accent-color;
+        }
+      }
+      &.invalid{
+        label{
+          font-weight: normal;
+        }
+      }
+
+      &::after{
+        display: none;
+      }
+    }
     &::before{
       display: none;
       //top: 50%;

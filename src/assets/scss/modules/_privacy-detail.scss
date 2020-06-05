@@ -75,7 +75,15 @@
     }
     ul{
       li{
-        font-size: 14px;
+        font-size: 12px;
+        @media screen and (min-width: $md-width){
+          font-size: 14px;
+        }
+        &::before{
+          @media screen and (min-width: $md-width){
+            top: 5px;
+          }
+        }
       }
     }
   }
