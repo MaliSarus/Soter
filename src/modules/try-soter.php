@@ -48,8 +48,15 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-5 try-soter__right">
-                <form action="#" id="try-soter-form">
+
+                <form action="#" id="trial-form">
+                    <div class="try-soter-success">
+                        <div class="success-image" style="display: block"></div>
+                        <p>Thank you for the request!</p>
+                        <small>Our team member will contact you soon</small>
+                    </div>
                     <p>Fill out the form and our team members will contact you!</p>
+                    <input type="checkbox" name="mc4wp-subscribe" value="1" style="display:none" checked/>
                     <input type="hidden" name="formname" value="try-soter form">
                     <input type="hidden" name="formname-second" value="Try product form">
                     <div class="request__form-row">

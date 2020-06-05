@@ -261,4 +261,30 @@
       }
     }
   }
+  &-success{
+    display: none;
+    .success-image{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    p{
+      font-weight: bold;
+      font-size: 37px;
+      line-height: 120%;
+      text-align: center;
+      color: #FFFFFF;
+      margin-bottom: 9px;
+    }
+    small{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 132%;
+      text-align: center;
+      color: #FFFFFF;
+      max-width: 243px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
