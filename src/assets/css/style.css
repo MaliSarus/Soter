@@ -3641,6 +3641,98 @@ img.align-center {
   flex-grow: 1;
 }
 
+.cases.without-hover .cases__item {
+  padding-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .cases.without-hover .cases__item {
+    padding-bottom: 70px;
+  }
+}
+
+.cases.without-hover .cases__item:hover {
+  -webkit-animation: none;
+  animation: none;
+}
+
+.cases.without-hover .cases__item:hover > .cases__item-content {
+  -webkit-animation: none;
+  animation: none;
+  display: block;
+}
+
+.cases.without-hover .cases__item:hover > .cases__item-content_hover {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  -webkit-animation: none;
+  animation: none;
+  display: none;
+}
+
+.cases.without-hover .cases__item:hover .hover {
+  display: none;
+}
+
+.cases.without-hover .cases__item:hover .link.hover {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+  opacity: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cases.without-hover .cases__item::before {
+  display: none;
+}
+
+.cases.without-hover .cases__item::after {
+  display: none;
+}
+
+.cases.without-hover .cases__item-content_hover {
+  display: none;
+}
+
+.cases.without-hover .cases__item a {
+  opacity: 1;
+  color: #2096F3;
+  -webkit-transition: text-shadow .5s !important;
+  -o-transition: text-shadow .5s !important;
+  transition: text-shadow .5s !important;
+}
+
+.cases.without-hover .cases__item a img {
+  -webkit-filter: brightness(0.5) sepia(1) hue-rotate(150deg) saturate(4.5);
+  filter: brightness(0.5) sepia(1) hue-rotate(150deg) saturate(4.5);
+}
+
+.cases.without-hover .cases__item a * {
+  color: #2096F3;
+}
+
+.cases.without-hover .cases__item a:hover {
+  text-decoration: none;
+  text-shadow: 0 0 10px #2096F3;
+}
+
+.cases.without-hover .cases__item a:hover img {
+  -webkit-transition: -webkit-filter .5s;
+  transition: -webkit-filter .5s;
+  -o-transition: filter .5s;
+  transition: filter .5s;
+  transition: filter .5s, -webkit-filter .5s;
+  -webkit-filter: brightness(0.5) sepia(1) hue-rotate(150deg) saturate(4.5) drop-shadow(0 0 10px #2096F3);
+  filter: brightness(0.5) sepia(1) hue-rotate(150deg) saturate(4.5) drop-shadow(0 0 10px #2096F3);
+}
+
 .cases__item {
   min-height: 268px;
   overflow: hidden;
@@ -3940,7 +4032,6 @@ img.align-center {
 
 @media screen and (min-width: 768px) {
   .cases__button {
-    padding-top: 27px;
     margin: 0;
     margin-top: 57px;
     max-width: 266px;
