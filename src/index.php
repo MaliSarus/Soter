@@ -47,5 +47,8 @@ require './modules/faq.php';
 require './modules/measures.php';
 require './modules/phases.php';
 // <!--13052020-->
+// <!--15062020-->
+require './modules/smart.php';
+// <!--15062020-->
 require './modules/footer.php';
 ?>
