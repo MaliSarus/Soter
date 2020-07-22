@@ -229,19 +229,22 @@
   .button {
     padding-top: 26px;
     padding-bottom: 19px;
-    width: 100%;
-
+    width: calc(100% - 60px);
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
     &::after {
       display: none;
     }
 
     @media screen and (min-width: $lg-width) {
-      padding: 0 34px;
-      padding-top: 22px;
-      padding-bottom: 17px;
+      padding: 22px 34px 17px;
       width: auto;
       margin-left: 68px;
       font-size: 14px;
+      position: relative;
+      bottom: auto;
+      left: auto;
     }
   }
 }

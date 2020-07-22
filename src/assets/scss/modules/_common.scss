@@ -215,3 +215,12 @@ button{
   appearance: none;
 }
 
+*[data-src]{
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+*[data-src].loaded{
+  opacity: 1;
+}
+

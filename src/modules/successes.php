@@ -8,7 +8,7 @@
         <div class="row successes__block">
             <div class="col-12 col-lg-6 ">
                 <div class="successes__video">
-                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/pabs8IHMUmQ" frameborder="0"
+                    <iframe width="100%" height="auto" data-src="https://www.youtube.com/embed/pabs8IHMUmQ" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
 <!--                    <img src="./assets/img/successes/img.jpg" alt="Картинка">-->

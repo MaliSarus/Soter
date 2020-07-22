@@ -3,7 +3,7 @@
         <div class="row products__block">
             <div class="col-12 col-lg-6 d-flex align-items-center">
                 <div class="products__image balls-br-sm">
-                    <img src="./assets/img/products/1-new.png" alt="">
+                    <img src="" class="lazy" data-src="./assets/img/products/1-new.png" alt="">
                 </div>
             </div>
             <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center">

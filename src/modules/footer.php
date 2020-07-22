@@ -69,9 +69,11 @@
         </p>
     </div>
     <div class="cookies__button">
-        <button class="cookies__submit button button_blue">Agree</button>
+        <button class="cookies__submit">Agree</button>
     </div>
 </div>
+
+<div class="up-button"></div>
 
 <footer class="footer">
     <div class="container">
