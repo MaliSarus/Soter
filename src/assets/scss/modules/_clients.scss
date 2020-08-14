@@ -7,7 +7,7 @@
     padding-top: 261px;
     padding-bottom: 138px;
   }
-  .row:first-child{
+  .row.clients__head-row{
     @media screen and (min-width: $md-width){
       //margin: 0 -20px;
       max-width: 830px;
@@ -107,10 +107,16 @@
       }
       .logo{
         max-width: 50%;
+        height: 40px;
+        @media screen and (min-width: $md-width){
+          height: 72px;
+        }
         img{
           max-width: 100%;
           max-height: 100%;
-          object-fit: contain;
+          object-fit: scale-down;
+          object-position: left;
+          height: 100%;
         }
       }
       .country{

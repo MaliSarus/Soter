@@ -1,4 +1,4 @@
-<section class="order" id="order-id">
+<section class="order">
     <div class="container">
         <div class="row">
             <div class="col-12 col-xl-5 order__left">
@@ -216,3 +216,78 @@
         </div>
     </div>
 </section>
+
+<section class="order">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xl-5 order__left">
+                <div class="order__preview">
+                    <div class="order__preview-top">
+                        <img src="./assets/img/order/clipngo.png" alt="Продукт">
+                    </div>
+                    <div class="order__preview-bottom">
+                        <div class="order__preview-image"><img src="./assets/img/order/clipngo-back.png"
+                                                               alt="Вид сзади">
+                        </div>
+                        <div class="order__preview-image"><img src="./assets/img/order/clipngo-side.png"
+                                                               alt="Вид сбоку">
+                        </div>
+                        <div class="order__preview-image"><img src="./assets/img/order/clipngo-mobile.png"
+                                                               alt="Вид на мобилке"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-7 order__right">
+                <div class="order__main-block">
+                    <h2>
+                        Soter Armband
+                    </h2>
+                    <p>An official Soter armband to wear SoterCoach device on a shoulder position</p>
+                    <form action="#" id="order-armband-form">
+                        <div class="add-info">
+                            If you'd like to order more than 30 devices simply contact us via the <a href="#"><i>form
+                                    below</i></a>
+                        </div>
+                        <input type="hidden" name="formname" value="order form">
+                        <input type="hidden" name="formname-second" value="Order form">
+                        <div class="order__form-row">
+                            <div class="order__quantity">
+                                <p>Quantity</p>
+                                <div class="order__quantity-wrapper">
+                                    <span class="order__quantity-button up"></span>
+                                    <span class="order__quantity-button down"></span>
+                                    <input type="number" id="armband-quantity-order" min="1" name="armband-quantity-order"
+                                           value="1" required>
+                                </div>
+                            </div>
+                            <div class="order__price">
+                                <p>Price</p>
+                                <div class="order__price-wrapper">
+                                    <input type="text" value="125$" name="clipngo-price-order" id="clipngo-price-order"
+                                           readonly>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="order__form-row">
+                            <div class="order__additional">
+                                <ul class="active">
+                                    <p><b>What’s included in the pack:</b></p>
+                                    <li>1 Soter Armband</li>
+                                </ul>
+                                <div class="order__button-wrapper">
+                                    <button class="button button_blue" type="button" id="armband-order-button">order now
+                                    </button>
+                                    <small>Prices shown in USD <span class="call-change-currency" id="armband-currency">Change</span></small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Soter Armband-->

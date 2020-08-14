@@ -75,6 +75,7 @@
     }
     &-content{
       flex-basis: 100%;
+      color: $main-color;
       @media screen and (min-width: $lg-width){
         max-width: 761px;
         flex-basis: 50%;

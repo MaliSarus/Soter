@@ -48,8 +48,8 @@
       input{
         height: 100%;
         width: 100%;
-        padding: 20px;
-        background: #E2EEFF;
+        //padding: 20px;
+        //background: #E2EEFF;
         font-size: 14px;
         line-height: 120%;
         color: #7088AB;
@@ -89,11 +89,15 @@
     position: relative;
     margin-bottom: 20px;
     width: calc(100% - 40px);
+    padding: 20px;
+    background: #E2EEFF;
     &.agree{
       -webkit-border-radius: 0px;
       -moz-border-radius: 0px;
       border-radius: 0px;
       overflow: visible;
+      padding: 0;
+      background: none;
       input{
         height: auto;
         width: auto;

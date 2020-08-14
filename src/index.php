@@ -57,8 +57,15 @@ require './modules/main-top.php';
 //// <!--20072020-->
 //require './modules/article.php';
 //// <!--20072020-->
-// <!--20072020-->
-require './modules/articles.php';
-// <!--20072020-->
+//// <!--20072020-->
+//require './modules/articles.php';
+//// <!--20072020-->
+//// <!--03082020-->
+require './modules/title-text.php';
+//require './modules/case-feedback.php';
+//require './modules/results.php';
+//require './modules/graphics.php';
+//require './modules/case-feedback.php';
+//// <!--03082020-->
 require './modules/footer.php';
 ?>

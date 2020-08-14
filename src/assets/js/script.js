@@ -293,6 +293,7 @@
         $(window).on('resize', function () {
             if ($(window).width() >= 992 && $('.clients__slider').hasClass('swiper-container-initialized')) {
                 mySwiperControl.destroy(false, true);
+                $('.clients__slider > .swiper-wrapper').addClass('wrapper_flex')
             }
         })
     }
@@ -573,18 +574,20 @@
             buttonUp.on('click', function () {
                 var input = $(this).siblings('input[type="number"]');
                 var addInfo = input.parents('form').find('.add-info');
+                let limit = $(this).parents('form').attr('id') == 'order-armband-form' ? 30 : 20;
                 input[0].stepUp();
-                if ($(input[0]).val() > 20) {
+                if ($(input[0]).val() > limit) {
                     addInfo.addClass('add-info_active');
-                    $(input[0]).val(20);
+                    $(input[0]).val(limit);
                 }
                 input.trigger('change');
             });
             buttonDown.on('click', function () {
                 var input = $(this).siblings('input[type="number"]');
                 var addInfo = input.parents('form').find('.add-info');
+                let limit = $(this).parents('form').attr('id') == 'order-armband-form' ? 30 : 20;
                 input[0].stepDown();
-                if ($(input[0]).val() < 20) {
+                if ($(input[0]).val() < limit) {
                     addInfo.removeClass('add-info_active');
                 }
                 input.trigger('change');
@@ -594,12 +597,13 @@
                 if ($(this).val() < 1) {
                     $(this).val(1);
                 }
-                if ($(this).val() > 20) {
+                let limit = $(this).parents('form').attr('id') == 'order-armband-form' ? 30 : 20;
+                if ($(this).val() > limit) {
                     var addInfo = $(this).parents('form').find('.add-info');
                     addInfo.addClass('add-info_active');
-                    $(this).val(20);
+                    $(this).val(limit);
                 }
-                if ($(this).val() < 20) {
+                if ($(this).val() < limit) {
                     var addInfo = $(this).parents('form').find('.add-info');
                     addInfo.removeClass('add-info_active');
                 }
@@ -1014,7 +1018,7 @@
             if ($(window).width() < 992 && !($('.clients__slider').hasClass('swiper-container-initialized'))) {
                 $('.clients__slider > .swiper-wrapper').removeClass('wrapper_flex');
                 clientsSliderInit();
-            } else if ($(window).width() >= 992 && !($('.clients__slider').hasClass('wrapper_flex'))) {
+            } else if ($(window).width() >= 992 && !($('.clients__slider > .swiper-wrapper').hasClass('wrapper_flex'))) {
                 $('.clients__slider > .swiper-wrapper').addClass('wrapper_flex')
             }
         }

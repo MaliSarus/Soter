@@ -224,3 +224,15 @@ button{
   opacity: 1;
 }
 
+.pt_md-80{
+  @media screen and (min-width: $md-width){
+    padding-top: 80px !important;
+  }
+}
+
+.pb_md-80{
+  @media screen and (min-width: $md-width){
+    padding-bottom: 80px !important;
+  }
+}
+

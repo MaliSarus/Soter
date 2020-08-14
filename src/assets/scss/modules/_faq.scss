@@ -1,7 +1,7 @@
 .faq {
-  padding-bottom: 62px;
+  padding: 62px 0;
   @media screen and (min-width: $md-width) {
-    padding-bottom: 135px;
+    padding: 135px 0;
   }
   &__head{
     h2{
