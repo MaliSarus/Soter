@@ -4669,7 +4669,6 @@ img.align-center {
 }
 
 .feedback__item {
-  cursor: pointer;
   margin-top: 40px;
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
@@ -8760,8 +8759,6 @@ img.align-center {
     -webkit-flex-grow: 3;
     -ms-flex-positive: 3;
     flex-grow: 3;
-    padding-left: 22.5px;
-    padding-right: 22.5px;
     margin-bottom: 0;
     max-width: 217px;
   }
