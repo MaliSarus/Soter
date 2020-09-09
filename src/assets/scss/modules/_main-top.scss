@@ -67,6 +67,31 @@
       padding-bottom: 162px;
     }
   }
+  &_rate {
+    padding-top: 115px;
+    padding-bottom: 41px;
+    @media screen and (min-width: $lg-width){
+      padding-top: 250px;
+      padding-bottom: 121px;
+    }
+    &::after{
+      content: '';
+      height: 10px;
+      width: 100%;
+      top: unset;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, #2095F2 0%, #0851BF 100%);
+      transform: none;
+    }
+    .main-top__text{
+      padding-left: 0;
+      &::before,&::after{
+        content: '';
+        display: none;
+      }
+    }
+  }
   &__text{
     text-align: center;
     margin-bottom: 21px;
@@ -147,6 +172,63 @@
       @media screen and (min-width: $lg-width){
         width: 100%;
         max-width: 213px;
+      }
+    }
+  }
+  .rating{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    p {
+      font-size: 12px;
+    }
+    @media screen and (min-width: $md-width){
+      p {
+        font-size: 14px;
+      }
+    }
+    @media screen and (min-width: $lg-width){
+      justify-content: initial;
+    }
+    >*{
+      margin-right: 74px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    >.rating__rate-wrapper{
+      margin-right: 0;
+      flex-basis: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 28px;
+      @media screen and (min-width: $md-width){
+        display: block;
+        flex-basis: auto;
+        margin-left: 0;
+        margin-right: 74px;
+        margin-bottom: 0;
+      }
+    }
+    &__rate{
+      &-mark{
+        padding-left: 20px;
+        font-weight: 600;
+        @media screen and (min-width: $md-width){
+          padding-left: 37px;
+        }
+      }
+    }
+    &__time{
+      &-rez{
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+    &__date{
+      &-rez{
+        font-weight: 600;
       }
     }
   }

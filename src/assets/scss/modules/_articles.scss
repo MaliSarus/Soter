@@ -105,12 +105,15 @@
           content: none;
         }
 
-        &.current {
+        &.current-cat {
           border-color: $accent-color;
           background: $accent-color;
           color: white;
         }
 
+        ul{
+          display: none;
+        }
 
       }
     }

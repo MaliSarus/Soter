@@ -112,6 +112,20 @@
                         help ensure that the correct safety and mandatory measures have been taken care of so operations
                         can proceed without a hitch.
                     </p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ol>
                     <p>
                         Commissioning checklists are used in the process of verifying the performance of facilities,
                         systems, and assemblies to ensure trouble-free outcomes and mitigate the risk of unplanned
@@ -159,7 +173,7 @@
                                     </div>
                                     <div class="article-card__desc">
                                         <div class="article-card__title">Quality Assurance and Quality Control</div>
-                                        <p>Learn the difference between QA and QC practices, their tools and
+                                        <p>their tools and
                                             methodologies, and how they can be used to improve business performance.</p>
                                         <div class="article-card__more"><b>Learn more</b> <img
                                                     src="./assets/img/cases/arrow.svg" alt=""></div>

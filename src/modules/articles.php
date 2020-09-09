@@ -5,7 +5,7 @@
                 <div class="articles__block">
                     <div class="articles__categories">
                         <span>Category:</span>
-                        <div class="current-category" data-current="The working process"></div>
+                        <div class="current-category" data-current="Select category"></div>
                         <ul class="categories-list">
                             <li class="current">The working process</li>
                             <li>Quality</li>
@@ -26,8 +26,7 @@
                                 </div>
                                 <div class="article-card__desc">
                                     <div class="article-card__title">Quality Assurance and Quality Control</div>
-                                    <p>Learn the difference between QA and QC practices, their tools and
-                                        methodologies, and how they can be used to improve business performance.</p>
+                                    <p>Learn the difference between QA and </p>
                                     <div class="article-card__more"><b>Learn more</b> <img
                                             src="./assets/img/cases/arrow.svg" alt=""></div>
                                 </div>
