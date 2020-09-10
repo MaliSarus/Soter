@@ -401,6 +401,10 @@ button {
   }
 }
 
+#heateor_sss_sharing_more_content .all-services ul li::before {
+  content: unset;
+}
+
 .button {
   height: 62px;
   display: -webkit-box;

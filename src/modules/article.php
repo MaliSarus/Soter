@@ -4,12 +4,12 @@
             <div class="col-12 col-lg-3">
                 <div class="article-nav">
                     <p>In this article</p>
-                    <a href="#1" class="article-nav__link">Quality Assurance and Quality Control:</a>
-                    <a href="#2" class="article-nav__link">How is it Different From Quality Control?</a>
-                    <a href="#3" class="article-nav__link">What are ISO Standards</a>
-                    <a href="#4" class="article-nav__link">QA Techniques and Principles</a>
-                    <a href="#5" class="article-nav__link">Different Use Cases for Quality Assurance and Quality Control
-                        Templates</a>
+<!--                    <a href="#1" class="article-nav__link">Quality Assurance and Quality Control:</a>-->
+<!--                    <a href="#2" class="article-nav__link">How is it Different From Quality Control?</a>-->
+<!--                    <a href="#3" class="article-nav__link">What are ISO Standards</a>-->
+<!--                    <a href="#4" class="article-nav__link">QA Techniques and Principles</a>-->
+<!--                    <a href="#5" class="article-nav__link">Different Use Cases for Quality Assurance and Quality Control-->
+<!--                        Templates</a>-->
                 </div>
             </div>
             <div class="col-12 col-lg-9">
@@ -17,7 +17,7 @@
                     <div class="article-content__category">
                         Category: <a class="article-content__category-name">Quality Control</a>
                     </div>
-                    <h2 id="1">Quality Assurance and Quality Control:</h2>
+                    <h2>Quality Assurance and Quality Control:</h2>
                     <p>
                         We all have our own ideas on what quality is supposed to be. But in the context of the products
                         and services we pay for, the work we do, and the life we live, we all want and strive for good
@@ -34,7 +34,7 @@
                         create supply and meet demand. This is the cycle of success which starts when a company
                         achieves, ensures, and maintains good quality.
                     </p>
-                    <h2 id="2">How is it Different From Quality Control?</h2>
+                    <h2>How is it Different From Quality Control?</h2>
                     <p>
                         Typically, each territory would have their own merchant guild (sellers of goods and services),
                         and craft guild (blacksmiths, masons, bakers, haberdashers, and other workers that serve the
@@ -55,7 +55,7 @@
                         industrial efficiency, with the latter becoming famous for developing the assembly line as a
                         method of mass production.
                     </p>
-                    <h2 id="3">What are ISO Standards?</h2>
+                    <h2>What are ISO Standards?</h2>
                     <p>
                         ISO stands for International Organization for Standardization. It is an independent organization
                         currently composed of 164 countries and is the world’s leading authority and regulating body for
@@ -88,7 +88,7 @@
                         (FSMS). This certification is a must-have for companies in the food processing and food service
                         industries.
                     </p>
-                    <h2 id="4">QA Techniques and Principles</h2>
+                    <h2>QA Techniques and Principles</h2>
                     <p>
                         Modern manufacturing SOPs may vary depending on the industry, nature of the business, and brand.
                         What highly successful corporations have in common, however, is their embodiment of the tried
@@ -100,7 +100,7 @@
                         ensuring that items, equipment, documents, and other workplace staples are in their proper
                         places so that work performance can improve organically through management and safety.
                     </p>
-                    <h2 id="5">Different Use Cases for Quality Assurance and Quality Control Templates</h2>
+                    <h2>Different Use Cases for Quality Assurance and Quality Control Templates</h2>
                     <p>
                         Listed below are use cases for QA and QC templates covering different aspects of an operation.
                         Utilizing the right template for the right job can help boost efficiency, prevent downtime, and

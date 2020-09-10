@@ -236,3 +236,13 @@ button{
   }
 }
 
+
+#heateor_sss_sharing_more_content {
+  .all-services {
+    ul{
+      li::before{
+        content: unset;
+      }
+    }
+  }
+}
