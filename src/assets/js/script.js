@@ -974,9 +974,8 @@
                     articleNav.append('<a href="#' + index + '" class="article-nav__link">' + $(this).text() + '</a>')
                 })
             } else {
-                articleNav.css({
-                    display: 'none'
-                })
+                articleNav.append('<a href="#start" class="article-nav__link">Introduction</a>');
+                $('.article-content').attr('id','start');
             }
         }
 

@@ -212,6 +212,14 @@
       }
     }
     &__rate{
+      &-stars{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        .rmp-icon--ratings{
+          font-size: 1.2rem;
+        }
+      }
       &-mark{
         padding-left: 20px;
         font-weight: 600;

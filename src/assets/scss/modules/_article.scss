@@ -511,4 +511,31 @@
       }
     }
   }
+  &-rate{
+    color: $main-color;
+    .rmp-heading--title{
+      font-weight: 600;
+      font-size: 18px;
+      @media screen and (min-width: $md-width){
+        font-size: 26px;
+      }
+    }
+    .rmp-heading--subtitle{
+      font-size: 16px;
+      @media screen and (min-width: $md-width){
+        font-size: 22px;
+      }
+    }
+    .rmp-rating-widget__results, .rmp-rating-widget__not-rated{
+      font-size: 12px;
+    }
+    ul{
+      li{
+        padding-left: 0;
+        &::before{
+          content: unset;
+        }
+      }
+    }
+  }
 }
