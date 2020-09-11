@@ -401,8 +401,28 @@ button {
   }
 }
 
-#heateor_sss_sharing_more_content .all-services ul li::before {
+#heateor_sss_sharing_more_providers {
+  border-radius: 4px;
+}
+
+#heateor_sss_sharing_more_providers #heateor_sss_sharing_more_content .all-services ul li::before {
   content: unset;
+}
+
+#heateor_sss_sharing_more_providers #heateor_sss_sharing_more_content .footer-panel {
+  border-radius: 0 0 4px 4px;
+}
+
+#heateor_sss_sharing_more_providers #heateor_sss_sharing_more_content .filter input.search {
+  border-color: transparent !important;
+  border-bottom-color: #8ECDFF !important;
+  border-bottom-width: 2px !important;
+  background: transparent !important;
+}
+
+#heateor_sss_sharing_more_providers #heateor_sss_sharing_more_content .heateorSssSharing {
+  border-radius: 50%;
+  margin-right: 5px;
 }
 
 .button {
@@ -11516,6 +11536,20 @@ img.align-center {
     bottom: -6px;
     left: -37px;
   }
+}
+
+.article__newsletter-success {
+  display: none;
+  color: white;
+  z-index: 3;
+  text-shadow: 0 0 20px #2096F3;
+  position: relative;
+  padding: 0 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .article__newsletter form {

@@ -924,8 +924,7 @@
                     event.preventDefault();
                     //fail
                 } else {
-                    //success
-                    console.log('success')
+                    $('.article__newsletter form').hide().siblings('.article__newsletter-success').css('display', 'flex');
                 }
                 event.preventDefault();
             })

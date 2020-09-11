@@ -227,6 +227,9 @@
         <div class="row">
             <div class="col-12 col-lg-9 offset-lg-3">
                 <div class="article__newsletter">
+                    <div class="article__newsletter-success">
+                        <h2>Thank you for subscribing!</h2>
+                    </div>
                     <form>
                         <h2>Sign up for our newsletter!</h2>
                         <p>We never send spam or unnecessary information - only the latest articles, answers to

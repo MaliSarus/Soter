@@ -393,6 +393,16 @@
         left: -37px;
       }
     }
+    &-success{
+      display: none;
+      color: white;
+      z-index: 3;
+      text-shadow: 0 0 20px $accent-color;
+      position: relative;
+      padding: 0 10px;
+      justify-content: center;
+      text-align: center;
+    }
     form{
       color: white;
       width: 100%;
