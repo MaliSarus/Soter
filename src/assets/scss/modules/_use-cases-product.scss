@@ -46,9 +46,10 @@
     a.button{
       margin-top: 10px;
       @media screen and (min-width: $sm-width){
-        max-width: 213px;
-        margin: 0 auto;
-        margin-top: 10px;
+        display: block;
+        //max-width: 213px;
+        margin: 10px auto 0;
+        width: fit-content;
       }
       @media screen and (min-width: $lg-width){
         margin: unset;

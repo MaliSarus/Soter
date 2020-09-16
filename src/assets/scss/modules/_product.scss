@@ -75,9 +75,9 @@
         text-align: left;
       }
     }
-    a{
+    .button{
       @media screen and (min-width: $md-width){
-        max-width: 260px;
+        //max-width: 260px;
         margin-left: auto;
         margin-right: auto;
       }

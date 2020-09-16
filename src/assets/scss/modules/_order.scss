@@ -704,6 +704,12 @@
       }
     }
   }
+  .button_blue{
+    @media screen and (min-width: $xl-width){
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 #order-clipngo-form{

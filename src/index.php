@@ -3,8 +3,8 @@
 <?php
 require './modules/header.php';
 
-//require './modules/main-top.php';
-require './modules/main-top_rate.php';
+require './modules/main-top.php';
+//require './modules/main-top_rate.php';
 //require './modules/sponsors.php';
 //require './modules/solutions.php';
 //require './modules/cases.php';
@@ -54,19 +54,22 @@ require './modules/main-top_rate.php';
 //// <!--19062020-->
 //require './modules/press.php';
 //// <!--19062020-->
-///
-// <!--20072020-->
-require './modules/article.php';
-// <!--20072020-->
+//// <!--20072020-->
+//require './modules/article.php';
+//// <!--20072020-->
 //// <!--20072020-->
 //require './modules/articles.php';
 //// <!--20072020-->
 //// <!--03082020-->
-//require './modules/title-text.php';
+require './modules/title-text.php';
+require './modules/title-text.php';
 //require './modules/case-feedback.php';
 //require './modules/results.php';
 //require './modules/graphics.php';
 //require './modules/case-feedback.php';
-//// <!--03082020-->
+// <!--03082020-->
+
+//require './modules/title-text.php';
+
 require './modules/footer.php';
 ?>

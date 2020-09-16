@@ -61,11 +61,12 @@
         text-align: left;
       }
     }
-    >a{
+    >.button{
       width: 100%;
       @media screen and (min-width: $md-width){
         margin: 0 auto;
-        max-width: 325px;
+        width: auto;
+        //max-width: 325px;
       }
       @media screen and (min-width: $lg-width){
         margin: 0;
@@ -98,13 +99,13 @@
       }
     }
   }
-  .button_lower{
-    width: calc(100% - 20px);
-    margin: 0 auto;
-    @media screen and (min-width: $lg-width){
-      width: 100%;
-      max-width: 288px;
-      margin: 0;
-    }
-  }
+  //.button_lower{
+  //  width: calc(100% - 20px);
+  //  margin: 0 auto;
+  //  @media screen and (min-width: $lg-width){
+  //    width: 100%;
+  //    max-width: 288px;
+  //    margin: 0;
+  //  }
+  //}
 }

@@ -1,4 +1,4 @@
-<section class="title-text">
+<section class="title-text title-text-image">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -12,6 +12,7 @@
                     <p>The solution provides a shift in manual handling behavioural change by transferring the
                         responsibility to the individuals. Real-time feedback, autonomous learning and self-tracking elicits
                         the increase in awareness required for self-adjustment <a href="#">Link</a></p>
+                    <img src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
                 </div>
             </div>
         </div>
