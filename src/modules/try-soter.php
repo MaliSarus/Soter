@@ -84,6 +84,13 @@
                             <label for="request-company">Company</label>
                         </div>
                     </div>
+                    <div class="request__form-row">
+                        <div class="request__input-wrapper request__message no-required">
+                                <textarea name="message" rows="1" class="request__input form-control"
+                                          id="request-message"></textarea>
+                            <label for="request-message">Message</label>
+                        </div>
+                    </div>
                     <small>*By submitting this form, you confirm that you have read and agree to the Privacy Policy and
                         Terms & Conditions and consent to the storage and usage of the personal data submitted to allow
                         one of our team to contact you. You also wish to sign up for our monthly newsletter to receive

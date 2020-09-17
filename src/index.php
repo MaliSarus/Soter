@@ -25,9 +25,9 @@ require './modules/main-top.php';
 //
 ////<!--07052020-->
 //require './modules/use-cases.php';
-//require './modules/use-cases-product.php';
+require './modules/use-cases-product.php';
 //require './modules/answer.php';
-//require './modules/try-soter.php';
+require './modules/try-soter.php';
 ////<!--07052020-->
 //
 ////<!--08052020-->

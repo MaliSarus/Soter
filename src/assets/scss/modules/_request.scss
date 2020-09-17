@@ -189,6 +189,16 @@
       opacity: 0;
     }
   }
+  &__message{
+    .request__input{
+      &:focus ~ label{
+        opacity: 0!important;
+      }
+      &:valid ~ label{
+        opacity: 1;
+      }
+    }
+  }
   &__bottom{
     >p {
       color: #8ECDFF;

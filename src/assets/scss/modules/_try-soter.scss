@@ -75,6 +75,13 @@
           background: white;
           left: 0;
         }
+        textarea.request__input{
+          border-width: 20px 18px 14px;
+          border-color: transparent;
+          border-style: solid;
+          padding: 0;
+          height: 80px;
+        }
         &.focused{
           &::after{
             background: $main-color;
@@ -114,6 +121,24 @@
             left: 20px;
             padding: 0;
             margin: 0;
+          }
+        }
+      }
+      &__message{
+        label{
+          top: 20px;
+          transform: none;
+          padding: 0;
+          margin-bottom: 0;
+        }
+        &.no-required{
+          label{
+            color: #7088AB !important;
+          }
+          &.valid {
+            &::after {
+              background-color: $main-color!important;
+            }
           }
         }
       }

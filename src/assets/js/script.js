@@ -371,10 +371,17 @@
         var phoneInput = $('.request__phone > input');
         var nameInput = $('.request__user > input, .request__lastname > input');
         var companyInput = $('.request__company > input');
-        var messageInput = $('#request-message');
+        var messageInput = $('.request__message textarea');
         var requestSubmit = $('.request__submit');
 
-
+        messageInput.on('blur',function () {
+            if($(this).val() !== ''){
+                $(this).siblings('label').css('opacity',0)
+            }
+            else{
+                $(this).siblings('label').css('opacity',1)
+            }
+        })
         requestInputs.on('input', function () {
             if ($(this).is(':valid')) {
                 if (!($(this).is('#request-email'))) {
@@ -391,9 +398,11 @@
             event.preventDefault();
             var failFlag = 0;
             $(this).parent().find('.request__input-wrapper').each(function () {
-                if ($(this).hasClass('invalid') || !($(this).hasClass('valid'))) {
-                    failFlag = 1;
-                    $(this).addClass('invalid').children('label').addClass('invalid');
+                if(!($(this).hasClass('no-required'))) {
+                    if ($(this).hasClass('invalid') || !($(this).hasClass('valid'))) {
+                        failFlag = 1;
+                        $(this).addClass('invalid').children('label').addClass('invalid');
+                    }
                 }
             });
             console.log(failFlag);
@@ -513,10 +522,10 @@
         });
 
         if (isSet($('.try-soter'))) {
-            $('.try-soter__right input').on('focus', function () {
+            $('.try-soter__right input,textarea').on('focus', function () {
                 $(this).parent('.request__input-wrapper').addClass('focused');
             });
-            $('.try-soter__right input').on('blur', function () {
+            $('.try-soter__right input,textarea').on('blur', function () {
                 $(this).parent('.request__input-wrapper').removeClass('focused');
             })
         }

@@ -5239,6 +5239,14 @@ img.align-center {
   opacity: 0;
 }
 
+.request__message .request__input:focus ~ label {
+  opacity: 0 !important;
+}
+
+.request__message .request__input:valid ~ label {
+  opacity: 1;
+}
+
 .request__bottom > p {
   color: #8ECDFF;
   margin-top: 18px;
@@ -6805,11 +6813,11 @@ img.align-center {
 
 .use-cases-product__text a.button {
   margin-top: 10px;
+  display: block;
 }
 
 @media screen and (min-width: 576px) {
   .use-cases-product__text a.button {
-    display: block;
     margin: 10px auto 0;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -7085,6 +7093,14 @@ img.align-center {
   left: 0;
 }
 
+.try-soter__right .request__input-wrapper textarea.request__input {
+  border-width: 20px 18px 14px;
+  border-color: transparent;
+  border-style: solid;
+  padding: 0;
+  height: 80px;
+}
+
 .try-soter__right .request__input-wrapper.focused::after {
   background: #11274B;
 }
@@ -7127,6 +7143,23 @@ img.align-center {
     padding: 0;
     margin: 0;
   }
+}
+
+.try-soter__right .request__message label {
+  top: 20px;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.try-soter__right .request__message.no-required label {
+  color: #7088AB !important;
+}
+
+.try-soter__right .request__message.no-required.valid::after {
+  background-color: #11274B !important;
 }
 
 .try-soter__right .request__input {
