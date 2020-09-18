@@ -419,7 +419,7 @@
                     $('.copy__success').css('display', 'flex');
                     $('.copy__form form').css('display', 'none');
                 } else if ($(this).is('#try-soter-button')) {
-                    $('#trial-form > *').css('display', 'none');
+                    $(this).parents('form').children().css('display', 'none');
                     $('.try-soter-success').css('display', 'block');
                 }
             }
