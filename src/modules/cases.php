@@ -9,7 +9,10 @@
         </div>
         <div class="row cases__content">
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15 d-flex justify-content-center">
-                <div class="cases__item" data-item="1">
+                <div class="cases__item">
+                    <div class="hover-background">
+                        <img src="./assets/img/cases/4.jpg" alt="">
+                    </div>
                     <div class="cases__item-content">
                         <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
                         <div class="cases__text">
@@ -41,7 +44,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15 d-flex justify-content-center">
-                <div class="cases__item" data-item="2">
+                <div class="cases__item">
                     <div class="cases__item-content">
                         <div class="cases__image"><img src="./assets/img/cases/icon.svg" alt=""></div>
                         <div class="cases__text">
@@ -63,7 +66,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15 d-flex justify-content-center">
-                <div class="cases__item" data-item="3">
+                <div class="cases__item">
                     <div class="cases__item-content">
                         <div class="cases__image"><img src="./assets/img/cases/icon-3.svg" alt=""></div>
                         <div class="cases__text">
@@ -95,7 +98,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15 d-flex justify-content-center">
-                <div class="cases__item" data-item="4">
+                <div class="cases__item">
                     <div class="cases__item-content">
                         <div class="cases__image"><img src="./assets/img/cases/icon-4.svg" alt=""></div>
                         <div class="cases__text">
@@ -126,7 +129,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15 d-flex justify-content-center">
-                <div class="cases__item" data-item="5">
+                <div class="cases__item">
                     <div class="cases__item-content">
                         <div class="cases__image"><img src="./assets/img/cases/icon-5.svg" alt=""></div>
                         <div class="cases__text">
@@ -157,7 +160,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 d-flex p-15 d-flex justify-content-center">
-                <div class="cases__item" data-item="6">
+                <div class="cases__item">
                     <div class="cases__item-content">
                         <div class="cases__image"><img src="./assets/img/cases/icon-6.svg" alt=""></div>
                         <div class="cases__text">
