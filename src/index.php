@@ -44,7 +44,7 @@ require './modules/try-soter.php';
 //// <!--13052020-->
 //// <!--13052020-->
 //require './modules/solutions-list.php';
-//require './modules/faq.php';
+require './modules/faq.php';
 //require './modules/measures.php';
 //require './modules/phases.php';
 //// <!--13052020-->
@@ -58,7 +58,7 @@ require './modules/try-soter.php';
 //require './modules/article.php';
 //// <!--20072020-->
 //// <!--20072020-->
-//require './modules/articles.php';
+require './modules/articles.php';
 //// <!--20072020-->
 //// <!--03082020-->
 require './modules/title-text.php';
@@ -70,6 +70,8 @@ require './modules/title-text.php';
 // <!--03082020-->
 
 //require './modules/title-text.php';
+
+require './modules/our-blog.php';
 
 require './modules/footer.php';
 ?>

@@ -12845,6 +12845,117 @@ img.align-center {
   }
 }
 
+.our-blog {
+  padding: 55px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .our-blog {
+    padding-top: 110px;
+    padding-bottom: 120px;
+  }
+}
+
+.our-blog__title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+@media screen and (min-width: 768px) {
+  .our-blog__title {
+    margin-bottom: 60px;
+  }
+}
+
+.our-blog__title h2 {
+  color: #11274B;
+  font-size: 25px;
+  line-height: 120%;
+}
+
+@media screen and (min-width: 768px) {
+  .our-blog__title h2 {
+    font-size: 55px;
+  }
+}
+
+.our-blog__first-article {
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .our-blog__first-article {
+    margin-bottom: 30px;
+  }
+}
+
+.our-blog__first-article .article-card {
+  max-width: none;
+}
+
+@media screen and (min-width: 768px) {
+  .our-blog__first-article .article-card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+
+.our-blog__first-article .article-card__image {
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .our-blog__first-article .article-card__image {
+    width: 100%;
+    max-width: 430px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-blog__first-article .article-card__desc {
+    padding-top: 40px;
+  }
+}
+
+.our-blog__first-article .article-card__date {
+  display: none;
+  position: static;
+}
+
+@media screen and (min-width: 768px) {
+  .our-blog__first-article .article-card__date {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 28px;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    width: 111px;
+  }
+}
+
+.our-blog__first-article .article-card__date.mobile {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+  .our-blog__first-article .article-card__date.mobile {
+    display: none;
+  }
+}
+
 .footer {
   padding-top: 36px;
   padding-bottom: 27px;
