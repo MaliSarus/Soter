@@ -29,10 +29,12 @@
       @media screen and (min-width: $md-width) {
         flex-direction: row;
         flex-wrap: nowrap;
+        border-radius: 5px 0px 0px 5px;
       }
       &__image{
-        height: auto;
+
         @media screen and (min-width: $md-width){
+          height: auto;
           width: 100%;
           max-width: 430px;
         }
@@ -40,7 +42,7 @@
       &__desc{
         @media screen and (min-width: $md-width){
           padding-top: 40px;
-
+          border-radius: 0 5px 5px 0;
         }
       }
       &__date{
