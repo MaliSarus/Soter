@@ -298,6 +298,59 @@
         })
     }
 
+    function safetySliderInit() {
+        var mySwiper = new Swiper('.safety__slider', {
+            // Optional parameters
+            slidesPerView: 1,
+            spaceBetween: 20,
+            direction: 'horizontal',
+            centeredSlides: true,
+            loop: true,
+            speed: 200,
+            on: {
+                slideNextTransitionStart: function () {
+                    var paginationWrapper = $('.pagination-wrapper');
+                    paginationWrapper.addClass('transition-next');
+                    setTimeout(function () {
+                        paginationWrapper.removeClass('transition-next')
+                    }, 500);
+                },
+                slidePrevTransitionStart: function () {
+                    var paginationWrapper = $('.pagination-wrapper');
+                    paginationWrapper.addClass('transition-prev');
+                    setTimeout(function () {
+                        paginationWrapper.removeClass('transition-prev')
+                    }, 500);
+                },
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 2,
+                    centeredSlides: false
+                },
+                768: {
+                    slidesPerView: 3,
+                    // spaceBetween: 20,
+                },
+            }
+            //     768: {
+            //         slidesPerView: 1,
+            //         spaceBetween: 20,
+            //     },
+            // }
+        });
+        var mySwiperControl = document.querySelector('.safety__slider.swiper-container').swiper;
+        // var dots = $('.feedback__block .little-dot');
+        // dots.on('click', function (event) {
+        //     if ($('.little-dot--first').is(event.target)) {
+        //         mySwiperControl.slidePrev(400, true);
+        //     }
+        //     if ($('.little-dot--last').is(event.target)) {
+        //         mySwiperControl.slideNext(400, true);
+        //     }
+        // });
+    }
+
     $(document).ready(function () {
 
         // //LazyLoad
@@ -374,12 +427,11 @@
         var messageInput = $('.request__message textarea');
         var requestSubmit = $('.request__submit');
 
-        messageInput.on('blur',function () {
-            if($(this).val() !== ''){
-                $(this).siblings('label').css('opacity',0)
-            }
-            else{
-                $(this).siblings('label').css('opacity',1)
+        messageInput.on('blur', function () {
+            if ($(this).val() !== '') {
+                $(this).siblings('label').css('opacity', 0)
+            } else {
+                $(this).siblings('label').css('opacity', 1)
             }
         })
         requestInputs.on('input', function () {
@@ -398,7 +450,7 @@
             event.preventDefault();
             var failFlag = 0;
             $(this).parent().find('.request__input-wrapper').each(function () {
-                if(!($(this).hasClass('no-required'))) {
+                if (!($(this).hasClass('no-required'))) {
                     if ($(this).hasClass('invalid') || !($(this).hasClass('valid'))) {
                         failFlag = 1;
                         $(this).addClass('invalid').children('label').addClass('invalid');
@@ -823,7 +875,7 @@
             }, 700);
         });
 
-        $('.article-nav').on('click', '.article-nav__link',function (e) {
+        $('.article-nav').on('click', '.article-nav__link', function (e) {
             e.preventDefault();
             var destination = $(this).attr('href');
             $('html, body').animate({
@@ -983,7 +1035,63 @@
                 })
             } else {
                 articleNav.append('<a href="#start" class="article-nav__link">Introduction</a>');
-                $('.article-content').attr('id','start');
+                $('.article-content').attr('id', 'start');
+            }
+        }
+
+        if (isSet($('.safety'))) {
+            if (isSet($('.safety__circle-block'))) {
+                var deg = deg || 0;
+                var fields = $('.circle__element'), container = $('.circle__wrapper'),
+                    radius = container.outerWidth() * 0.94 / 2,
+                    width = container.outerWidth(), height = container.outerHeight(),
+                    angle = deg || Math.PI * 3.5, step = (2 * Math.PI) / fields.length;
+                fields.each(function () {
+                    var x = Math.round(width / 2 + radius * Math.cos(angle) - $(this).outerWidth() / 2);
+                    var y = Math.round(height / 2 + radius * Math.sin(angle) - $(this).outerHeight() / 2);
+                    $(this).css({
+                        left: x + 'px',
+                        top: y + 'px'
+                    });
+                    angle += step;
+                });
+                fields.on('click', function () {
+                    $('.circle__wrapper').removeAttr('style');
+                    var offset = $('.circle').offset();
+                    var center_x = (offset.left) + ($('.circle').outerWidth() / 2);
+                    var center_y = (offset.top) + ($('.circle').outerHeight() / 2);
+                    var finish_x = (offset.left);
+                    var finish_y = (offset.top) + ($('.circle').outerHeight() / 2);
+                    var field_x = $(this).offset().left;
+                    var field_y = $(this).offset().top + $(this).outerHeight() / 2;
+                    // var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
+                    var degreeToField = Math.abs(Math.atan2(field_y - center_y, field_x - center_x) * (180 / Math.PI));
+                    var degreeToFinish = Math.abs(Math.atan2(finish_y - center_y, finish_x - center_x) * (180 / Math.PI));
+                    if (field_y > center_y) {
+                        degreeToField *= -1;
+                    }
+
+                    var degree = degreeToFinish - degreeToField;
+                    var oldDegree = 0;
+                    var tween = gsap.to(".circle__wrapper", { duration: .5, rotation: (-1 * degree)});
+                    tween.eventCallback("onComplete", function () {
+                        fields.removeClass(['content_right', 'content_left']);
+                        fields.each(function () {
+                            if($(this).offset().left > center_x){
+                                $(this).addClass('content_right')
+                            }
+                            else{
+                                $(this).addClass('content_left')
+                            }
+                        })
+                    });
+                    gsap.to('.circle__element', {duration: .5, rotation: degree});
+
+
+                })
+            }
+            if (isSet($('.safety__slider-block'))) {
+                safetySliderInit();
             }
         }
 
