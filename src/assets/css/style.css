@@ -12903,15 +12903,13 @@ img.align-center {
     -webkit-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    border-radius: 5px 0px 0px 5px;
   }
-}
-
-.our-blog__first-article .article-card__image {
-  height: auto;
 }
 
 @media screen and (min-width: 768px) {
   .our-blog__first-article .article-card__image {
+    height: auto;
     width: 100%;
     max-width: 430px;
   }
@@ -12920,6 +12918,7 @@ img.align-center {
 @media screen and (min-width: 768px) {
   .our-blog__first-article .article-card__desc {
     padding-top: 40px;
+    border-radius: 0 5px 5px 0;
   }
 }
 
