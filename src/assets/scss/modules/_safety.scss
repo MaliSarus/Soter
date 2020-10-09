@@ -1,6 +1,7 @@
 .safety {
   padding: 55px 0 60px;
   background: #F6FAFF;
+  overflow: hidden;
   @media screen and (min-width: $md-width) {
     padding: 120px 0;
   }
@@ -41,7 +42,8 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
+
         .safety__subtitle {
           img {
             width: 90px;
@@ -50,7 +52,8 @@
             display: block;
             object-fit: contain;
           }
-          p{
+
+          p {
             font-size: 16px;
             line-height: 140%;
             color: $main-color;
@@ -73,6 +76,21 @@
         display: inline-block;
         //background: $accent-color;
         //animation: spin 20s linear infinite reverse;
+        &.non-active{
+          .circle__element-content{
+            * {
+              opacity: 0;
+            }
+            h3{
+              opacity: 1;
+            }
+          }
+        }
+        &.active{
+          .circle__element-hidden{
+            opacity: 1;
+          }
+        }
         &.content_left {
           .circle__element-content {
             top: 0;
@@ -102,6 +120,7 @@
         }
 
         &-icon {
+          cursor: pointer;
           position: relative;
           border-radius: 50%;
           overflow: hidden;
@@ -144,12 +163,15 @@
           width: 200%;
           transition: left .2s, right .2s, top .2s, bottom .2s, transform .2s;
 
-          & :first-child {
+          & > :first-child {
             margin-top: 0;
           }
 
-          & :last-child {
+          & > :last-child {
             margin-bottom: 0;
+          }
+          *{
+            transition: opacity .25s;
           }
 
           h3 {
@@ -169,6 +191,34 @@
           p {
             font-size: 14px;
             line-height: 160%;
+          }
+        }
+        &-hidden{
+          opacity: 0;
+          ul {
+            margin: 20px 0;
+
+            & :last-child {
+              margin-bottom: 0;
+            }
+
+            li {
+              font-size: 12px;
+              line-height: 160%;
+              font-weight: normal;
+              margin-bottom: 20px;
+              position: relative;
+              padding: 0 0 0 32px;
+
+              &::before {
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                background: url("../img/safety/list-marker.svg");
+                left: 0;
+                top: -3px;
+              }
+            }
           }
         }
       }
@@ -207,39 +257,44 @@
   &__slider {
     padding: 40px 40px;
     padding-top: 50px;
-    .swiper-button-next, .swiper-button-prev{
+
+    .swiper-button-next, .swiper-button-prev {
       width: 30px;
       height: 30px;
       background: white;
       box-shadow: 0px 6px 16px rgba(17, 39, 75, 0.15);
       border-radius: 50%;
-      @media screen and (min-width: $md-width){
+      @media screen and (min-width: $md-width) {
         width: 50px;
         height: 50px;
       }
-      &::after{
+
+      &::after {
         width: 100%;
         height: 12px;
         content: '';
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         background: url("../img/safety/arrow.svg") center no-repeat;
         background-size: auto 100%;
-        @media screen and (min-width: $md-width){
+        @media screen and (min-width: $md-width) {
           height: 18px;
           background-position: calc(50% - 2px) center;
         }
       }
     }
-    .swiper-button-prev{
+
+    .swiper-button-prev {
       left: 13px;
     }
-    .swiper-button-next{
+
+    .swiper-button-next {
       right: 13px;
-      &::after{
-        transform: translate(-50%,-50%) rotate(180deg);
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(180deg);
       }
     }
 
@@ -272,11 +327,23 @@
       .slide__head {
         color: $main-color;
 
-        img {
-          display: block;
+        &-icon {
           width: 64px;
           height: 64px;
           margin: 0 auto 25px;
+          background: $accent-color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+        }
+
+        img {
+          height: 30px;
+          width: 100%;
+          object-fit: contain;
+          object-position: center;
+
         }
 
         h3 {

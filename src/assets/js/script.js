@@ -357,7 +357,7 @@
     function placeElementContent(element,center_y, center_x) {
         var fieldCenter = element.offset().left + element.outerWidth() / 2;
         var fieldTop = element.offset().top;
-        if (fieldTop > center_y && fieldCenter >= center_x - 100 && fieldCenter <= center_x + 100) {
+        if (fieldTop > center_y && fieldCenter >= center_x - 150 && fieldCenter <= center_x + 150) {
             element.addClass('content_bottom')
         }
         else{
@@ -1100,6 +1100,8 @@
                 placeCircleElement();
                 var fields = $('.circle__element')
                 fields.on('click', function () {
+                    fields.removeClass('active').addClass('non-active');
+                    $(this).removeClass('non-active').addClass('active');
                     $('.circle__wrapper').removeAttr('style');
                     var offset = $('.circle').offset();
                     var center_x = (offset.left) + ($('.circle').outerWidth() / 2);

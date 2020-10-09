@@ -27,6 +27,19 @@
                                 <h3>Data-Driven Hiring</h3>
                                 <h4>Data-Driven Job Profiles & Role Requirements.</h4>
                                 <p>Understand the risks in the task to get better job requirements.</p>
+                                <div class="circle__element-hidden">
+                                    <ul>
+                                        <li>Practise a data-driven approach to hire the most appropriate candidates for
+                                            heavy lifting & high-demanding jobs
+                                        </li>
+                                        <li>Evaluate job-fitting of the current employees for their suitability for
+                                            existing tasks & duties
+                                        </li>
+                                        <li>Use job profile data to develop the most effective training programs &
+                                            ensure maximum ergonomic safety from day 1
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="circle__element">
@@ -93,7 +106,9 @@
                             <div class="swiper-slide">
                                 <div class="safety__slider-slide">
                                     <div class="slide__head">
-                                        <img src="./assets/img/safety/data-icon.svg" alt="">
+                                        <div class="slide__head-icon">
+                                            <img src="./assets/img/safety/data-icon.svg" alt="">
+                                        </div>
                                         <h3>Data-Driven Hiring</h3>
                                         <h4>Data-Driven Job Profiles & Role Requirements.</h4>
                                         <p>Understand the risks in the task to get better job requirements.</p>
@@ -114,20 +129,48 @@
                             <div class="swiper-slide">
                                 <div class="safety__slider-slide">
                                     <div class="slide__head">
-                                        <img src="./assets/img/safety/data-icon.svg" alt="">
-                                        <h3>Data-Driven Hiring</h3>
-                                        <h4>Data-Driven Job Profiles & Role Requirements.</h4>
-                                        <p>Understand the risks in the task to get better job requirements.</p>
+                                        <div class="slide__head-icon">
+                                            <img src="./assets/img/safety/return-icon.svg" alt="">
+                                        </div>
+                                        <h3>Return to Work</h3>
+                                        <h4>Training to Manage a Return-to-Work & Avoid Re-Injury</h4>
+                                        <p>Ensure the employee is returning to a safe condition and catch the risk of re-injury</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="safety__slider-slide">
                                     <div class="slide__head">
-                                        <img src="./assets/img/safety/data-icon.svg" alt="">
-                                        <h3>Data-Driven Hiring</h3>
-                                        <h4>Data-Driven Job Profiles & Role Requirements.</h4>
-                                        <p>Understand the risks in the task to get better job requirements.</p>
+                                        <div class="slide__head-icon">
+                                            <img src="./assets/img/safety/alarm-icon.svg" alt="">
+                                        </div>
+                                        <h3>Early Intervention</h3>
+                                        <h4>Fight the Early Stages of Pain to Avoid Recordable Injuries</h4>
+                                        <p>Catch an injury at the first signs of a problem</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="safety__slider-slide">
+                                    <div class="slide__head">
+                                        <div class="slide__head-icon">
+                                            <img src="./assets/img/safety/improve-icon.svg" alt="">
+                                        </div>
+                                        <h3>Continuous Improvement</h3>
+                                        <h4>Data to Measure & Reduce Workplace Risk</h4>
+                                        <p>Task assessments & risk data to reduce injuries</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="safety__slider-slide">
+                                    <div class="slide__head">
+                                        <div class="slide__head-icon">
+                                            <img src="./assets/img/safety/train-icon.svg" alt="">
+                                        </div>
+                                        <h3>New Starter Training</h3>
+                                        <h4>Pre-built or Customized Training Programs.</h4>
+                                        <p>Manual handling coaching via the device & app to build good working behavio.</p>
                                     </div>
                                 </div>
                             </div>
