@@ -12,8 +12,14 @@
         <div class="container">
             <div class="col-12">
                 <div class="circle">
+                    <div class="circle__content">
+                        <div class="safety__subtitle">
+                            <img src="./assets/img/safety/icon.svg" alt="">
+                            <p>Soter suits every stage of <br>the employee work cycle</p>
+                        </div>
+                    </div>
                     <div class="circle__wrapper">
-                        <div class="circle__element content_left">
+                        <div class="circle__element">
                             <div class="circle__element-icon">
                                 <img src="./assets/img/safety/data-icon.svg" alt="">
                             </div>
@@ -23,7 +29,7 @@
                                 <p>Understand the risks in the task to get better job requirements.</p>
                             </div>
                         </div>
-                        <div class="circle__element content_right">
+                        <div class="circle__element">
                             <div class="circle__element-icon">
                                 <img src="./assets/img/safety/return-icon.svg" alt="">
                             </div>
@@ -33,7 +39,7 @@
                                 <p>Ensure the employee is returning to a safe condition and catch the risk of re-injury</p>
                             </div>
                         </div>
-                        <div class="circle__element content_right">
+                        <div class="circle__element">
                             <div class="circle__element-icon">
                                 <img src="./assets/img/safety/alarm-icon.svg" alt="">
                             </div>
@@ -43,7 +49,7 @@
                                 <p>Catch an injury at the first signs of a problem</p>
                             </div>
                         </div>
-                        <div class="circle__element content_left">
+                        <div class="circle__element ">
                             <div class="circle__element-icon">
                                 <img src="./assets/img/safety/improve-icon.svg" alt="">
                             </div>
@@ -53,7 +59,7 @@
                                 <p>Task assessments & risk data to reduce injuries</p>
                             </div>
                         </div>
-                        <div class="circle__element content_left">
+                        <div class="circle__element">
                             <div class="circle__element-icon">
                                 <img src="./assets/img/safety/train-icon.svg" alt="">
                             </div>
@@ -81,6 +87,8 @@
             <div class="row">
                 <div class="col-12 p-0">
                     <div class="safety__slider swiper-container">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="safety__slider-slide">

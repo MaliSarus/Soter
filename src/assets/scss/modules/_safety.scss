@@ -9,9 +9,9 @@
     text-align: center;
     color: $main-color;
     margin-bottom: 34px;
-    @media screen and (min-width: $md-width) {
-      margin-bottom: 125px;
-    }
+    //@media screen and (min-width: $md-width) {
+    //  margin-bottom: 125px;
+    //}
 
     h2 {
       @media screen and (min-width: $md-width) {
@@ -23,15 +23,41 @@
 
   &__circle-block {
     display: none;
-    @media screen and (min-width: $lg-width){
+    @media screen and (min-width: $xl-width) {
       display: block;
+      padding: 150px 0 0;
+      transition: padding-bottom .2s;
     }
+
     .circle {
+      position: relative;
       width: 50%;
       max-width: 500px;
       //height: 500px;
       margin: auto;
       background: url("../img/safety/circle.svg") center / contain no-repeat;
+
+      &__content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        .safety__subtitle {
+          img {
+            width: 90px;
+            height: 84px;
+            margin: 0 auto 15px;
+            display: block;
+            object-fit: contain;
+          }
+          p{
+            font-size: 16px;
+            line-height: 140%;
+            color: $main-color;
+            font-weight: 500;
+          }
+        }
+      }
 
       &__wrapper {
         position: relative;
@@ -40,29 +66,42 @@
         //height: 100%;
         //animation: spin 10s linear infinite reverse;
       }
-      &__element{
+
+      &__element {
         position: absolute;
         line-height: 100%;
         display: inline-block;
         //background: $accent-color;
         //animation: spin 20s linear infinite reverse;
-        &.content_left{
-          .circle__element-content{
+        &.content_left {
+          .circle__element-content {
             top: 0;
             left: 0;
             transform: translateX(-100%);
             padding-right: 10px;
           }
         }
-        &.content_right{
-          .circle__element-content{
+
+        &.content_bottom {
+          .circle__element-content {
+            width: 300%;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            padding-top: 10px;
+          }
+        }
+
+        &.content_right {
+          .circle__element-content {
             top: 0;
             right: 0;
             transform: translateX(100%);
             padding-left: 10px;
           }
         }
-        &-icon{
+
+        &-icon {
           position: relative;
           border-radius: 50%;
           overflow: hidden;
@@ -73,7 +112,8 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          &::before{
+
+          &::before {
             display: block;
             position: absolute;
             content: '';
@@ -82,10 +122,11 @@
             background: $accent-color;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             border-radius: 50%;
           }
-          img{
+
+          img {
             position: relative;
             width: 50px;
             height: 50px;
@@ -93,30 +134,39 @@
             object-position: center;
           }
         }
-        &-content{
+
+        &-content {
+          //background: black;
+          text-shadow: #F6FAFF 1px 1px 0, #F6FAFF -1px -1px 0,
+          #F6FAFF -1px 1px 0, #F6FAFF 1px -1px 0, #F6FAFF 0 0 5px;
           color: $main-color;
           position: absolute;
           width: 200%;
           transition: left .2s, right .2s, top .2s, bottom .2s, transform .2s;
-          & :first-child{
+
+          & :first-child {
             margin-top: 0;
           }
-          & :last-child{
+
+          & :last-child {
             margin-bottom: 0;
           }
-          h3{
+
+          h3 {
             text-transform: uppercase;
             font-size: 20px;
             line-height: 160%;
             margin: 9px 0;
             font-weight: bold;
           }
-          h4{
+
+          h4 {
             font-size: 14px;
             line-height: 160%;
             margin: 5px 0;
           }
-          p{
+
+          p {
             font-size: 14px;
             line-height: 160%;
           }
@@ -130,8 +180,9 @@
       transform: rotate(1turn);
     }
   }
+
   &__slider-block {
-    @media screen and (min-width: $lg-width) {
+    @media screen and (min-width: $xl-width) {
       display: none;
     }
 
@@ -156,6 +207,41 @@
   &__slider {
     padding: 40px 40px;
     padding-top: 50px;
+    .swiper-button-next, .swiper-button-prev{
+      width: 30px;
+      height: 30px;
+      background: white;
+      box-shadow: 0px 6px 16px rgba(17, 39, 75, 0.15);
+      border-radius: 50%;
+      @media screen and (min-width: $md-width){
+        width: 50px;
+        height: 50px;
+      }
+      &::after{
+        width: 100%;
+        height: 12px;
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background: url("../img/safety/arrow.svg") center no-repeat;
+        background-size: auto 100%;
+        @media screen and (min-width: $md-width){
+          height: 18px;
+          background-position: calc(50% - 2px) center;
+        }
+      }
+    }
+    .swiper-button-prev{
+      left: 13px;
+    }
+    .swiper-button-next{
+      right: 13px;
+      &::after{
+        transform: translate(-50%,-50%) rotate(180deg);
+      }
+    }
 
     .swiper-wrapper {
       display: flex;

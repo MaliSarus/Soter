@@ -307,6 +307,10 @@
             centeredSlides: true,
             loop: true,
             speed: 200,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
             on: {
                 slideNextTransitionStart: function () {
                     var paginationWrapper = $('.pagination-wrapper');
@@ -349,6 +353,58 @@
         //         mySwiperControl.slideNext(400, true);
         //     }
         // });
+    }
+    function placeElementContent(element,center_y, center_x) {
+        var fieldCenter = element.offset().left + element.outerWidth() / 2;
+        var fieldTop = element.offset().top;
+        if (fieldTop > center_y && fieldCenter >= center_x - 100 && fieldCenter <= center_x + 100) {
+            element.addClass('content_bottom')
+        }
+        else{
+            if (fieldCenter > center_x) {
+                element.addClass('content_right')
+            } else {
+                element.addClass('content_left')
+            }
+        }
+    }
+
+    function placeCircleElement() {
+        var deg = deg || 180;
+        var fields = $('.circle__element'), container = $('.circle__wrapper'),
+            radius = container.outerWidth() * 0.94 / 2,
+            width = container.outerWidth(), height = container.outerHeight(),
+            angle = deg || Math.PI * 3.5, step = (2 * Math.PI) / fields.length;
+        var center_x = $('.circle').offset().left + $('.circle').outerWidth() / 2;
+        var center_y = $('.circle').offset().top + $('.circle').outerHeight() / 2;
+        fields.removeClass(['content_right', 'content_left', 'content_bottom']);
+        fields.each(function () {
+            var x = Math.round(width / 2 + radius * Math.cos(angle) - $(this).outerWidth() / 2);
+            var y = Math.round(height / 2 + radius * Math.sin(angle) - $(this).outerHeight() / 2);
+            $(this).css({
+                left: x + 'px',
+                top: y + 'px'
+            });
+            angle += step;
+        });
+        fields.each(function () {
+           placeElementContent($(this),center_y,center_x)
+        });
+        var contentBottom = 0;
+        fields.each(function () {
+            if ($(this).hasClass('content_bottom')){
+                var height = $(this).find('.circle__element-content').outerHeight();
+                $('.safety__circle-block').css({
+                    paddingBottom: height + 'px'
+                })
+                contentBottom = 1;
+            }
+            if (contentBottom == 1){
+                return false
+            } else {
+                $('.safety__circle-block').removeAttr('style');
+            }
+        })
     }
 
     $(document).ready(function () {
@@ -1041,20 +1097,8 @@
 
         if (isSet($('.safety'))) {
             if (isSet($('.safety__circle-block'))) {
-                var deg = deg || 0;
-                var fields = $('.circle__element'), container = $('.circle__wrapper'),
-                    radius = container.outerWidth() * 0.94 / 2,
-                    width = container.outerWidth(), height = container.outerHeight(),
-                    angle = deg || Math.PI * 3.5, step = (2 * Math.PI) / fields.length;
-                fields.each(function () {
-                    var x = Math.round(width / 2 + radius * Math.cos(angle) - $(this).outerWidth() / 2);
-                    var y = Math.round(height / 2 + radius * Math.sin(angle) - $(this).outerHeight() / 2);
-                    $(this).css({
-                        left: x + 'px',
-                        top: y + 'px'
-                    });
-                    angle += step;
-                });
+                placeCircleElement();
+                var fields = $('.circle__element')
                 fields.on('click', function () {
                     $('.circle__wrapper').removeAttr('style');
                     var offset = $('.circle').offset();
@@ -1073,15 +1117,25 @@
 
                     var degree = degreeToFinish - degreeToField;
                     var oldDegree = 0;
-                    var tween = gsap.to(".circle__wrapper", { duration: .5, rotation: (-1 * degree)});
+                    var tween = gsap.to(".circle__wrapper", {duration: .5, rotation: (-1 * degree)});
                     tween.eventCallback("onComplete", function () {
-                        fields.removeClass(['content_right', 'content_left']);
+                        fields.removeClass(['content_right', 'content_left', 'content_bottom']);
                         fields.each(function () {
-                            if($(this).offset().left > center_x){
-                                $(this).addClass('content_right')
+                            placeElementContent($(this), center_y, center_x)
+                        });
+                        var contentBottom = 0;
+                        fields.each(function () {
+                            if ($(this).hasClass('content_bottom')){
+                                var height = $(this).find('.circle__element-content').outerHeight();
+                                $('.safety__circle-block').css({
+                                    paddingBottom: height + 'px'
+                                })
+                                contentBottom = 1;
                             }
-                            else{
-                                $(this).addClass('content_left')
+                            if (contentBottom == 1){
+                                return false
+                            } else {
+                                $('.safety__circle-block').removeAttr('style');
                             }
                         })
                     });
@@ -1220,6 +1274,7 @@
         if ($(window).width() >= 992 && $('.footer__socials').data('mobile') !== undefined) {
             $('.footer__socials').detach().appendTo('.footer__left');
         }
+        placeCircleElement();
     });
 
     $(document).scroll(function () {
