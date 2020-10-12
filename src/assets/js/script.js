@@ -398,20 +398,20 @@
            placeElementContent($(this),center_y,center_x)
         });
         var contentBottom = 0;
-        fields.each(function () {
-            if ($(this).hasClass('content_bottom')){
-                var height = $(this).find('.circle__element-content').outerHeight();
-                $('.safety__circle-block').css({
-                    paddingBottom: height + 'px'
-                })
-                contentBottom = 1;
-            }
-            if (contentBottom == 1){
-                return false
-            } else {
-                $('.safety__circle-block').removeAttr('style');
-            }
-        })
+        // fields.each(function () {
+        //     if ($(this).hasClass('content_bottom')){
+        //         var height = $(this).find('.circle__element-content').outerHeight();
+        //         $('.safety__circle-block').css({
+        //             paddingBottom: height + 'px'
+        //         })
+        //         contentBottom = 1;
+        //     }
+        //     if (contentBottom == 1){
+        //         return false
+        //     } else {
+        //         $('.safety__circle-block').removeAttr('style');
+        //     }
+        // })
     }
 
     $(document).ready(function () {
@@ -1134,20 +1134,20 @@
                             placeElementContent($(this), center_y, center_x)
                         });
                         var contentBottom = 0;
-                        fields.each(function () {
-                            if ($(this).hasClass('content_bottom')){
-                                var height = $(this).find('.circle__element-content').outerHeight();
-                                $('.safety__circle-block').css({
-                                    paddingBottom: height + 'px'
-                                })
-                                contentBottom = 1;
-                            }
-                            if (contentBottom == 1){
-                                return false
-                            } else {
-                                $('.safety__circle-block').removeAttr('style');
-                            }
-                        })
+                        // fields.each(function () {
+                        //     if ($(this).hasClass('content_bottom')){
+                        //         var height = $(this).find('.circle__element-content').outerHeight();
+                        //         $('.safety__circle-block').css({
+                        //             paddingBottom: height + 'px'
+                        //         })
+                        //         contentBottom = 1;
+                        //     }
+                        //     if (contentBottom == 1){
+                        //         return false
+                        //     } else {
+                        //         $('.safety__circle-block').removeAttr('style');
+                        //     }
+                        // })
                     });
                     gsap.to('.circle__element', {duration: .5, rotation: degree});
 

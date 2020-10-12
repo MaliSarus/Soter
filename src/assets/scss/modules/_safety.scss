@@ -26,7 +26,7 @@
     display: none;
     @media screen and (min-width: $xl-width) {
       display: block;
-      padding: 150px 0 0;
+      padding: 150px 0 150px;
       transition: padding-bottom .2s;
     }
 
