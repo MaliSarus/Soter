@@ -49,7 +49,18 @@
                             <div class="circle__element-content">
                                 <h3>Return to Work</h3>
                                 <h4>Training to Manage a Return-to-Work & Avoid Re-Injury</h4>
-                                <p>Ensure the employee is returning to a safe condition and catch the risk of re-injury</p>
+                                <p>Ensure the employee is returning to a safe condition and catch the risk of
+                                    re-injury</p>
+                                <div class="circle__element-hidden">
+                                    <ul>
+                                        <li>Monitor if employee is fatiguing quickly or carrying out high risk tasks when returning to work
+                                        </li>
+                                        <li>Supply a returning-to-work employee with personalized training programs for the most effective reintegration
+                                        </li>
+                                        <li>Collect & share risk data with therapist or healthcare provider for immediate intervention if required
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="circle__element">
@@ -60,6 +71,16 @@
                                 <h3>Early Intervention</h3>
                                 <h4>Fight the Early Stages of Pain to Avoid Recordable Injuries</h4>
                                 <p>Catch an injury at the first signs of a problem</p>
+                                <div class="circle__element-hidden">
+                                    <ul>
+                                        <li>Get insights on hazardous movements that cause injuries and retrain them before an injury happens
+                                        </li>
+                                        <li>After a worker reports pain, deploy  injury prevention support through the special in-app training program
+                                        </li>
+                                        <li>Provide injured workers with methods to prevent recordable injuries autonomously
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="circle__element ">
@@ -70,6 +91,16 @@
                                 <h3>Continuous Improvement</h3>
                                 <h4>Data to Measure & Reduce Workplace Risk</h4>
                                 <p>Task assessments & risk data to reduce injuries</p>
+                                <div class="circle__element-hidden">
+                                    <ul>
+                                        <li>Highlight areas of increased risk within handling operations, site or departmental risk, workflow, specific indicators etc.
+                                        </li>
+                                        <li>Deploy additional help to workers who need it, i.e. physio coaching, onsite support, workplace redesign
+                                        </li>
+                                        <li>Reduce further injuries using more comprehensive training programs which drive positive behavioral changes
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="circle__element">
@@ -80,6 +111,19 @@
                                 <h3>New Starter Training</h3>
                                 <h4>Pre-built or Customized Training Programs.</h4>
                                 <p>Manual handling coaching via the device & app to build good working behavio.</p>
+                                <div class="circle__element-hidden">
+                                    <ul>
+                                        <li>Gather data on the worker’s condition & injury risk in real time in the
+                                            first weeks of employment
+                                        </li>
+                                        <li>Ensure good behaviors are being established and workers are becoming
+                                            conditioned to the task
+                                        </li>
+                                        <li>Effective on the job manual handling training is more relevant & retained by
+                                            workers while they work
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -134,8 +178,17 @@
                                         </div>
                                         <h3>Return to Work</h3>
                                         <h4>Training to Manage a Return-to-Work & Avoid Re-Injury</h4>
-                                        <p>Ensure the employee is returning to a safe condition and catch the risk of re-injury</p>
+                                        <p>Ensure the employee is returning to a safe condition and catch the risk of
+                                            re-injury</p>
                                     </div>
+                                    <ul>
+                                        <li>Monitor if employee is fatiguing quickly or carrying out high risk tasks when returning to work
+                                        </li>
+                                        <li>Supply a returning-to-work employee with personalized training programs for the most effective reintegration
+                                        </li>
+                                        <li>Collect & share risk data with therapist or healthcare provider for immediate intervention if required
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -147,6 +200,14 @@
                                         <h3>Early Intervention</h3>
                                         <h4>Fight the Early Stages of Pain to Avoid Recordable Injuries</h4>
                                         <p>Catch an injury at the first signs of a problem</p>
+                                        <ul>
+                                            <li>Get insights on hazardous movements that cause injuries and retrain them before an injury happens
+                                            </li>
+                                            <li>After a worker reports pain, deploy  injury prevention support through the special in-app training program
+                                            </li>
+                                            <li>Provide injured workers with methods to prevent recordable injuries autonomously
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -160,6 +221,14 @@
                                         <h4>Data to Measure & Reduce Workplace Risk</h4>
                                         <p>Task assessments & risk data to reduce injuries</p>
                                     </div>
+                                    <ul>
+                                        <li>Highlight areas of increased risk within handling operations, site or departmental risk, workflow, specific indicators etc.
+                                        </li>
+                                        <li>Deploy additional help to workers who need it, i.e. physio coaching, onsite support, workplace redesign
+                                        </li>
+                                        <li>Reduce further injuries using more comprehensive training programs which drive positive behavioral changes
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="swiper-slide">
@@ -170,8 +239,20 @@
                                         </div>
                                         <h3>New Starter Training</h3>
                                         <h4>Pre-built or Customized Training Programs.</h4>
-                                        <p>Manual handling coaching via the device & app to build good working behavio.</p>
+                                        <p>Manual handling coaching via the device & app to build good working
+                                            behavio.</p>
                                     </div>
+                                    <ul>
+                                        <li>Gather data on the worker’s condition & injury risk in real time in the
+                                            first weeks of employment
+                                        </li>
+                                        <li>Ensure good behaviors are being established and workers are becoming
+                                            conditioned to the task
+                                        </li>
+                                        <li>Effective on the job manual handling training is more relevant & retained by
+                                            workers while they work
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

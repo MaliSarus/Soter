@@ -344,15 +344,22 @@
             // }
         });
         var mySwiperControl = document.querySelector('.safety__slider.swiper-container').swiper;
-        // var dots = $('.feedback__block .little-dot');
-        // dots.on('click', function (event) {
-        //     if ($('.little-dot--first').is(event.target)) {
-        //         mySwiperControl.slidePrev(400, true);
-        //     }
-        //     if ($('.little-dot--last').is(event.target)) {
-        //         mySwiperControl.slideNext(400, true);
-        //     }
-        // });
+        var dots = $('.safety__slider-block .little-dot');
+        dots.on('click', function (event) {
+            if ($('.little-dot--first').is(event.target)) {
+                mySwiperControl.slidePrev(400, true);
+            }
+            if ($('.little-dot--last').is(event.target)) {
+                mySwiperControl.slideNext(400, true);
+            }
+        });
+        if (isSet($('.safety__circle-block'))){
+            var fields = $('.circle__element');
+            fields.on('click', function () {
+                var index = fields.index($(this));
+                mySwiper.slideToLoop(index, 500);
+            })
+        }
     }
     function placeElementContent(element,center_y, center_x) {
         var fieldCenter = element.offset().left + element.outerWidth() / 2;
@@ -1100,6 +1107,7 @@
                 placeCircleElement();
                 var fields = $('.circle__element')
                 fields.on('click', function () {
+                    console.log(fields.index($(this)))
                     fields.removeClass('active').addClass('non-active');
                     $(this).removeClass('non-active').addClass('active');
                     $('.circle__wrapper').removeAttr('style');

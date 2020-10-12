@@ -13060,6 +13060,7 @@ img.align-center {
 }
 
 .safety__circle-block .circle__element.content_bottom .circle__element-content {
+  text-align: center;
   width: 300%;
   bottom: 0;
   left: 50%;
