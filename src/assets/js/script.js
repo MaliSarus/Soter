@@ -1105,18 +1105,18 @@
         if (isSet($('.safety'))) {
             if (isSet($('.safety__circle-block'))) {
                 placeCircleElement();
-                var fields = $('.circle__element')
+                var fields = $('.circle__element-icon');
+                var oldDegree = 0;
                 fields.on('click', function () {
-                    console.log(fields.index($(this)))
-                    fields.removeClass('active').addClass('non-active');
-                    $(this).removeClass('non-active').addClass('active');
-                    $('.circle__wrapper').removeAttr('style');
+                    fields.parent().removeClass('active').addClass('non-active');
+                    $(this).parent().removeClass('non-active').addClass('active');
+                    // $('.circle__wrapper').removeAttr('style');
                     var offset = $('.circle').offset();
                     var center_x = (offset.left) + ($('.circle').outerWidth() / 2);
                     var center_y = (offset.top) + ($('.circle').outerHeight() / 2);
                     var finish_x = (offset.left);
                     var finish_y = (offset.top) + ($('.circle').outerHeight() / 2);
-                    var field_x = $(this).offset().left;
+                    var field_x = $(this).offset().left + $(this).outerWidth() / 2;
                     var field_y = $(this).offset().top + $(this).outerHeight() / 2;
                     // var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
                     var degreeToField = Math.abs(Math.atan2(field_y - center_y, field_x - center_x) * (180 / Math.PI));
@@ -1125,12 +1125,13 @@
                         degreeToField *= -1;
                     }
 
-                    var degree = degreeToFinish - degreeToField;
-                    var oldDegree = 0;
-                    var tween = gsap.to(".circle__wrapper", {duration: .5, rotation: (-1 * degree)});
+                    var degree = -1 * (degreeToFinish - degreeToField);
+
+                    var tween = gsap.to(".circle__wrapper", {duration: .5, rotation: (oldDegree + degree)});
                     tween.eventCallback("onComplete", function () {
-                        fields.removeClass(['content_right', 'content_left', 'content_bottom']);
-                        fields.each(function () {
+                        var fieldsContent = $('.circle__element')
+                        fieldsContent.removeClass(['content_right', 'content_left', 'content_bottom']);
+                        fieldsContent.each(function () {
                             placeElementContent($(this), center_y, center_x)
                         });
                         var contentBottom = 0;
@@ -1149,7 +1150,9 @@
                         //     }
                         // })
                     });
-                    gsap.to('.circle__element', {duration: .5, rotation: degree});
+                    gsap.to('.circle__element', {duration: .5, rotation: -1 * (oldDegree + degree)});
+                    oldDegree += degree;
+                    console.log(oldDegree)
 
 
                 })

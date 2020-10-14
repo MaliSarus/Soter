@@ -12987,7 +12987,7 @@ img.align-center {
 @media screen and (min-width: 1200px) {
   .safety__circle-block {
     display: block;
-    padding: 150px 0 0;
+    padding: 150px 0 150px;
     -webkit-transition: padding-bottom .2s;
     -o-transition: padding-bottom .2s;
     transition: padding-bottom .2s;
