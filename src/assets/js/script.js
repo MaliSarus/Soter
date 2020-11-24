@@ -361,6 +361,58 @@
             })
         }
     }
+
+    function ourMissionSliderInit() {
+        var mySwiper = new Swiper('.our-mission__slider', {
+            // Optional parameters
+            slidesPerView: 1,
+            direction: 'horizontal',
+            loop: true,
+            spaceBetween: 10,
+            breakpoints: {
+                768: {
+                    spaceBetween: 47,
+                    // spaceBetween: 20,
+                },
+            }
+
+        });
+        var mySwiperControl = document.querySelector('.our-mission__slider.swiper-container').swiper;
+        var arrows = $('.our-mission__slider-control .arrow-prev, .our-mission__slider-control .arrow-next');
+        arrows.on('click', function (event) {
+            if ($('.arrow-prev').is(event.currentTarget)) {
+                mySwiperControl.slidePrev(400, true);
+            }
+            if ($('.arrow-next').is(event.currentTarget)) {
+                mySwiperControl.slideNext(400, true);
+            }
+        });
+    }
+
+    function ourTeamSliderInit() {
+        var mySwiper = new Swiper('.our-team__slider', {
+            // Optional parameters
+            slidesPerView: 1,
+            direction: 'horizontal',
+            loop: true,
+            spaceBetween: 15,
+            centeredSlides: true,
+            breakpoints: {
+                577: {
+                   slidesPerView: 2
+                },
+                768:{
+                    slidesPerView: 3
+                }
+            }
+        });
+        var mySwiperControl = document.querySelector('.our-team__slider.swiper-container').swiper;
+        $(window).on('resize', function () {
+            if ($(window).width() >= 1200 && $('.our-team__slider').hasClass('swiper-container-initialized')) {
+                mySwiperControl.destroy(false, true);
+            }
+        })
+    }
     function placeElementContent(element,center_y, center_x) {
         var fieldCenter = element.offset().left + element.outerWidth() / 2;
         var fieldTop = element.offset().top;
@@ -1089,7 +1141,6 @@
 
         if (isSet($('.article'))) {
             var articleHeaders = $('.article-content').find('h2');
-            console.log(articleHeaders)
             var articleNav = $('.article-nav');
             if (articleHeaders.length > 0) {
                 articleHeaders.each(function (index) {
@@ -1109,8 +1160,7 @@
                 var oldDegree = 0;
                 fields.on('click', function () {
                     fields.parent().removeClass('active').addClass('non-active');
-                    $(this).parent().removeClass('non-active').addClass('active');
-                    // $('.circle__wrapper').removeAttr('style');
+                    const that = $(this);
                     var offset = $('.circle').offset();
                     var center_x = (offset.left) + ($('.circle').outerWidth() / 2);
                     var center_y = (offset.top) + ($('.circle').outerHeight() / 2);
@@ -1118,48 +1168,41 @@
                     var finish_y = (offset.top) + ($('.circle').outerHeight() / 2);
                     var field_x = $(this).offset().left + $(this).outerWidth() / 2;
                     var field_y = $(this).offset().top + $(this).outerHeight() / 2;
-                    // var radians = Math.atan2(mouse_x - center_x, mouse_y - center_y);
                     var degreeToField = Math.abs(Math.atan2(field_y - center_y, field_x - center_x) * (180 / Math.PI));
                     var degreeToFinish = Math.abs(Math.atan2(finish_y - center_y, finish_x - center_x) * (180 / Math.PI));
                     if (field_y > center_y) {
                         degreeToField *= -1;
                     }
-
                     var degree = -1 * (degreeToFinish - degreeToField);
-
                     var tween = gsap.to(".circle__wrapper", {duration: .5, rotation: (oldDegree + degree)});
                     tween.eventCallback("onComplete", function () {
-                        var fieldsContent = $('.circle__element')
+                        var fieldsContent = $('.circle__element');
                         fieldsContent.removeClass(['content_right', 'content_left', 'content_bottom']);
                         fieldsContent.each(function () {
                             placeElementContent($(this), center_y, center_x)
                         });
-                        var contentBottom = 0;
-                        // fields.each(function () {
-                        //     if ($(this).hasClass('content_bottom')){
-                        //         var height = $(this).find('.circle__element-content').outerHeight();
-                        //         $('.safety__circle-block').css({
-                        //             paddingBottom: height + 'px'
-                        //         })
-                        //         contentBottom = 1;
-                        //     }
-                        //     if (contentBottom == 1){
-                        //         return false
-                        //     } else {
-                        //         $('.safety__circle-block').removeAttr('style');
-                        //     }
-                        // })
+                        that.parent().removeClass('non-active').addClass('active');
                     });
                     gsap.to('.circle__element', {duration: .5, rotation: -1 * (oldDegree + degree)});
                     oldDegree += degree;
-                    console.log(oldDegree)
-
-
                 })
             }
             if (isSet($('.safety__slider-block'))) {
                 safetySliderInit();
             }
+        }
+        if (isSet($('.our-mission'))){
+            ourMissionSliderInit();
+        }
+        if (isSet($('.our-team'))){
+            if ($(window).width() < 1200) {
+                ourTeamSliderInit();
+            }
+            $(window).on('resize',function () {
+                if($(window).width() < 1200 && !($('.our-team__slider').hasClass('swiper-container-initialized'))){
+                    ourTeamSliderInit()
+                }
+            })
         }
 
         $('.up-button').on('click', function () {
@@ -1287,7 +1330,9 @@
         if ($(window).width() >= 992 && $('.footer__socials').data('mobile') !== undefined) {
             $('.footer__socials').detach().appendTo('.footer__left');
         }
-        placeCircleElement();
+        if (isSet($('.safety'))) {
+            placeCircleElement();
+        }
     });
 
     $(document).scroll(function () {

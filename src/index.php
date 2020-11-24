@@ -72,7 +72,15 @@ require './modules/main-top.php';
 //require './modules/title-text.php';
 
 //require './modules/our-blog.php';
-require './modules/safety.php';
+//require './modules/safety.php';
+
+// <!--23102020-->
+require './modules/our-interests.php';
+require './modules/our-presentation.php';
+require './modules/our-mission.php';
+require './modules/our-team.php';
+require './modules/our-offices.php';
+// <!--23102020-->
 
 require './modules/footer.php';
 ?>

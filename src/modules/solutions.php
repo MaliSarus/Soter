@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 solutions__top with-dots">
-                <h2 class="title title_dark">The Worlds First End-to-End Ergonomic Training Solution</h2>
+                <span class="title title_dark">The Worlds First End-to-End Ergonomic Training Solution</span>
                 <p class="text">We are empowering organizations to prevent ergonomic injuries in the workplace by
                     providing them with valuable insights on injury risk and allowing them to continuously improve the
                     health and safety of the entire workforce</p>

@@ -2,7 +2,7 @@
     <div class="container-fluid container-lg">
         <div class="row">
             <div class="col-12 feedback__top with-dots">
-                <h2 class="title title_dark">What Our Clients Are Saying About Us</h2>
+                <span class="title title_dark">What Our Clients Are Saying About Us</span>
             </div>
         </div>
         <div class="row feedback__block">
@@ -13,7 +13,7 @@
                             <div class="feedback__image"
                                  style="background-image: url(./assets/img/feedback/user-image.jpg)"></div>
                             <div class="feedback__text">
-                                <h3>Vimel Budhev</h3>
+                                <span>Vimel Budhev</span>
                                 <p>Adopting the SoterSpine solution to link-in with one of the problems that we have
                                     within
                                     the business, [manual handling], and employing this device to help eliminate, reduce
@@ -27,7 +27,7 @@
                             <div class="feedback__image"
                                  style="background-image: url(./assets/img/feedback/2.jpg)"></div>
                             <div class="feedback__text">
-                                <h3>Lincoln Butler</h3>
+                                <span>Lincoln Butler</span>
                                 <p>We have seen what fitness trackers and smartwatches have done for engaging people in
                                     their own general well-being and fitness, and I expect this type of simple,
                                     effective device will help drive more preventative behaviour at work</p>
@@ -38,7 +38,7 @@
                             <div class="feedback__image"
                                  style="background-image: url(./assets/img/feedback/3.jpg)"></div>
                             <div class="feedback__text">
-                                <h3>Vimel Budhev</h3>
+                                <span>Vimel Budhev</span>
                                 <p>Adopting the SoterSpine solution to link-in with one of the problems that we have
                                     within
                                     the business, [manual handling], and employing this device to help eliminate, reduce
@@ -52,7 +52,7 @@
                             <div class="feedback__image"
                                  style="background-image: url(./assets/img/feedback/4.jpg)"></div>
                             <div class="feedback__text">
-                                <h3>Vimel Budhev</h3>
+                                <span>Vimel Budhev</span>
                                 <p>Adopting the SoterSpine solution to link-in with one of the problems that we have
                                     within
                                     the business, [manual handling], and employing this device to help eliminate, reduce

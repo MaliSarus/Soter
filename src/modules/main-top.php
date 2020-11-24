@@ -1,4 +1,4 @@
-<section class="main-top" style="background-image: url(./assets/img/main-top/bg-image.png)">
+<section class="main-top main-top_simple" style="background-image: url(./assets/img/main-top/bg-image.png)">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-9">
@@ -12,10 +12,10 @@
                             ergonomic safety and reduce hazardous movements
                         </p>
                     </div>
-                    <div class="main-top__nav">
-                        <a href="#" class="button button_blue">Try Soter</a>
-                        <a href="#" class="button button_tr">Learn more</a>
-                    </div>
+<!--                    <div class="main-top__nav">-->
+<!--                        <a href="#" class="button button_blue">Try Soter</a>-->
+<!--                        <a href="#" class="button button_tr">Learn more</a>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>

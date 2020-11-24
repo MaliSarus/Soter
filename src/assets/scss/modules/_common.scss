@@ -25,6 +25,7 @@ body {
 
   main {
     flex-grow: 1;
+    overflow: hidden;
   }
 }
 
@@ -194,7 +195,7 @@ ul {
   }
 }
 
-.container, .container-xl {
+.container{
   padding: 0 20px;
   @media (min-width: 576px) {
     max-width: calc(540px + (1210px - 1140px))
@@ -211,6 +212,11 @@ ul {
   }
 
   // Экстрабольшие девайсы (большие десктопы, >= 1200px)
+  @media (min-width: 1200px) {
+    max-width: calc(1140px + (1210px - 1140px));
+  }
+}
+.container-xl {
   @media (min-width: 1200px) {
     max-width: calc(1140px + (1210px - 1140px));
   }

@@ -28,10 +28,15 @@
       }
     }
 
-    > h2 {
+    > span {
+      font-weight: bold;
+      font-size: 25px;
+      line-height: 120%;
+      display: block;
       @media screen and (min-width: $md-width) {
         max-width: 650.34px;
         margin: 0 auto;
+        font-size: 55px;
       }
     }
   }
@@ -164,12 +169,13 @@
       }
     }
 
-    > h3 {
+    > span {
       font-weight: bold;
       line-height: 160%;
       font-size: 16px;
       color: $main-color;
       margin-bottom: 2px;
+      display: block;
       @media screen and (min-width: $lg-width) {
         font-size: 20px;
         margin-bottom: 5px;
