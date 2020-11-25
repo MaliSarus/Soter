@@ -353,7 +353,7 @@
                 mySwiperControl.slideNext(400, true);
             }
         });
-        if (isSet($('.safety__circle-block'))){
+        if (isSet($('.safety__circle-block'))) {
             var fields = $('.circle__element');
             fields.on('click', function () {
                 var index = fields.index($(this));
@@ -370,9 +370,18 @@
             loop: true,
             spaceBetween: 10,
             breakpoints: {
+                577: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
                 768: {
-                    spaceBetween: 47,
+                    spaceBetween: 20,
+                    slidesPerView: 2,
                     // spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 1,
+                    spaceBetween: 47
                 },
             }
 
@@ -399,9 +408,9 @@
             centeredSlides: true,
             breakpoints: {
                 577: {
-                   slidesPerView: 2
+                    slidesPerView: 2
                 },
-                768:{
+                768: {
                     slidesPerView: 3
                 }
             }
@@ -413,13 +422,13 @@
             }
         })
     }
-    function placeElementContent(element,center_y, center_x) {
+
+    function placeElementContent(element, center_y, center_x) {
         var fieldCenter = element.offset().left + element.outerWidth() / 2;
         var fieldTop = element.offset().top;
         if (fieldTop > center_y && fieldCenter >= center_x - 150 && fieldCenter <= center_x + 150) {
             element.addClass('content_bottom')
-        }
-        else{
+        } else {
             if (fieldCenter > center_x) {
                 element.addClass('content_right')
             } else {
@@ -447,7 +456,7 @@
             angle += step;
         });
         fields.each(function () {
-           placeElementContent($(this),center_y,center_x)
+            placeElementContent($(this), center_y, center_x)
         });
         var contentBottom = 0;
         // fields.each(function () {
@@ -1191,15 +1200,15 @@
                 safetySliderInit();
             }
         }
-        if (isSet($('.our-mission'))){
+        if (isSet($('.our-mission'))) {
             ourMissionSliderInit();
         }
-        if (isSet($('.our-team'))){
+        if (isSet($('.our-team'))) {
             if ($(window).width() < 1200) {
                 ourTeamSliderInit();
             }
-            $(window).on('resize',function () {
-                if($(window).width() < 1200 && !($('.our-team__slider').hasClass('swiper-container-initialized'))){
+            $(window).on('resize', function () {
+                if ($(window).width() < 1200 && !($('.our-team__slider').hasClass('swiper-container-initialized'))) {
                     ourTeamSliderInit()
                 }
             })

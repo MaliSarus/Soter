@@ -56,7 +56,7 @@
         bottom: 0;
         display: flex;
         &-icon{
-          padding: 11px;
+          padding: 11px 14px;
           line-height: 1;
           background-color: $main-color;
           img{
@@ -81,6 +81,8 @@
           line-height: 120%;
           color: $accent-color;
           font-weight: 500;
+          display: block;
+          margin-bottom: 7px;
         }
         p{
           font-size: 20px;

@@ -16,7 +16,7 @@
     @media screen and (min-width: $md-width){
       background: url("../img/our-presentation/balls-sm.svg"), url("../img/our-presentation/balls-lg.svg"), url("../img/our-presentation/balls-lg-2.svg"), linear-gradient(94.81deg, #11274B 0.94%, #1F2E48 99.67%);
       background-repeat: no-repeat, no-repeat, no-repeat;
-      background-position: 0 0, 35% 100%, 100% 0;
+      background-position: 0 0, 45% 100%, 100% 0;
     }
     @media screen and (min-width: $lg-width){
       padding: 0;
@@ -33,6 +33,7 @@
     }
     a.button{
       margin-top: 30px;
+      padding: 25px 28px;
       @media screen and (min-width: $md-width){
         margin-top: 45px;
       }
@@ -40,7 +41,6 @@
   }
   &__image{
     position: relative;
-    height: 151px;
     transform: translateY(18px);
     @media screen and (min-width: $sm-width){
       height: 200px;
@@ -56,6 +56,10 @@
     img{
       width: 100%;
       height: 100%;
+      filter: drop-shadow(-2px 71px 51px rgba(23, 36, 58, 0.18));
+      max-height: 100%;
+      object-fit: contain;
+      object-position: center;
       @media screen and (min-width: $xl-width){
         position: absolute;
         top: 50%;
@@ -63,11 +67,8 @@
         right: -73px;
         width: 727px;
         height: 376px;
+        filter: drop-shadow(-2px 71px 51px rgba(23, 36, 58, 0.18));
       }
-      max-height: 100%;
-      object-fit: contain;
-      object-position: center;
-      filter: drop-shadow(-2px 71px 51px rgba(23, 36, 58, 0.18));
     }
   }
 }

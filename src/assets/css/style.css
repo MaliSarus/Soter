@@ -13669,11 +13669,13 @@ img.align-center {
   line-height: 170%;
   text-transform: uppercase;
   font-weight: bold;
+  margin-bottom: 6px;
 }
 
 @media screen and (min-width: 768px) {
   .our-interests__item .card__text h3 {
     font-size: 21px;
+    margin-bottom: 10px;
   }
 }
 
@@ -13724,7 +13726,7 @@ img.align-center {
     background: url("../img/our-presentation/balls-sm.svg"), url("../img/our-presentation/balls-lg.svg"), url("../img/our-presentation/balls-lg-2.svg"), -o-linear-gradient(355.19deg, #11274B 0.94%, #1F2E48 99.67%);
     background: url("../img/our-presentation/balls-sm.svg"), url("../img/our-presentation/balls-lg.svg"), url("../img/our-presentation/balls-lg-2.svg"), linear-gradient(94.81deg, #11274B 0.94%, #1F2E48 99.67%);
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 0 0, 35% 100%, 100% 0;
+    background-position: 0 0, 45% 100%, 100% 0;
   }
 }
 
@@ -13755,6 +13757,7 @@ img.align-center {
 
 .our-presentation__text a.button {
   margin-top: 30px;
+  padding: 25px 28px;
 }
 
 @media screen and (min-width: 768px) {
@@ -13765,7 +13768,6 @@ img.align-center {
 
 .our-presentation__image {
   position: relative;
-  height: 151px;
   -webkit-transform: translateY(18px);
   -ms-transform: translateY(18px);
   transform: translateY(18px);
@@ -13797,13 +13799,13 @@ img.align-center {
 .our-presentation__image img {
   width: 100%;
   height: 100%;
+  -webkit-filter: drop-shadow(-2px 71px 51px rgba(23, 36, 58, 0.18));
+  filter: drop-shadow(-2px 71px 51px rgba(23, 36, 58, 0.18));
   max-height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
   -o-object-position: center;
   object-position: center;
-  -webkit-filter: drop-shadow(-2px 71px 51px rgba(23, 36, 58, 0.18));
-  filter: drop-shadow(-2px 71px 51px rgba(23, 36, 58, 0.18));
 }
 
 @media screen and (min-width: 1200px) {
@@ -13816,6 +13818,8 @@ img.align-center {
     right: -73px;
     width: 727px;
     height: 376px;
+    -webkit-filter: drop-shadow(-2px 71px 51px rgba(23, 36, 58, 0.18));
+    filter: drop-shadow(-2px 71px 51px rgba(23, 36, 58, 0.18));
   }
 }
 
@@ -13833,7 +13837,7 @@ img.align-center {
     background: url("../img/our-mission/balls-left.svg"), url("../img/our-mission/balls-right.svg"), -o-linear-gradient(left, #F6FAFF 0%, #EBF4FF 100%);
     background: url("../img/our-mission/balls-left.svg"), url("../img/our-mission/balls-right.svg"), linear-gradient(90deg, #F6FAFF 0%, #EBF4FF 100%);
     background-repeat: no-repeat;
-    background-position: 0 50%, 100% 22%;
+    background-position: 0 71%, 100% 26%,0 0;
     padding-top: 356px;
     padding-bottom: 104px;
   }
@@ -13841,6 +13845,7 @@ img.align-center {
 
 .our-mission__slider-control {
   margin-top: 85px;
+  margin-bottom: 14px;
   display: none;
   position: relative;
   z-index: 10;
@@ -13863,7 +13868,7 @@ img.align-center {
 .our-mission__slider-control .arrow-prev, .our-mission__slider-control .arrow-next {
   cursor: pointer;
   height: 20px;
-  width: 10px;
+  width: 11px;
   background-image: url("../img/our-mission/arrow.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -13941,6 +13946,7 @@ img.align-center {
 }
 
 .our-mission__text {
+  text-align: left;
   color: #11274B;
   max-width: 600px;
   margin-bottom: 25px;
@@ -14014,13 +14020,14 @@ img.align-center {
 }
 
 .our-mission__slider {
-  padding-right: calc(100vw * 0.36);
+  padding-right: 42%;
+  height: 180px;
 }
 
 @media screen and (min-width: 1200px) {
   .our-mission__slider {
     height: 100%;
-    padding-right: calc(100vw * 0.16);
+    padding-right: 50%;
   }
 }
 
@@ -14125,7 +14132,7 @@ img.align-center {
 }
 
 .our-team__slide .card__contacts-icon {
-  padding: 11px;
+  padding: 11px 14px;
   line-height: 1;
   background-color: #11274B;
 }
@@ -14157,6 +14164,8 @@ img.align-center {
   line-height: 120%;
   color: #2096F3;
   font-weight: 500;
+  display: block;
+  margin-bottom: 7px;
 }
 
 .our-team__slide .card__desc p {
@@ -14196,6 +14205,17 @@ img.align-center {
 @media screen and (min-width: 768px) {
   .our-offices__title h2 {
     margin-bottom: 10px;
+  }
+}
+
+.our-offices__title p {
+  font-size: 14px;
+  line-height: 170%;
+}
+
+@media screen and (min-width: 768px) {
+  .our-offices__title p {
+    font-size: 16px;
   }
 }
 

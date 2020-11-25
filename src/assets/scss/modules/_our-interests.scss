@@ -55,8 +55,10 @@
           line-height: 170%;
           text-transform: uppercase;
           font-weight: bold;
+          margin-bottom: 6px;
           @media screen and (min-width: $md-width){
             font-size: 21px;
+            margin-bottom: 10px;
           }
         }
         p{

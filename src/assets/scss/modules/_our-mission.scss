@@ -5,13 +5,14 @@
   @media screen and (min-width: $md-width) {
     background: url("../img/our-mission/balls-left.svg"), url("../img/our-mission/balls-right.svg"),linear-gradient(90deg, #F6FAFF 0%, #EBF4FF 100%);
     background-repeat: no-repeat;
-    background-position: 0 50%, 100% 22%;
+    background-position: 0 71%, 100% 26%,0 0;
     padding-top: 356px;
     padding-bottom: 104px;
   }
 
   &__slider-control {
     margin-top: 85px;
+    margin-bottom: 14px;
     display: none;
     position: relative;
     z-index: 10;
@@ -25,7 +26,7 @@
       &-prev, &-next {
         cursor: pointer;
         height: 20px;
-        width: 10px;
+        width: 11px;
         background-image: url('../img/our-mission/arrow.svg');
         background-size: contain;
         background-repeat: no-repeat;
@@ -79,6 +80,7 @@
   }
 
   &__text {
+    text-align: left;
     color: $main-color;
     max-width: 600px;
     margin-bottom: 25px;
@@ -135,10 +137,13 @@
   }
 
   &__slider {
-    padding-right: calc(100vw * 0.36);
+    padding-right: 42%;
+    //padding-right: calc(100vw * 0.36);
+    height: 180px;
     @media screen and (min-width: $xl-width) {
       height: 100%;
-      padding-right: calc(100vw * 0.16);
+      padding-right: 50%;
+      //padding-right: calc(100vw * 0.16);
     }
   }
 

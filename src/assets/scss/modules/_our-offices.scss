@@ -17,6 +17,13 @@
         margin-bottom: 10px;
       }
     }
+    p{
+      font-size: 14px;
+      line-height: 170%;
+      @media screen and (min-width: $md-width){
+        font-size: 16px;
+      }
+    }
   }
   &__map{
     max-width: 1002px;
