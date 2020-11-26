@@ -16,7 +16,7 @@
                                 <img src="./assets/img/our-interests/1.png" alt="">
                             </div>
                             <div class="card__text">
-                                <h3>What interested us?</h3>
+                                <h3>We see perspective</h3>
                                 <p>Soter Analytics has been founded on the conviction that more should and could be done
                                     to help manual handling workers reduce their injury risk. New technologies can be
                                     used as enablers to develop ground breaking occupational health and ergonomics

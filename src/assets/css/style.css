@@ -14129,6 +14129,8 @@ img.align-center {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: 38px;
+  overflow: hidden;
 }
 
 .our-team__slide .card__contacts-icon {
@@ -14138,6 +14140,7 @@ img.align-center {
 }
 
 .our-team__slide .card__contacts-icon img {
+  display: block;
   width: 16px;
   height: 16px;
 }
