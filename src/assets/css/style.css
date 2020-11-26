@@ -14131,6 +14131,12 @@ img.align-center {
   display: flex;
   height: 38px;
   overflow: hidden;
+  text-decoration: none;
+}
+
+.our-team__slide .card__contacts:hover .card__contacts-text {
+  text-decoration: none;
+  background: #11274B;
 }
 
 .our-team__slide .card__contacts-icon {
@@ -14160,6 +14166,10 @@ img.align-center {
   font-weight: 500;
   padding: 0 15px;
   background-color: #2096F3;
+  text-decoration: none;
+  -webkit-transition: background-color .25s;
+  -o-transition: background-color .25s;
+  transition: background-color .25s;
 }
 
 .our-team__slide .card__desc small {

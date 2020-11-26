@@ -18,12 +18,12 @@
                                 <div class="card">
                                     <div class="card__image">
                                         <img src="./assets/img/our-team/1.png" alt="">
-                                        <div class="card__contacts">
+                                        <a href="#" class="card__contacts">
                                             <div class="card__contacts-icon">
                                                 <img src="./assets/img/our-team/in.svg" alt="">
                                             </div>
                                             <div class="card__contacts-text">LinkedIn</div>
-                                        </div>
+                                        </a>
                                     </div>
                                     <div class="card__desc">
                                         <small>Founder & CEO</small>
@@ -35,12 +35,12 @@
                                 <div class="card">
                                     <div class="card__image">
                                         <img src="./assets/img/our-team/2.png" alt="">
-                                        <div class="card__contacts">
+                                        <a href="#" class="card__contacts">
                                             <div class="card__contacts-icon">
                                                 <img src="./assets/img/our-team/in.svg" alt="">
                                             </div>
                                             <div class="card__contacts-text">LinkedIn</div>
-                                        </div>
+                                        </a>
                                     </div>
                                     <div class="card__desc">
                                         <small>Chief Technical Officer</small>
@@ -52,12 +52,12 @@
                                 <div class="card">
                                     <div class="card__image">
                                         <img src="./assets/img/our-team/3.png" alt="">
-                                        <div class="card__contacts">
+                                        <a href="#" class="card__contacts">
                                             <div class="card__contacts-icon">
                                                 <img src="./assets/img/our-team/in.svg" alt="">
                                             </div>
                                             <div class="card__contacts-text">LinkedIn</div>
-                                        </div>
+                                        </a>
                                     </div>
                                     <div class="card__desc">
                                         <small>Chief Commercial Officer</small>
@@ -69,12 +69,12 @@
                                 <div class="card">
                                     <div class="card__image">
                                         <img src="./assets/img/our-team/4.png" alt="">
-                                        <div class="card__contacts">
+                                        <a href="#" class="card__contacts">
                                             <div class="card__contacts-icon">
                                                 <img src="./assets/img/our-team/in.svg" alt="">
                                             </div>
                                             <div class="card__contacts-text">LinkedIn</div>
-                                        </div>
+                                        </a>
                                     </div>
                                     <div class="card__desc">
                                         <small>US Account Manager</small>
@@ -86,12 +86,12 @@
                                 <div class="card">
                                     <div class="card__image">
                                         <img src="./assets/img/our-team/5.png" alt="">
-                                        <div class="card__contacts">
+                                        <a href="#" class="card__contacts">
                                             <div class="card__contacts-icon">
                                                 <img src="./assets/img/our-team/in.svg" alt="">
                                             </div>
                                             <div class="card__contacts-text">LinkedIn</div>
-                                        </div>
+                                        </a>
                                     </div>
                                     <div class="card__desc">
                                         <small>Ergonomist</small>
