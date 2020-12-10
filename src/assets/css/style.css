@@ -14444,12 +14444,6 @@ img.align-center {
   margin-bottom: 19px;
 }
 
-@media screen and (min-width: 992px) {
-  .footer__nav {
-    padding-left: 59px;
-  }
-}
-
 .footer__nav > ul {
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
@@ -14465,9 +14459,13 @@ img.align-center {
 
 @media screen and (min-width: 992px) {
   .footer__nav > ul {
-    -webkit-flex-basis: 50%;
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
+    -webkit-flex-basis: calc(100% / 3);
+    -ms-flex-preferred-size: calc(100% / 3);
+    flex-basis: calc(100% / 3);
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
     margin-bottom: 0;
     max-width: 197px;
   }

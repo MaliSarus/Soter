@@ -140,7 +140,7 @@
     flex-wrap: wrap;
     margin-bottom: 19px;
     @media screen and (min-width: $lg-width) {
-      padding-left: 59px;
+      //padding-left: 59px;
     }
 
     > ul {
@@ -154,7 +154,8 @@
       }
 
       @media screen and (min-width: $lg-width) {
-        flex-basis: 50%;
+        flex-basis: calc(100% / 3);
+        flex-grow: 1;
         margin-bottom: 0;
         max-width: 197px;
       }
