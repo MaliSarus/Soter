@@ -2,14 +2,19 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-3">
-                <div class="article-nav">
-                    <p>In this article</p>
-                    <!--                    <a href="#1" class="article-nav__link">Quality Assurance and Quality Control:</a>-->
-                    <!--                    <a href="#2" class="article-nav__link">How is it Different From Quality Control?</a>-->
-                    <!--                    <a href="#3" class="article-nav__link">What are ISO Standards</a>-->
-                    <!--                    <a href="#4" class="article-nav__link">QA Techniques and Principles</a>-->
-                    <!--                    <a href="#5" class="article-nav__link">Different Use Cases for Quality Assurance and Quality Control-->
-                    <!--                        Templates</a>-->
+                <div class="article__sticky-content">
+                    <div class="article-nav">
+                        <p>In this article</p>
+                        <!--                    <a href="#1" class="article-nav__link">Quality Assurance and Quality Control:</a>-->
+                        <!--                    <a href="#2" class="article-nav__link">How is it Different From Quality Control?</a>-->
+                        <!--                    <a href="#3" class="article-nav__link">What are ISO Standards</a>-->
+                        <!--                    <a href="#4" class="article-nav__link">QA Techniques and Principles</a>-->
+                        <!--                    <a href="#5" class="article-nav__link">Different Use Cases for Quality Assurance and Quality Control-->
+                        <!--                        Templates</a>-->
+                    </div>
+                    <a href="https://soteranalytics.com/solutions/sotercoach/" class="article__link">
+                        <img src="../assets/img/article/article-link.png" alt="">
+                    </a>
                 </div>
             </div>
             <div class="col-12 col-lg-9">
@@ -133,6 +138,9 @@
                         pre-commissioning to confirm that equipment installation and function follows client
                         specifications.
                     </p>
+                    <a href="https://soteranalytics.com/solutions/sotercoach/" class="article__link">
+                        <img src="../assets/img/article/article-link_mobile.png" alt="">
+                    </a>
                 </article>
             </div>
         </div>
@@ -259,7 +267,8 @@
                                     <div class="explore-cards__content">
                                         <span>SoterCoach</span>
                                         <div class="explore-cards__text">
-                                            <p>The wearable device that gives personalized feedback accompanied by a mobile
+                                            <p>The wearable device that gives personalized feedback accompanied by a
+                                                mobile
                                                 app & micro-learning for workers to self-correct their movements in
                                                 real-time. All data is accessible via the analytics dashboard.</p>
                                         </div>
@@ -275,9 +284,10 @@
                                     <div class="explore-cards__content">
                                         <span>Clip&Go</span>
                                         <div class="explore-cards__text">
-                                        <p>Personal app-free solution for worksites where is no opportunity to use
-                                            mobile phones. All data is stored, synchronized & analyzed in the communal
-                                            device management app.</p>
+                                            <p>Personal app-free solution for worksites where is no opportunity to use
+                                                mobile phones. All data is stored, synchronized & analyzed in the
+                                                communal
+                                                device management app.</p>
                                         </div>
                                         <a href="#" class="button button_blue">Explore Clip&Go</a>
                                     </div>

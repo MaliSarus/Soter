@@ -55,7 +55,7 @@ require './modules/main-top.php';
 //require './modules/press.php';
 //// <!--19062020-->
 //// <!--20072020-->
-//require './modules/article.php';
+require './modules/article.php';
 //// <!--20072020-->
 //// <!--20072020-->
 //require './modules/articles.php';
@@ -75,11 +75,11 @@ require './modules/main-top.php';
 //require './modules/safety.php';
 
 // <!--23102020-->
-require './modules/our-interests.php';
-require './modules/our-presentation.php';
-require './modules/our-mission.php';
-require './modules/our-team.php';
-require './modules/our-offices.php';
+//require './modules/our-interests.php';
+//require './modules/our-presentation.php';
+//require './modules/our-mission.php';
+//require './modules/our-team.php';
+//require './modules/our-offices.php';
 // <!--23102020-->
 
 require './modules/footer.php';

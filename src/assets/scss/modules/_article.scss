@@ -3,9 +3,31 @@
   @media screen and (min-width: $lg-width){
     padding: 50px 0 60px;
   }
+  &__sticky-content{
+    height: 100%;
+    *{
+      &:not(:last-child){
+        margin-bottom: 10px;
+      }
+    }
+    .article__link{
+      position: sticky;
+      top: 10px;
+    }
+  }
+  &__link{
+    display: none;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+    @media screen and (min-width: $lg-width){
+      display: block;
+    }
+    img{
+      width: 100%;
+    }
+  }
   &-nav{
-    position: sticky;
-    top: 10px;
     background: #EFF6FF;
     border-radius: 5px;
     padding: 25px 20px;
@@ -109,7 +131,7 @@
       margin-bottom: 17px;
       a{
         color: $accent-color;
-        text-decoration: none;
+        text-decoration: none !important;
         font-weight: 500;
       }
     }
@@ -170,6 +192,24 @@
     }
     ol{
       padding-left: 25px;
+    }
+    .article__link{
+      display: block;
+      margin: 10px auto;
+      @media screen and (min-width: $md-width){
+        max-width: 500px;
+      }
+      @media screen and (min-width: $lg-width){
+        display: none;
+      }
+      img{
+        margin: 0;
+      }
+    }
+    a{
+      color: $accent-color;
+      text-decoration: underline;
+      font-weight: 500;
     }
   }
   hr{
@@ -575,6 +615,8 @@
           width: 100%;
           align-self: flex-start;
           margin-top: 16px;
+          padding-left: 5px;
+          padding-right: 5px;
           @media screen and (min-width: $md-width){
             width: auto;
             align-self: center;

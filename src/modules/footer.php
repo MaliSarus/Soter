@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="col-12 col-lg-5">
-                <div class="footer__nav">
+                <div class="footer__nav desktop">
                     <ul>
                         <li><a href="#">Products</a></li>
                         <li><a href="#">Industries</a></li>
@@ -99,6 +99,34 @@
                         <li><a href="#">Sales Terms and Conditions</a></li>
                         <li><a href="#">Privacy</a></li>
                     </ul>
+                </div>
+                <div class="footer__nav mobile">
+                    <div class="footer__mobile-block">
+                        <button>Solutions</button>
+                        <ul>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Industries</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Log In</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__mobile-block">
+                        <button>Use Cases</button>
+                        <ul>
+                            <li><a href="#">Try Soter</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Sales Terms and Conditions</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__mobile-block other">
+                        <ul>
+                            <li><a href="#">Try Soter</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Sales Terms and Conditions</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-lg-4">

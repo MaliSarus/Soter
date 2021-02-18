@@ -1213,6 +1213,13 @@
                 }
             })
         }
+        if (isSet($('.footer__mobile-block'))){
+            var footerMobileBlockButton = $('.footer__mobile-block button');
+            footerMobileBlockButton.on('click', function(){
+                $(this).siblings('ul').slideToggle();
+                $(this).toggleClass('active')
+            })
+        }
 
         $('.up-button').on('click', function () {
             $('body,html').animate({scrollTop: 0}, 700);

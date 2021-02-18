@@ -1,4 +1,9 @@
-<section class="main-top main-top_simple" style="background-image: url(./assets/img/main-top/bg-image.png)">
+<section class="main-top" style="background-image: url(./assets/img/main-top/bg-image.png)">
+    <div class="main-top__video">
+        <video autoplay loop>
+            <source src="./assets/video/geo_1080.mp4" type='video/mp4'>
+        </video>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-9">

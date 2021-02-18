@@ -136,11 +136,30 @@
   }
 
   &__nav {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 19px;
+    //display: flex;
+    //flex-wrap: wrap;
+    //margin-bottom: 19px;
     @media screen and (min-width: $lg-width) {
       //padding-left: 59px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 19px;
+    }
+    &.desktop{
+      display: none;
+      @media screen and (min-width: $lg-width) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 19px;
+      }
+    }
+    &.mobile{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      @media screen and (min-width: $lg-width){
+        display: none;
+      }
     }
 
     > ul {
@@ -203,6 +222,65 @@
     }
   }
 
+  &__mobile-block{
+    margin: 10px 0;
+    background:  rgba(#E2EEFF, .8);
+    border-radius: 4px;
+    overflow: hidden;
+    flex-basis: 100%;
+    @media screen and (min-width: $md-width){
+      margin: 10px;
+      flex-basis: calc(50% - 20px);
+    }
+    button{
+      position: relative;
+      padding: 10px 34px;
+      width: 100%;
+      border: none;
+      font-weight: 500;
+      background: none;
+      outline: none;
+      color: $main-color;
+      &::before{
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        display: block;
+        height: 14px;
+        width: 8px;
+        content: '';
+        background: url(../img/footer/mobile-nav-arrow.svg) center/contain no-repeat;
+        transform: translateY(-50%) rotate(-90deg);
+        transition: transform .5s;
+      }
+      &.active{
+        &::before{
+          transform: translateY(-50%) rotate(90deg);
+        }
+      }
+    }
+    ul{
+      display: none;
+      li{
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        &::before{
+          content: none;
+        }
+        a{
+          display: block;
+          font-weight: 400;
+          padding: 10px 0;
+        }
+      }
+    }
+    &.others{
+      ul{
+        display: block;
+      }
+    }
+  }
   &__contacts {
     text-align: center;
     @media screen and (min-width: $lg-width) {
