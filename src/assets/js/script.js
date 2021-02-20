@@ -475,6 +475,20 @@
         // })
     }
 
+    function changeHeaderToScroll(){
+        var header = $('header');
+        var mainTop = $('.main-top');
+        $(document).on('scroll', function () {
+            console.log(header.outerHeight())
+            if (header.offset().top + header.outerHeight() > mainTop.outerHeight()){
+                header.addClass('header_fixed');
+            }
+            else {
+                header.removeClass('header_fixed')
+            }
+        })
+    }
+
     $(document).ready(function () {
 
         // //LazyLoad
@@ -488,7 +502,7 @@
         //         }
         //     })
         // });
-
+        changeHeaderToScroll();
 
         if (isSet($('.sponsors'))) {
             sponsorsSliderInit();
